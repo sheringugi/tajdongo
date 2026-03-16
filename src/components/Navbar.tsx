@@ -87,12 +87,25 @@ const Navbar = () => {
               {link.label}
             </Link>
           ))}
-          <button
-            onClick={() => setLanguage(language === "en" ? "de" : "en")}
-            className="font-body text-lg text-muted-foreground hover:text-foreground transition-colors"
-          >
-            {language === "en" ? "Deutsch" : "English"}
-          </button>
+          <div className="flex items-center gap-4">
+            <button
+              onClick={() => setLanguage("en")}
+              className={`font-body text-lg transition-colors ${
+                language === "en" ? "text-foreground font-semibold" : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              English
+            </button>
+            <span className="text-muted-foreground">|</span>
+            <button
+              onClick={() => setLanguage("de")}
+              className={`font-body text-lg transition-colors ${
+                language === "de" ? "text-foreground font-semibold" : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              Deutsch
+            </button>
+          </div>
           <Link
             to="/donate"
             onClick={() => setIsOpen(false)}
