@@ -3,20 +3,21 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Layout from "@/components/Layout";
 import ImpactNumbers from "@/components/ImpactNumbers";
-import heroImg from "@/assets/hero-dog.jpg";
-import communityImg from "@/assets/tajdo-community.jpg";
-import visionImg from "@/assets/tajdo-vision.png";
-import educationImg from "@/assets/tajdo-education.png";
-import teamImg from "@/assets/tajdo-team.jpg";
+import { useLanguage } from "@/i18n/LanguageContext";
+import { IMG_RESCUE, IMG_TAJANA, IMG_NATURE } from "@/lib/images";
+
+const missionImages = [IMG_RESCUE, IMG_TAJANA, IMG_NATURE];
 
 const Index = () => {
+  const { t } = useLanguage();
+
   return (
     <Layout>
       {/* Hero */}
       <section className="relative h-[90vh] min-h-[600px] overflow-hidden">
         <img
-          src={heroImg}
-          alt="Rescued street dog on Zanzibar beach"
+          src={IMG_RESCUE}
+          alt="TAJDO Rescue dogs"
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-foreground/70 via-foreground/40 to-transparent" />
@@ -27,20 +28,20 @@ const Index = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="max-w-xl"
           >
-            <p className="label-caps text-primary-foreground/70 mb-4">Together for each other</p>
+            <p className="label-caps text-primary-foreground/70 mb-4">{t.index.heroLabel}</p>
             <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-light text-primary-foreground leading-[1.1] mb-6">
-              Rescuing Lives<br />in Zanzibar
+              {t.index.heroTitle1}<br />{t.index.heroTitle2}
             </h1>
             <p className="font-body text-base text-primary-foreground/80 font-light leading-relaxed mb-10 max-w-md">
-              TAJDO is dedicated to rescuing, rehabilitating, and caring for the street dogs of Zanzibar. Every life matters.
+              {t.index.heroDesc}
             </p>
             <div className="flex flex-wrap gap-4">
               <Link to="/donate" className="btn-primary bg-primary-foreground text-foreground hover:bg-primary-foreground/90">
-                Donate Now
+                {t.index.donateNow}
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <Link to="/about" className="btn-secondary border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-foreground">
-                Our Story
+                {t.index.ourStory}
               </Link>
             </div>
           </motion.div>
@@ -57,8 +58,8 @@ const Index = () => {
             transition={{ duration: 0.7 }}
           >
             <img
-              src={communityImg}
-              alt="TAJDO community in Zanzibar"
+              src={IMG_TAJANA}
+              alt="Tajana holding a rescued puppy"
               className="w-full aspect-[4/5] object-cover"
             />
           </motion.div>
@@ -68,21 +69,15 @@ const Index = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.2 }}
           >
-            <p className="label-caps mb-4">About TAJDO</p>
-            <h2 className="heading-section mb-6">Together for each other</h2>
+            <p className="label-caps mb-4">{t.index.aboutLabel}</p>
+            <h2 className="heading-section mb-6">{t.index.aboutTitle}</h2>
             <div className="space-y-5">
-              <p className="body-text">
-                TAJDO is more than just an organisation — we are a community of people who work with heart and passion for the street dogs of Zanzibar.
-              </p>
-              <p className="body-text">
-                Our goal is to provide every dog with a safe, loving and healthy life. We believe that even small acts can have a great impact: a bit of food, a shady spot, or medical care can change a dog's life forever.
-              </p>
-              <p className="body-text">
-                With every project we start and every bit of help we provide, we show that solidarity, care and responsibility are not just empty words — but the foundation for a better future for humans and animals alike.
-              </p>
+              <p className="body-text">{t.index.aboutP1}</p>
+              <p className="body-text">{t.index.aboutP2}</p>
+              <p className="body-text">{t.index.aboutP3}</p>
             </div>
             <Link to="/about" className="btn-secondary mt-8 inline-flex">
-              Read Our Story
+              {t.index.readStory}
             </Link>
           </motion.div>
         </div>
@@ -91,28 +86,12 @@ const Index = () => {
       {/* Mission Preview */}
       <section className="bg-secondary section-padding py-24">
         <div className="max-w-6xl mx-auto">
-          <p className="label-caps text-center mb-4">What We Do</p>
-          <h2 className="heading-section text-center mb-16">Our Mission</h2>
+          <p className="label-caps text-center mb-4">{t.index.missionLabel}</p>
+          <h2 className="heading-section text-center mb-16">{t.index.missionTitle}</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Maintenance & Care",
-                description: "Regular food, clean water, medical care, vaccinations, and sterilisations for the street dogs.",
-                image: teamImg,
-              },
-              {
-                title: "Development & Vision",
-                description: "Working towards building a dog shelter in Zanzibar — sustainable, step by step.",
-                image: visionImg,
-              },
-              {
-                title: "Education & Enlightenment",
-                description: "Raising awareness about the needs of street dogs and fostering respect and compassion.",
-                image: educationImg,
-              },
-            ].map((item, index) => (
+            {t.index.missionItems.map((item, index) => (
               <motion.div
-                key={item.title}
+                key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -121,12 +100,12 @@ const Index = () => {
               >
                 <div className="overflow-hidden mb-6">
                   <img
-                    src={item.image}
+                    src={missionImages[index]}
                     alt={item.title}
                     className="w-full aspect-[4/3] object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
-                <p className="label-caps mb-2">Mission</p>
+                <p className="label-caps mb-2">{t.index.missionTag}</p>
                 <h3 className="heading-card mb-3">{item.title}</h3>
                 <p className="body-text text-sm">{item.description}</p>
               </motion.div>
@@ -134,7 +113,7 @@ const Index = () => {
           </div>
           <div className="text-center mt-12">
             <Link to="/mission" className="btn-secondary">
-              Learn More
+              {t.index.learnMore}
             </Link>
           </div>
         </div>
@@ -146,14 +125,12 @@ const Index = () => {
       {/* Donate CTA */}
       <section className="section-padding py-24">
         <div className="max-w-3xl mx-auto text-center">
-          <p className="label-caps mb-4">Make a Difference</p>
-          <h2 className="heading-display mb-6">Every Contribution Counts</h2>
-          <p className="body-text max-w-xl mx-auto mb-10">
-            Your donation helps us feed, vaccinate, sterilise and shelter the street dogs of Zanzibar. Together, we can create a safer world for them.
-          </p>
+          <p className="label-caps mb-4">{t.index.ctaLabel}</p>
+          <h2 className="heading-display mb-6">{t.index.ctaTitle}</h2>
+          <p className="body-text max-w-xl mx-auto mb-10">{t.index.ctaDesc}</p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link to="/donate" className="btn-primary">
-              Donate Now
+              {t.index.donateNow}
               <ArrowRight className="w-4 h-4" />
             </Link>
             <a
@@ -162,7 +139,7 @@ const Index = () => {
               rel="noopener noreferrer"
               className="btn-secondary"
             >
-              Shop to Support
+              {t.index.shopSupport}
             </a>
           </div>
         </div>
