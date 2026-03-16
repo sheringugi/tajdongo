@@ -1,15 +1,39 @@
 import { motion } from "framer-motion";
 import { Heart, Eye, BookOpen } from "lucide-react";
+import { useEffect, useRef } from "react";
+import { useLocation } from "react-router-dom";
 import Layout from "@/components/Layout";
 import ImpactNumbers from "@/components/ImpactNumbers";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { IMG_RESCUE, IMG_TAJANA, IMG_NATURE } from "@/lib/images";
+import { default as IMG_VISION } from "@/assets/tajdo-vision.png";
+import { default as IMG_COMMUNITY } from "@/assets/tajdo-community.jpg";
+
+import { default as IMG_EDUCATION } from "@/assets/tajdo-education.png";
+
+
+
+
 
 const icons = [Heart, Eye, BookOpen];
-const images = [IMG_RESCUE, IMG_TAJANA, IMG_NATURE];
-
+// const images = [IMG_RESCUE, IMG_TAJANA, IMG_NATURE];
+const images = [IMG_COMMUNITY, IMG_VISION, IMG_EDUCATION, IMG_COMMUNITY];
 const Mission = () => {
   const { t } = useLanguage();
+  const location = useLocation();
+  const sectionRefs = useRef<(HTMLElement | null)[]>([]);
+
+  useEffect(() => {
+    const activeSection = location.state?.activeSection;
+    if (activeSection !== undefined && sectionRefs.current[activeSection]) {
+      setTimeout(() => {
+        sectionRefs.current[activeSection]?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }, 300); // slight delay to let page render first
+    }
+  }, [location.state]);
 
   return (
     <Layout>
@@ -21,7 +45,6 @@ const Mission = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
           >
-            <p className="label-caps mb-4">{t.mission.label}</p>
             <h1 className="heading-display mb-6">{t.mission.title}</h1>
             <p className="body-text max-w-2xl mx-auto text-lg">{t.mission.subtitle}</p>
           </motion.div>
@@ -34,6 +57,7 @@ const Mission = () => {
         return (
           <section
             key={index}
+            ref={(el) => (sectionRefs.current[index] = el)}
             className={`section-padding py-24 ${index % 2 === 1 ? "bg-secondary" : ""}`}
           >
             <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">

@@ -1,0 +1,80 @@
+import { useParams, Link } from "react-router-dom";
+import Layout from "@/components/Layout";
+import { useLanguage } from "@/i18n/LanguageContext";
+import { IMG_NATURE, IMG_RESCUE, IMG_TAJANA } from "@/lib/images"; // Assuming these are your project images
+import { ArrowLeft, ArrowRight } from "lucide-react";
+import Adoption from "@/i18n/Adoption";
+import NotFound from "./NotFound";
+
+const projectImages = [IMG_RESCUE, IMG_TAJANA, IMG_NATURE, IMG_RESCUE, IMG_TAJANA, IMG_NATURE];
+
+const ProjectDetail = () => {
+  const { slug } = useParams();
+  const { t } = useLanguage();
+
+  const projectIndex = t.projects.items.findIndex((p: any) => p.slug === slug);
+  const project = t.projects.items[projectIndex];
+
+  if (!project) {
+    return <NotFound />;
+  }
+
+  const image = projectImages[projectIndex];
+
+  const projectsCount = t.projects.items.length;
+  const nextProjectIndex = (projectIndex + 1) % projectsCount;
+  const nextProject = t.projects.items[nextProjectIndex];
+
+  const prevProjectIndex = (projectIndex - 1 + projectsCount) % projectsCount;
+  const prevProject = t.projects.items[prevProjectIndex];
+
+  return (
+    <Layout>
+      <section className="section-padding py-24">
+        <div className="max-w-4xl mx-auto">
+          <Link to="/projects" className="inline-flex items-center text-primary hover:underline mb-8">
+            <ArrowLeft className="mr-2 h-4 w-4" />
+            Back to Projects
+          </Link>
+          <div className="mb-8">
+            <p className="label-caps text-accent mb-2">{project.category}</p>
+            <h1 className="heading-display mb-6">{project.title}</h1>
+          </div>
+          <img
+            src={image}
+            alt={project.title}
+            className="w-full aspect-video object-cover rounded-lg mb-8"
+          />
+          <div className="max-w-none space-y-5 mb-16">
+            {project.detail.map((paragraph: string, index: number) => (
+              <p key={index} className="body-text text-lg">{paragraph}</p>
+            ))}
+          </div>
+
+          {project.slug === "successful-rehoming" ? (
+            <Adoption />
+          ) : (
+            <div className="border-t pt-8 flex justify-between items-center">
+              <Link
+                to={`/projects/${prevProject.slug}`}
+                className="inline-flex items-center text-primary hover:underline font-medium"
+              >
+                <ArrowLeft className="mr-2 h-4 w-4" />
+                Previous Project: {prevProject.title}
+              </Link>
+              <Link
+                to={`/projects/${nextProject.slug}`}
+                className="inline-flex items-center text-primary hover:underline font-medium"
+              >
+                Next Project: {nextProject.title}
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </div>
+          )}
+        </div>
+      </section>
+    </Layout>
+  );
+};
+
+export default ProjectDetail;

@@ -1,92 +1,86 @@
 import { motion } from "framer-motion";
-import { Heart, Mail, MessageCircle } from "lucide-react";
 import Layout from "@/components/Layout";
-import ImpactNumbers from "@/components/ImpactNumbers";
 import { useLanguage } from "@/i18n/LanguageContext";
-import { IMG_NATURE } from "@/lib/images";
+import { IMG_RESCUE } from "@/lib/images";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
+import { useToast } from "@/components/ui/use-toast";
 
 const Donate = () => {
   const { t } = useLanguage();
+  const { toast } = useToast();
+
+  const handleAdoptionSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    toast({
+      title: "Inquiry Sent!",
+      description: "Thank you for your interest. We will get back to you shortly.",
+    });
+    e.currentTarget.reset();
+  };
 
   return (
     <Layout>
       {/* Hero */}
-      <section className="relative h-[60vh] min-h-[400px] overflow-hidden">
+      <section className="relative overflow-hidden">
         <img
-          src={IMG_NATURE}
-          alt="Dogs in nature"
+          src={IMG_RESCUE}
+          alt="A rescued dog"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/40 to-foreground/20" />
-        <div className="relative h-full flex items-end section-padding pb-16">
+        <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/70 to-foreground/50" />
+        <div className="relative section-padding py-24">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-xl"
+            transition={{ duration: 0.7 }}
+            className="max-w-4xl mx-auto text-center text-primary-foreground"
           >
-            <p className="label-caps text-primary-foreground/70 mb-4">{t.donate.heroLabel}</p>
-            <h1 className="font-display text-5xl md:text-6xl font-light text-primary-foreground leading-[1.1] mb-4">
+            <h1 className="heading-display mb-6 text-primary-foreground">
               {t.donate.heroTitle}
             </h1>
-            <p className="font-body text-primary-foreground/80 font-light">{t.donate.heroDesc}</p>
+            <div className="space-y-4 text-primary-foreground/80">
+              {t.donate.heroDesc.map((p, i) => (
+                <p key={i} className="font-body max-w-2xl mx-auto text-lg font-light leading-relaxed">{p}</p>
+              ))}
+            </div>
+            <a href="#donate-now" className="btn-primary mt-8 bg-primary-foreground text-foreground hover:bg-primary-foreground/90">
+              {t.donate.donateNow}
+            </a>
           </motion.div>
         </div>
       </section>
 
-      {/* Donation options */}
-      <section className="section-padding py-24">
-        <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="bg-secondary p-10"
-            >
-              <Heart className="w-8 h-8 text-accent mb-6" />
-              <h2 className="heading-card mb-4">{t.donate.bankTitle}</h2>
-              <p className="body-text mb-8">{t.donate.bankDesc}</p>
-              <div className="space-y-3">
-                <a
-                  href="mailto:info@tajdo.ch?subject=Donation%20-%20Bank%20Transfer%20Details"
-                  className="btn-primary w-full justify-center"
-                >
-                  <Mail className="w-4 h-4" />
-                  {t.donate.requestBank}
-                </a>
-                <a
-                  href="https://wa.me/+41799583979?text=Hi%20TAJDO%2C%20I%20would%20like%20to%20make%20a%20donation.%20Could%20you%20please%20share%20the%20bank%20transfer%20details%3F"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-secondary w-full justify-center"
-                >
-                  <MessageCircle className="w-4 h-4" />
-                  {t.donate.whatsapp}
-                </a>
-              </div>
-            </motion.div>
+      {/* Main Content */}
+      <section id="donate-now" className="section-padding py-24">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+          {/* Left Column: Text */}
+          <div className="space-y-6">
+            <h2 className="heading-section">{t.donate.mainTitle}</h2>
+            {t.donate.mainDesc.map((p, i) => (
+              <p key={i} className="body-text">{p}</p>
+            ))}
+          </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.15 }}
-              className="bg-secondary p-10"
-            >
-              <Heart className="w-8 h-8 text-accent mb-6" />
-              <h2 className="heading-card mb-4">{t.donate.shopTitle}</h2>
-              <p className="body-text mb-8">{t.donate.shopDesc}</p>
-              <a
-                href="https://tadjo-frontend-draft.vercel.app"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary w-full justify-center"
-              >
-                {t.donate.visitStore}
-              </a>
-            </motion.div>
+          {/* Right Column: Details */}
+          <div className="bg-secondary p-8 rounded-lg space-y-8">
+            <div>
+              <h3 className="heading-card mb-2">{t.donate.details.bank.title}</h3>
+              <p className="body-text">{t.donate.details.bank.name}</p>
+              <p className="body-text">{t.donate.details.bank.iban}</p>
+              <p className="body-text">{t.donate.details.bank.bic}</p>
+            </div>
+            <div>
+              <h3 className="heading-card mb-2">{t.donate.details.address.title}</h3>
+              <p className="body-text">{t.donate.details.address.name}</p>
+              <p className="body-text">{t.donate.details.address.line1}</p>
+              <p className="body-text">{t.donate.details.address.line2}</p>
+            </div>
+            <div>
+              <h3 className="heading-card mb-2">{t.donate.details.info.title}</h3>
+              <p className="body-text text-sm">{t.donate.details.info.desc}</p>
+            </div>
           </div>
         </div>
       </section>
@@ -113,8 +107,23 @@ const Donate = () => {
         </div>
       </section>
 
-      {/* Impact */}
-      <ImpactNumbers />
+      {/* Adoption Form */}
+      <section className="section-padding py-24">
+        <div className="max-w-2xl mx-auto bg-secondary p-10 rounded-lg">
+          <div className="text-center mb-8">
+            <h2 className="heading-section mb-4">{t.donate.adoptionForm.title}</h2>
+            <p className="body-text">{t.donate.adoptionForm.subtitle}</p>
+          </div>
+          <form onSubmit={handleAdoptionSubmit} className="text-left space-y-4">
+            <Input type="text" name="name" placeholder={t.donate.adoptionForm.namePlaceholder} required />
+            <Input type="email" name="email" placeholder={t.donate.adoptionForm.emailPlaceholder} required />
+            <Textarea name="message" placeholder={t.donate.adoptionForm.messagePlaceholder} required />
+            <Button type="submit" className="w-full">
+              {t.donate.adoptionForm.submitButton}
+            </Button>
+          </form>
+        </div>
+      </section>
     </Layout>
   );
 };

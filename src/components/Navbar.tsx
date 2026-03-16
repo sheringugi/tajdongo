@@ -17,8 +17,8 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-background/95 backdrop-blur-sm sticky top-0 z-50 border-b border-border">
-      <div className="section-padding flex items-center justify-between py-4">
+    <nav className="bg-background/70 backdrop-blur-sm sticky top-0 z-50 border-b border-border">
+  <div className="section-padding flex items-center justify-between py-0 min-h-[112px]">
         {/* Left nav links - desktop */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
@@ -35,9 +35,9 @@ const Navbar = () => {
         </div>
 
         {/* Center logo */}
-        <Link to="/" className="absolute left-1/2 -translate-x-1/2">
-          <img src={logo} alt="TAJDO" className="h-12 md:h-14 w-auto invert dark:invert-0" />
-        </Link>
+            <Link to="/" className="absolute left-1/2 -translate-x-1/2 z-10">
+              <img src={logo} alt="TAJDO" className="h-24 md:h-28 w-auto invert dark:invert-0" />
+            </Link>
 
         {/* Right - Language toggle + Donate */}
         <div className="hidden md:flex items-center gap-4">

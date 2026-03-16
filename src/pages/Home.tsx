@@ -1,15 +1,21 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { useState } from "react";
 import { ArrowRight } from "lucide-react";
 import Layout from "@/components/Layout";
 import ImpactNumbers from "@/components/ImpactNumbers";
 import { useLanguage } from "@/i18n/LanguageContext";
-import { IMG_RESCUE, IMG_TAJANA, IMG_NATURE } from "@/lib/images";
+import { default as IMG_VISION } from "@/assets/tajdo-vision.png";
+import { default as IMG_COMMUNITY } from "@/assets/tajdo-community.jpg";
 
-const missionImages = [IMG_RESCUE, IMG_TAJANA, IMG_NATURE];
+import { default as IMG_EDUCATION } from "@/assets/tajdo-education.png";
+import { IMG_RESCUE, IMG_TAJANA } from "@/lib/images";
+
+const missionImages = [IMG_COMMUNITY, IMG_VISION, IMG_EDUCATION, IMG_COMMUNITY];
 
 const Index = () => {
   const { t } = useLanguage();
+  const [activeTab, setActiveTab] = useState(0);
 
   return (
     <Layout>
@@ -69,7 +75,7 @@ const Index = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.2 }}
           >
-            <p className="label-caps mb-4">{t.index.aboutLabel}</p>
+            {/* <p className="label-caps mb-4">{t.index.aboutLabel}</p> */}
             <h2 className="heading-section mb-6">{t.index.aboutTitle}</h2>
             <div className="space-y-5">
               <p className="body-text">{t.index.aboutP1}</p>
@@ -83,41 +89,72 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Mission Preview */}
-      <section className="bg-secondary section-padding py-24">
-        <div className="max-w-6xl mx-auto">
-          <p className="label-caps text-center mb-4">{t.index.missionLabel}</p>
-          <h2 className="heading-section text-center mb-16">{t.index.missionTitle}</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {t.index.missionItems.map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.15, duration: 0.6 }}
-                className="group"
-              >
-                <div className="overflow-hidden mb-6">
-                  <img
-                    src={missionImages[index]}
-                    alt={item.title}
-                    className="w-full aspect-[4/3] object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
-                <p className="label-caps mb-2">{t.index.missionTag}</p>
-                <h3 className="heading-card mb-3">{item.title}</h3>
-                <p className="body-text text-sm">{item.description}</p>
-              </motion.div>
-            ))}
+       {/* Mission Preview */}
+<section className="bg-secondary section-padding py-24">
+  <div className="max-w-6xl mx-auto">
+    <h2 className="heading-section text-center mb-16">{t.index.missionTitle}</h2>
+
+    {/* Tab Buttons Row */}
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-2 mb-12">
+      {t.index.missionItems.map((item, index) => (
+        <motion.button
+          key={index}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: index * 0.15, duration: 0.6 }}
+          className={`w-full text-left px-6 py-5 transition-all duration-300 border-b-2 ${
+            activeTab === index
+              ? "border-foreground bg-primary-foreground text-foreground shadow-md"
+              : "border-transparent bg-primary-foreground/10 text-foreground/50 hover:bg-primary-foreground/20 hover:text-foreground/70"
+          }`}
+          onClick={() => setActiveTab(index)}
+        >
+          <h3 className={`heading-card transition-all duration-300 ${
+            activeTab === index ? "text-foreground text-lg" : "text-foreground/50 text-base"
+          }`}>
+            {item.title}
+          </h3>
+        </motion.button>
+      ))}
+    </div>
+
+    {/* Active Tab Content — full width below tabs */}
+    {t.index.missionItems.map((item, index) => (
+      activeTab === index && (
+        <motion.div
+          key={index}
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+        >
+          {/* Image */}
+          <div className="overflow-hidden">
+            <img
+              src={missionImages[index]}
+              alt={item.title}
+              className="w-full aspect-[4/3] object-cover"
+            />
           </div>
-          <div className="text-center mt-12">
-            <Link to="/mission" className="btn-secondary">
+
+          {/* Text */}
+          <div className="space-y-6">
+            <h3 className="heading-section">{item.title}</h3>
+            <p className="body-text leading-relaxed">{item.description}</p>
+            <Link 
+              to="/mission" 
+              state={{ activeSection: index }}
+              className="btn-secondary inline-flex"
+            >
               {t.index.learnMore}
             </Link>
           </div>
-        </div>
-      </section>
+        </motion.div>
+      )
+    ))}
+  </div>
+</section>
 
       {/* Impact Numbers */}
       <ImpactNumbers />
@@ -147,5 +184,6 @@ const Index = () => {
     </Layout>
   );
 };
+
 
 export default Index;
