@@ -2,17 +2,19 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import logo from "@/assets/tajdo-logo.png";
-
-const navLinks = [
-  { label: "Home", href: "/" },
-  { label: "About Us", href: "/about" },
-  { label: "Mission", href: "/mission" },
-  { label: "Projects", href: "/projects" },
-];
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const { language, setLanguage, t } = useLanguage();
+
+  const navLinks = [
+    { label: t.nav.home, href: "/" },
+    { label: t.nav.about, href: "/about" },
+    { label: t.nav.mission, href: "/mission" },
+    { label: t.nav.projects, href: "/projects" },
+  ];
 
   return (
     <nav className="bg-background/95 backdrop-blur-sm sticky top-0 z-50 border-b border-border">
@@ -37,10 +39,16 @@ const Navbar = () => {
           <img src={logo} alt="TAJDO" className="h-12 md:h-14 w-auto invert dark:invert-0" />
         </Link>
 
-        {/* Right - Donate button */}
-        <div className="hidden md:flex items-center gap-6">
+        {/* Right - Language toggle + Donate */}
+        <div className="hidden md:flex items-center gap-4">
+          <button
+            onClick={() => setLanguage(language === "en" ? "de" : "en")}
+            className="label-caps text-[11px] text-muted-foreground hover:text-foreground transition-colors px-2 py-1 border border-border"
+          >
+            {language === "en" ? "DE" : "EN"}
+          </button>
           <Link to="/donate" className="btn-donate">
-            Donate
+            {t.nav.donate}
           </Link>
         </div>
 
@@ -67,12 +75,18 @@ const Navbar = () => {
               {link.label}
             </Link>
           ))}
+          <button
+            onClick={() => setLanguage(language === "en" ? "de" : "en")}
+            className="font-body text-lg text-muted-foreground hover:text-foreground transition-colors"
+          >
+            {language === "en" ? "Deutsch" : "English"}
+          </button>
           <Link
             to="/donate"
             onClick={() => setIsOpen(false)}
             className="btn-donate mt-4"
           >
-            Donate
+            {t.nav.donate}
           </Link>
         </div>
       )}

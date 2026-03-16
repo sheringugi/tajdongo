@@ -1,21 +1,17 @@
 import { motion } from "framer-motion";
-
-const stats = [
-  { number: "500+", label: "Dogs Fed Daily" },
-  { number: "200+", label: "Sterilisations" },
-  { number: "75+", label: "Successful Adoptions" },
-  { number: "1,000+", label: "Vaccinations" },
-];
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const ImpactNumbers = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="bg-foreground text-primary-foreground py-20 section-padding">
       <div className="max-w-6xl mx-auto">
-        <p className="label-caps text-primary-foreground/40 text-center mb-12">Our Impact</p>
+        <p className="label-caps text-primary-foreground/40 text-center mb-12">{t.impact.label}</p>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
-          {stats.map((stat, index) => (
+          {t.impact.stats.map((stat, index) => (
             <motion.div
-              key={stat.label}
+              key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
