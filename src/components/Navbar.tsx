@@ -41,12 +41,24 @@ const Navbar = () => {
 
         {/* Right - Language toggle + Donate */}
         <div className="hidden md:flex items-center gap-4">
-          <button
-            onClick={() => setLanguage(language === "en" ? "de" : "en")}
-            className="label-caps text-[11px] text-muted-foreground hover:text-foreground transition-colors px-2 py-1 border border-border"
-          >
-            {language === "en" ? "DE" : "EN"}
-          </button>
+          <div className="flex items-center border border-border">
+            <button
+              onClick={() => setLanguage("en")}
+              className={`label-caps text-[11px] px-2 py-1 transition-colors ${
+                language === "en" ? "bg-foreground text-background" : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              EN
+            </button>
+            <button
+              onClick={() => setLanguage("de")}
+              className={`label-caps text-[11px] px-2 py-1 transition-colors ${
+                language === "de" ? "bg-foreground text-background" : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              DE
+            </button>
+          </div>
           <Link to="/donate" className="btn-donate">
             {t.nav.donate}
           </Link>
@@ -75,12 +87,25 @@ const Navbar = () => {
               {link.label}
             </Link>
           ))}
-          <button
-            onClick={() => setLanguage(language === "en" ? "de" : "en")}
-            className="font-body text-lg text-muted-foreground hover:text-foreground transition-colors"
-          >
-            {language === "en" ? "Deutsch" : "English"}
-          </button>
+          <div className="flex items-center gap-4">
+            <button
+              onClick={() => setLanguage("en")}
+              className={`font-body text-lg transition-colors ${
+                language === "en" ? "text-foreground font-semibold" : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              English
+            </button>
+            <span className="text-muted-foreground">|</span>
+            <button
+              onClick={() => setLanguage("de")}
+              className={`font-body text-lg transition-colors ${
+                language === "de" ? "text-foreground font-semibold" : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              Deutsch
+            </button>
+          </div>
           <Link
             to="/donate"
             onClick={() => setIsOpen(false)}
