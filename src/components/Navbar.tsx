@@ -41,12 +41,24 @@ const Navbar = () => {
 
         {/* Right - Language toggle + Donate */}
         <div className="hidden md:flex items-center gap-4">
-          <button
-            onClick={() => setLanguage(language === "en" ? "de" : "en")}
-            className="label-caps text-[11px] text-muted-foreground hover:text-foreground transition-colors px-2 py-1 border border-border"
-          >
-            {language === "en" ? "DE" : "EN"}
-          </button>
+          <div className="flex items-center border border-border">
+            <button
+              onClick={() => setLanguage("en")}
+              className={`label-caps text-[11px] px-2 py-1 transition-colors ${
+                language === "en" ? "bg-foreground text-background" : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              EN
+            </button>
+            <button
+              onClick={() => setLanguage("de")}
+              className={`label-caps text-[11px] px-2 py-1 transition-colors ${
+                language === "de" ? "bg-foreground text-background" : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              DE
+            </button>
+          </div>
           <Link to="/donate" className="btn-donate">
             {t.nav.donate}
           </Link>
