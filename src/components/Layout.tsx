@@ -1,5 +1,5 @@
 import { ReactNode, useEffect } from "react";
-import AnnouncementBar from "./AnnouncementBar";
+// import AnnouncementBar from "./AnnouncementBar";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 
@@ -16,7 +16,7 @@ const Layout = ({ children }: LayoutProps) => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <AnnouncementBar />
+      {/* <AnnouncementBar /> */}
       <Navbar />
       <main className="flex-1">{children}</main>
       <Footer />
