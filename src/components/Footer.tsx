@@ -55,10 +55,10 @@ const Footer = () => {
           <div>
             <h4 className="label-caps text-primary-foreground/40 mb-4">{t.footer.shop}</h4>
             <div className="flex flex-col gap-3">
-              <a href="https://tadjo-frontend-draft.vercel.app" target="_blank" rel="noopener noreferrer" className="font-body text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">
+              <a href="https://www.tajdo.shop" target="_blank" rel="noopener noreferrer" className="font-body text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">
                 {t.footer.onlineStore}
               </a>
-              <a href="https://tadjo-frontend-draft.vercel.app/products" target="_blank" rel="noopener noreferrer" className="font-body text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">
+              <a href="https://www.tajdo.shop/products" target="_blank" rel="noopener noreferrer" className="font-body text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">
                 {t.footer.allProducts}
               </a>
             </div>

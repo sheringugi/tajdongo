@@ -171,7 +171,7 @@ const Index = () => {
               <ArrowRight className="w-4 h-4" />
             </Link>
             <a
-              href="https://tadjo-frontend-draft.vercel.app"
+              href="https://www.tajdo.shop"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-secondary"

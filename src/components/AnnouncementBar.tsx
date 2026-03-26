@@ -7,7 +7,7 @@ const AnnouncementBar = () => {
   return (
     <div className="bg-announcement-bg text-announcement-fg py-2.5 text-center">
       <a
-        href="https://tadjo-frontend-draft.vercel.app"
+        href="https://www.tajdo.shop"
         target="_blank"
         rel="noopener noreferrer"
         className="label-caps text-[10px] inline-flex items-center gap-2 text-announcement-fg hover:opacity-80 transition-opacity"
