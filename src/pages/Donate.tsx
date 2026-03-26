@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/components/ui/use-toast";
+import { ArrowRight, ShoppingBag } from "lucide-react";
 
 const Donate = () => {
   const { t } = useLanguage();
@@ -52,6 +53,7 @@ const Donate = () => {
         </div>
       </section>
 
+      
       {/* Main Content */}
       <section id="donate-now" className="section-padding py-24">
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
@@ -84,6 +86,46 @@ const Donate = () => {
           </div>
         </div>
       </section>
+
+      {/* Interactive Shop CTA Section */}
+      <section className="py-12 section-padding bg-background">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="max-w-5xl mx-auto"
+        >
+          <div className="relative group overflow-hidden rounded-2xl border border-border bg-secondary/30 p-8 md:p-12 transition-all hover:shadow-md">
+            {/* Decorative background element */}
+            <div className="absolute top-0 right-0 -mt-8 -mr-8 w-32 h-32 bg-accent/5 rounded-full blur-3xl transition-all group-hover:bg-accent/10" />
+            
+            <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-10">
+              <div className="text-center md:text-left flex-1">
+                <div className="inline-flex items-center gap-2 mb-4 px-3 py-1 rounded-full bg-accent/10 text-accent label-caps text-[10px]">
+                  <ShoppingBag className="w-3 h-3" />
+                  {t.donate.shopCTA}
+                </div>
+                <h2 className="heading-section text-2xl md:text-3xl mb-4">{t.donate.shopTitle}</h2>
+                <p className="body-text text-base max-w-xl">
+                  {t.announcement}
+                </p>
+              </div>
+              
+              <a
+                href="https://www.tajdo.shop"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary group/btn flex items-center gap-2 px-8 py-4 whitespace-nowrap bg-foreground text-background hover:bg-foreground/90 transition-all active:scale-95"
+              >
+                {t.donate.shopButton}
+                <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
+              </a>
+            </div>
+          </div>
+        </motion.div>
+      </section>
+
 
       {/* What your donation funds */}
       <section className="bg-secondary section-padding py-24">

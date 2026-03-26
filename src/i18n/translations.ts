@@ -214,6 +214,9 @@ export const translations = {
         "We would like to thank you from the bottom of our hearts for your generosity and trust.",
         "TAJDO",
       ],
+      shopCTA: "Double the Impact",
+      shopTitle: "Shop to Save Lives",
+      shopButton: "Visit Our Shop",
       details: {
         bank: {
           title: "Bank details",
@@ -235,10 +238,10 @@ export const translations = {
       fundsLabel: "Where It Goes",
       fundsTitle: "What Your Donation Funds",
       fundsItems: [
-        { title: "Food & Water", desc: "Daily feeding rounds for 500+ dogs" },
-        { title: "Medical Care", desc: "Vaccinations, sterilisations, surgeries" },
-        { title: "Shelter Building", desc: "Towards the first Zanzibar dog shelter" },
-        { title: "Education", desc: "Community awareness programmes" },
+        { title: "Feeding Stations", desc: "Building numerous food and water bowls and placing them at various locations. Our team continuously cleans and refills them so the animals always have access to food and fresh water." },
+        { title: "Medical Care", desc: "Treating illnesses and injuries, sterilizations and rabies vaccinations and regular care such as deworming and flea treatment." },
+        { title: "Shelter Building", desc: "Building weatherproof doghouses that offer shelter and a safe retreat for street dogs." },
+        { title: "Education", desc: "Raising awareness among children and adults in Zanzibar about treating dogs with respect." },
       ],
       adoptionForm: {
         title: "Do you want to adopt?",
@@ -481,6 +484,9 @@ export const translations = {
         "Wir danken Ihnen von Herzen für Ihre Grosszügigkeit und Ihr Vertrauen.",
         "TAJDO",
       ],
+      shopCTA: "Doppelte Wirkung",
+      shopTitle: "Shoppen, um Leben zu retten",
+      shopButton: "Besuchen Sie unseren Shop",
       details: {
         bank: {
           title: "Bankverbindung",
@@ -502,10 +508,10 @@ export const translations = {
       fundsLabel: "Wohin es geht",
       fundsTitle: "Was Ihre Spende bewirkt",
       fundsItems: [
-        { title: "Futter & Wasser", desc: "Tägliche Futterrunden für 500+ Hunde" },
-        { title: "Medizinische Versorgung", desc: "Impfungen, Sterilisationen, Operationen" },
-        { title: "Bau eines Hundeheims", desc: "Für das erste Hundeheim auf Sansibar" },
-        { title: "Bildung", desc: "Programme zur Gemeinschaftsaufklärung" },
+        { title: "Futterstellen", desc: "Bau zahlreicher Futter- und Wassernäpfe an verschiedenen Standorten. Unser Team reinigt und füllt sie kontinuierlich auf, damit die Tiere immer Zugang zu Futter und frischem Wasser haben." },
+        { title: "Medizinische Versorgung", desc: "Behandlung von Krankheiten und Verletzungen, Sterilisationen und Tollwutimpfungen sowie regelmässige Pflege wie Entwurmung und Flohbehandlung." },
+        { title: "Bau von Unterkünften", desc: "Bau wetterfester Hundehütten, die Schutz und einen sicheren Rückzugsort für Strassenhunde bieten." },
+        { title: "Bildung", desc: "Sensibilisierung von Kindern und Erwachsenen auf Sansibar für einen respektvollen Umgang mit Hunden." },
       ],
       adoptionForm: {
         title: "Möchten Sie adoptieren?",
