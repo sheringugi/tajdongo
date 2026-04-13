@@ -6,10 +6,10 @@ import Layout from "@/components/Layout";
 import ImpactNumbers from "@/components/ImpactNumbers";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { IMG_RESCUE, IMG_TAJANA, IMG_NATURE } from "@/lib/images";
-import { default as IMG_VISION } from "@/assets/tajdo-vision.png";
-import { default as IMG_COMMUNITY } from "@/assets/tajdo-community.jpg";
+import { default as IMG_VISION } from "@/assets/tajdo-vision.jpeg";
+import { default as IMG_COMMUNITY } from "@/assets/tajdo-community.jpeg";
 
-import { default as IMG_EDUCATION } from "@/assets/tajdo-education.png";
+import { default as IMG_EDUCATION } from "@/assets/tajdo-education.jpeg";
 
 
 

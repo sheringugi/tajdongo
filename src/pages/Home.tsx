@@ -5,13 +5,14 @@ import { ArrowRight } from "lucide-react";
 import Layout from "@/components/Layout";
 import ImpactNumbers from "@/components/ImpactNumbers";
 import { useLanguage } from "@/i18n/LanguageContext";
-import { default as IMG_VISION } from "@/assets/tajdo-vision.png";
-import { default as IMG_COMMUNITY } from "@/assets/tajdo-community.jpg";
+import { default as IMG_VISION } from "@/assets/tajdo-vision.jpeg";
+import { default as IMG_COMMUNITY } from "@/assets/tajdo-community.jpeg";
 
-import { default as IMG_EDUCATION } from "@/assets/tajdo-education.png";
-import { IMG_RESCUE, IMG_TAJANA } from "@/lib/images";
+import { default as IMG_EDUCATION } from "@/assets/tajdo-education.jpeg";
+import { IMG_RESCUE} from "@/lib/images";
+import { default as IMG_TAJANA} from "@/assets/tajdo-maintenance.jpeg";
 
-const missionImages = [IMG_COMMUNITY, IMG_VISION, IMG_EDUCATION, IMG_COMMUNITY];
+const missionImages = [IMG_COMMUNITY, IMG_VISION, IMG_EDUCATION];
 
 const Index = () => {
   const { t } = useLanguage();
@@ -66,7 +67,7 @@ const Index = () => {
             <img
               src={IMG_TAJANA}
               alt="Tajana holding a rescued puppy"
-              className="w-full aspect-[4/5] object-cover"
+              className="w-full aspect-[4/5] object-cover object-[center_20%]"
             />
           </motion.div>
           <motion.div

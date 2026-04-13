@@ -5,8 +5,16 @@ import { IMG_NATURE, IMG_RESCUE, IMG_TAJANA } from "@/lib/images"; // Assuming t
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Adoption from "@/i18n/Adoption";
 import NotFound from "./NotFound";
+import { default as IMG_MEDICAL} from "@/assets/tajdo-medical.jpeg";
+import { default as IMG_VISION } from "@/assets/tajdo-vision.jpeg";
+import { default as IMG_COMMUNITY } from "@/assets/tajdo-community.jpeg";
+import { default as IMG_FEED } from "@/assets/tajdo-feeding.jpeg";
+import { default as IMG_EDUCATION } from "@/assets/tajdo-education.jpeg";
 
-const projectImages = [IMG_RESCUE, IMG_TAJANA, IMG_NATURE, IMG_RESCUE, IMG_TAJANA, IMG_NATURE];
+
+
+
+const projectImages = [IMG_COMMUNITY, IMG_FEED, IMG_VISION, IMG_MEDICAL, IMG_NATURE, IMG_EDUCATION];
 
 const ProjectDetail = () => {
   const { slug } = useParams();

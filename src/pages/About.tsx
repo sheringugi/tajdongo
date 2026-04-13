@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import Layout from "@/components/Layout";
 import { useLanguage } from "@/i18n/LanguageContext";
-import { IMG_TAJANA, IMG_RESCUE } from "@/lib/images";
+import { IMG_TAJANA } from "@/lib/images";
+import { default as IMG_RESCUE} from "@/assets/dollar.jpeg";
 
 const About = () => {
   const { t } = useLanguage();
