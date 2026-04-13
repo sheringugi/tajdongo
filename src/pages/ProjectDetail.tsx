@@ -10,11 +10,12 @@ import { default as IMG_VISION } from "@/assets/tajdo-vision.jpeg";
 import { default as IMG_COMMUNITY } from "@/assets/tajdo-community.jpeg";
 import { default as IMG_FEED } from "@/assets/tajdo-feeding.jpeg";
 import { default as IMG_EDUCATION } from "@/assets/tajdo-education.jpeg";
+import { default as IMG_SHELTER} from "@/assets/tajdo-shelter.jpeg";
 
 
 
 
-const projectImages = [IMG_COMMUNITY, IMG_FEED, IMG_VISION, IMG_MEDICAL, IMG_NATURE, IMG_EDUCATION];
+const projectImages = [IMG_COMMUNITY, IMG_FEED, IMG_SHELTER, IMG_MEDICAL, IMG_NATURE, IMG_EDUCATION];
 
 const ProjectDetail = () => {
   const { slug } = useParams();

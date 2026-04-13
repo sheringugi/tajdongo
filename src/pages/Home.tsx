@@ -10,9 +10,10 @@ import { default as IMG_COMMUNITY } from "@/assets/tajdo-community.jpeg";
 
 import { default as IMG_EDUCATION } from "@/assets/tajdo-education.jpeg";
 import { IMG_RESCUE} from "@/lib/images";
-import { default as IMG_TAJANA} from "@/assets/tajdo-maintenance.jpeg";
+import { default as IMG_SHELTER} from "@/assets/tajdo-shelter.jpeg";
+import { IMG_TAJANA } from "@/lib/images";
 
-const missionImages = [IMG_COMMUNITY, IMG_VISION, IMG_EDUCATION];
+const missionImages = [IMG_SHELTER, IMG_VISION, IMG_EDUCATION];
 
 const Index = () => {
   const { t } = useLanguage();

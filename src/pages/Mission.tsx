@@ -8,6 +8,7 @@ import { useLanguage } from "@/i18n/LanguageContext";
 import { IMG_RESCUE, IMG_TAJANA, IMG_NATURE } from "@/lib/images";
 import { default as IMG_VISION } from "@/assets/tajdo-vision.jpeg";
 import { default as IMG_COMMUNITY } from "@/assets/tajdo-community.jpeg";
+import { default as IMG_SHELTER} from "@/assets/tajdo-shelter.jpeg";
 
 import { default as IMG_EDUCATION } from "@/assets/tajdo-education.jpeg";
 
@@ -17,7 +18,7 @@ import { default as IMG_EDUCATION } from "@/assets/tajdo-education.jpeg";
 
 const icons = [Heart, Eye, BookOpen];
 // const images = [IMG_RESCUE, IMG_TAJANA, IMG_NATURE];
-const images = [IMG_COMMUNITY, IMG_VISION, IMG_EDUCATION, IMG_COMMUNITY];
+const images = [IMG_SHELTER, IMG_VISION, IMG_EDUCATION, IMG_COMMUNITY];
 const Mission = () => {
   const { t } = useLanguage();
   const location = useLocation();
