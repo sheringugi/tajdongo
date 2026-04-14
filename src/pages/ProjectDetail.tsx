@@ -15,7 +15,7 @@ import { default as IMG_SHELTER} from "@/assets/tajdo-shelter.jpeg";
 
 
 
-const projectImages = [IMG_COMMUNITY, IMG_FEED, IMG_SHELTER, IMG_MEDICAL, IMG_NATURE, IMG_EDUCATION];
+const projectImages = [IMG_FEED, IMG_EDUCATION, IMG_MEDICAL, IMG_NATURE, IMG_COMMUNITY];
 
 const ProjectDetail = () => {
   const { slug } = useParams();
@@ -60,26 +60,24 @@ const ProjectDetail = () => {
             ))}
           </div>
 
-          {project.slug === "successful-rehoming" ? (
-            <Adoption />
-          ) : (
-            <div className="border-t pt-8 flex justify-between items-center">
-              <Link
-                to={`/projects/${prevProject.slug}`}
-                className="inline-flex items-center text-primary hover:underline font-medium"
-              >
-                <ArrowLeft className="mr-2 h-4 w-4" />
-                Previous Project: {prevProject.title}
-              </Link>
-              <Link
-                to={`/projects/${nextProject.slug}`}
-                className="inline-flex items-center text-primary hover:underline font-medium"
-              >
-                Next Project: {nextProject.title}
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </div>
-          )}
+          {project.slug === "successful-placement" && <Adoption />}
+
+          <div className="mt-12 border-t pt-8 flex justify-between items-center">
+            <Link
+              to={`/projects/${prevProject.slug}`}
+              className="inline-flex items-center text-primary hover:underline font-medium"
+            >
+              <ArrowLeft className="mr-2 h-4 w-4" />
+              Previous Project: {prevProject.title}
+            </Link>
+            <Link
+              to={`/projects/${nextProject.slug}`}
+              className="inline-flex items-center text-primary hover:underline font-medium"
+            >
+              Next Project: {nextProject.title}
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </div>
         </div>
       </section>
     </Layout>

@@ -10,15 +10,16 @@ import { default as IMG_VISION } from "@/assets/tajdo-vision.jpeg";
 import { default as IMG_COMMUNITY } from "@/assets/tajdo-community.jpeg";
 
 import { default as IMG_EDUCATION } from "@/assets/tajdo-education.jpeg";
-import { IMG_RESCUE, IMG_TAJANA, IMG_NATURE} from "@/lib/images";
+// import { IMG_RESCUE, IMG_TAJANA, IMG_NATURE} from "@/lib/images";
 import { default as IMG_FOOD} from "@/assets/tajdo-feeding.jpeg";
 import { default as IMG_MEDICAL} from "@/assets/tajdo-medical.jpeg";
 import { default as IMG_SHELTER} from "@/assets/tajdo-shelter.jpeg";
+import { default as IMG_NATURE} from "@/assets/tajdo-team.jpeg";
 
 
 
 
-const projectImages = [IMG_COMMUNITY, IMG_FOOD, IMG_SHELTER, IMG_MEDICAL, IMG_NATURE, IMG_EDUCATION];
+const projectImages = [IMG_FOOD, IMG_EDUCATION, IMG_MEDICAL, IMG_NATURE, IMG_COMMUNITY];
 
 const Projects = () => {
   const { t } = useLanguage();

@@ -111,63 +111,59 @@ export const translations = {
       subtitle: "We create safe spaces, medical care and new life prospects for Zanzibar's street dogs.",
       items: [
         {
-          slug: "location-identification",
-          category: "Strategy",
-          title: "Location Identification",
-          description: "We have identified over 70 locations in Zanzibar where street dogs live. These locations form the basis for our future animal welfare projects.",
-          detail: [
-            "Identifying and mapping the areas where street dogs congregate is the critical first step in our strategic approach. By understanding their territories, population densities, and daily routines, we can plan our interventions more effectively.",
-            "This data informs where we place feeding stations, build shelters, and focus our medical outreach efforts, ensuring our resources are directed where they are needed most. This foundational work is carried out by dedicated volunteers who survey neighborhoods and engage with local residents, building a comprehensive map of need across Zanzibar.",
-          ],
-        },
-        {
-          slug: "feeding-stations",
-          category: "Nutrition",
-          title: "Feeding Stations",
-          description: "To ensure the dogs are regularly fed, we have built numerous food and water bowls and placed them at various locations. Our TAJDO team continuously cleans and refills them so the animals always have access to food and fresh water.",
+          slug: "care",
+          category: "Care",
+          title: "Care",
+          description: "Our team regularly cleans and refills our specially designed feeding stations with clean water and fresh food.",
           detail: [
             "Consistent access to nutrition and clean water is fundamental to the health of the street dog population. Our feeding stations are more than just bowls; they are custom-built 'dog bars' designed for durability and hygiene. Our dedicated TAJDO team conducts regular rounds to thoroughly clean and refill these stations.",
-            "This not only prevents the spread of disease but also builds trust with the local dog populations, making them more receptive to future medical care and interaction. It's a simple act that provides daily comfort and life-sustaining support.",
+            "This cleaning and maintenance routine is critical. It not only prevents the spread of disease but also builds trust with the local dog populations, making them more receptive to future medical care and interaction. It's a simple act that provides daily comfort and life-sustaining support.",
+            "To protect the dogs from Zanzibar's harsh climate, including intense sun and heavy rains, we also construct simple yet durable, weatherproof doghouses in key locations. These shelters offer a safe and dry place for dogs to rest, recover from illness, or raise their puppies.",
+            "Dog kennels are being built at various locations in local villages to provide the dogs with a safe and loving environment, as well as protection from bad weather."
           ],
         },
         {
-          slug: "shelter-construction",
-          category: "Infrastructure",
-          title: "Shelter Construction",
-          description: "In addition, we have built weatherproof doghouses that offer shelter and a safe retreat for street dogs.",
-          detail: [
-            "Zanzibar's climate can be harsh, with intense sun and heavy rains. To provide protection from the elements, we construct simple yet durable, weatherproof doghouses in key locations. These shelters offer a safe and dry place for dogs to rest, recover from illness, or raise their puppies.",
-            "Built with local materials, they provide a crucial retreat from the stresses of street life, reducing their vulnerability and improving their overall well-being. Each doghouse is a small sanctuary, a symbol of safety and care in a challenging environment.",
-          ],
-        },
-        {
-          slug: "veterinary-treatment",
-          category: "Medical Care",
-          title: "Veterinary Treatment",
-          description: "In cooperation with local veterinarians, we treat illnesses and injuries – including cancer, serious wounds, as well as necessary sterilizations and rabies vaccinations. Regular care such as deworming and flea treatment is also part of our services.",
-          detail: [
-            "Our medical intervention program is comprehensive and life-saving. In partnership with compassionate local veterinarians, we provide a wide range of treatments. Sterilization and spaying are at the core of our mission, humanely controlling the street dog population and preventing future suffering.",
-            "We also run vaccination campaigns against rabies and other common diseases, protecting both dogs and the human community. Beyond preventative care, we treat acute injuries, skin conditions, and serious illnesses like cancer, offering a chance at a healthy life to dogs who would otherwise have no hope.",
-          ],
-        },
-        {
-          slug: "successful-rehoming",
-          category: "Adoption",
-          title: "Successful Rehoming",
-          description: "We have already been able to give seven street dogs, who previously lived in life-threatening conditions, a loving new home with suitable adoptive families.",
-          detail: [
-            "While our goal is to improve the lives of all street dogs, some are too vulnerable, young, or injured to survive on their own. For these special cases, we run a careful and considered adoption program. We have successfully placed seven dogs into loving, permanent homes with families who understand their needs.",
-            "Our process involves thorough vetting of potential adopters to ensure a perfect match, providing a second chance for a life filled with love, safety, and companionship. Each adoption is a story of hope and transformation.",
-          ],
-        },
-        {
-          slug: "community-awareness",
+          slug: "education",
           category: "Education",
-          title: "Community Awareness",
-          description: "Furthermore, we are raising awareness among children and adults in Zanzibar about treating dogs with respect and learning more about the animal “dog” – an important step towards a sustainable coexistence between humans and animals.",
+          title: "Education and Awareness",
+          description: "In Zanzibar, there is often a lack of knowledge about how to handle dogs, partly due to cultural and religious influences.",
           detail: [
-            "Long-term change requires a shift in perspective. Our education and awareness programs are designed to foster a culture of compassion and respect for animals within the local community. We conduct workshops in schools and community centers, teaching children and adults about dog behavior, safety, and the importance of animal welfare.",
-            "By dispelling myths and addressing cultural misconceptions, we are building a foundation for a more harmonious coexistence between humans and animals in Zanzibar. Education is the most powerful tool for creating a sustainable and kind future.",
+            "In many parts of Zanzibar, street dogs are often misunderstood or considered 'unclean' due to cultural and religious influences. This misinformation can unfortunately lead to neglect or mistreatment, despite the fact that compassionate care for animals is a universal value.",
+            "Long-term change requires a shift in perspective. Our education and awareness programs are designed to foster a culture of compassion and respect. We conduct workshops and run targeted school projects with Dollar to teach children and adults about dog behavior and safety.",
+            "By dispelling myths and addressing cultural misconceptions, we are building a foundation for a more harmonious coexistence between humans and animals. In this way, young people learn from an early age to treat dogs with respect and recognise how even small actions can improve lives.",
+            "Education is the most powerful tool for creating a sustainable and kind future for Zanzibar."
+          ],
+        },
+        {
+          slug: "medical-care",
+          category: "Medical",
+          title: "Medical Care",
+          description: "In collaboration with local vets, we regularly neuter, vaccinate and treat stray dogs to prevent suffering.",
+          detail: [
+            "Our medical intervention program is comprehensive and life-saving. In partnership with compassionate local veterinarians, we provide a wide range of treatments including vaccinations against rabies and other common diseases, protecting both dogs and the human community.",
+            "In collaboration with local vets, we regularly neuter, vaccinate and treat stray dogs to prevent suffering before it even begins, and to save lives that are already in danger.",
+            "Beyond preventative care, we treat acute injuries, skin conditions, and serious illnesses like cancer. Regular care such as deworming and flea treatment is also a vital part of our services, offering a chance at a healthy life to dogs who would otherwise have no hope."
+          ],
+        },
+        {
+          slug: "successful-placement",
+          category: "Adoption",
+          title: "Successful Placement",
+          description: "Our aim is to improve the lives of all street dogs, but some dogs are too vulnerable to survive on their own.",
+          detail: [
+            "While our goal is to improve the lives of all street dogs, some are too vulnerable, young, or injured to survive on their own on the streets. For these special cases, we run a careful and considered adoption program.",
+            "Our aim is to improve the lives of all street dogs, but some dogs are too vulnerable to survive on their own on the streets. Our adoption programme carefully matches these special cases with loving, permanent families.",
+            "Our process involves thorough vetting of potential adopters to ensure a perfect match, providing a second chance for a life filled with love, safety, and companionship. Each adoption is a story of hope and transformation."
+          ],
+        },
+        {
+          slug: "campaigns",
+          category: "Campaigns",
+          title: "Campaigns",
+          description: "Through regular neutering campaigns, necessary vaccinations, operations and neutering are carried out.",
+          detail: [
+            "Neutering and sterilization are at the core of our long-term mission to humanely control the street dog population and prevent future suffering. By conducting large-scale campaigns, we can address the root cause of the crisis in Zanzibar.",
+            "Through regular neutering campaigns, necessary vaccinations, operations and neutering are carried out. These measures are crucial for the health of the dogs and, at the same time, an important step towards sustainably regulating the stray dog population and improving the quality of life for local residents."
           ],
         },
       ],
@@ -260,6 +256,7 @@ export const translations = {
         { number: "6", label: "Feeding and watering stations" },
         { number: "7", label: "Successfully adopted dogs" },
         { number: "100", label: "Medically treated dogs" },
+        { number: "120", label: "School Projects" },
       ],
     },
     // Footer
@@ -382,63 +379,59 @@ export const translations = {
       subtitle: "Wir schaffen sichere Orte, medizinische Versorgung und neue Lebensperspektiven für Sansibars Strassenhunde.",
       items: [
         {
-          slug: "location-identification",
-          category: "Strategie",
-          title: "Standortidentifikation",
-          description: "Wir haben über 70 Standorte auf Sansibar identifiziert, an denen Strassenhunde leben. Diese Standorte bilden die Basis für unsere zukünftigen Tierschutzprojekte.",
-          detail: [
-            "Die Identifizierung und Kartierung der Gebiete, in denen sich Strassenhunde aufhalten, ist der entscheidende erste Schritt in unserem strategischen Ansatz. Indem wir ihre Reviere, Populationsdichten und täglichen Routinen verstehen, können wir unsere Eingriffe effektiver planen.",
-            "Diese Daten informieren darüber, wo wir Futterstellen einrichten, Unterkünfte bauen und unsere medizinischen Hilfsaktionen konzentrieren, um sicherzustellen, dass unsere Ressourcen dort eingesetzt werden, wo sie am dringendsten benötigt werden. Diese grundlegende Arbeit wird von engagierten Freiwilligen durchgeführt, die Stadtteile erkunden und mit Anwohnern sprechen, um eine umfassende Karte des Bedarfs auf ganz Sansibar zu erstellen.",
-          ],
-        },
-        {
-          slug: "feeding-stations",
-          category: "Ernährung",
-          title: "Futterstellen",
-          description: "Um sicherzustellen, dass die Hunde regelmässig gefüttert werden, haben wir zahlreiche Futter- und Wassernäpfe gebaut und an verschiedenen Standorten platziert. Unser TAJDO-Team reinigt und füllt sie kontinuierlich auf, damit die Tiere immer Zugang zu Futter und frischem Wasser haben.",
+          slug: "care",
+          category: "Versorgung",
+          title: "Versorgung",
+          description: "Unser Team reinigt und füllt regelmäßig unsere speziell angefertigten Futterstellen mit sauberem Wasser und frischem Futter auf.",
           detail: [
             "Ein beständiger Zugang zu Nahrung und sauberem Wasser ist für die Gesundheit der Strassenhundepopulation von grundlegender Bedeutung. Unsere Futterstationen sind mehr als nur Schüsseln; es sind massgefertigte 'Hundebars', die auf Langlebigkeit und Hygiene ausgelegt sind.",
-            "Unser engagiertes TAJDO-Team führt regelmässige Runden durch, um diese Stationen gründlich zu reinigen und aufzufüllen. Dies verhindert nicht nur die Ausbreitung von Krankheiten, sondern schafft auch Vertrauen bei den lokalen Hundepopulationen, was sie für zukünftige medizinische Versorgung und Interaktion empfänglicher macht. Es ist eine einfache Handlung, die täglichen Komfort und lebenserhaltende Unterstützung bietet.",
+            "Unser engagiertes TAJDO-Team führt regelmässige Runden durch, um diese Stationen gründlich zu reinigen und aufzufüllen. Dies verhindert nicht nur die Ausbreitung von Krankheiten, sondern schafft auch Vertrauen bei den lokalen Hundepopulationen, was sie für zukünftige medizinische Versorgung und Interaktion empfänglicher macht.",
+            "Um die Hunde vor dem rauen Klima Sansibars zu schützen – mit intensiver Sonne und starken Regenfällen – errichten wir an wichtigen Standorten einfache, aber langlebige und wetterfeste Hundehütten. Diese Unterkünfte bieten einen sicheren und trockenen Ort, an dem sich Hunde ausruhen, von Krankheiten erholen oder ihre Welpen aufziehen können.",
+            "Hundehütten werden an diversen Standorten in lokalen Dörfern gebaut, um den Hunden eine sichere und liebevolle Umgebung zu bieten, wie auch vor Unwetter zu schützen."
           ],
         },
         {
-          slug: "shelter-construction",
-          category: "Infrastruktur",
-          title: "Bau von Unterkünften",
-          description: "Zusätzlich haben wir wetterfeste Hundehütten gebaut, die Schutz und einen sicheren Rückzugsort für Strassenhunde bieten.",
+          slug: "education",
+          category: "Bildung",
+          title: "Bildung und Aufklärung",
+          description: "Auf Sansibar fehlt es oft an Wissen im Umgang mit Hunden, geprägt auch durch kulturelle und religiöse Einflüsse.",
           detail: [
-            "Das Klima auf Sansibar kann rau sein, mit intensiver Sonne und starken Regenfällen. Um Schutz vor den Elementen zu bieten, errichten wir an wichtigen Standorten einfache, aber langlebige und wetterfeste Hundehütten.",
-            "Diese Unterkünfte bieten einen sicheren und trockenen Ort, an dem sich Hunde ausruhen, von Krankheiten erholen oder ihre Welpen aufziehen können. Gebaut mit lokalen Materialien, bieten sie einen wichtigen Rückzugsort von den Belastungen des Strassenlebens, verringern ihre Anfälligkeit und verbessern ihr allgemeines Wohlbefinden. Jede Hundehütte ist ein kleines Heiligtum, ein Symbol für Sicherheit und Fürsorge in einer herausfordernden Umgebung.",
+            "In vielen Teilen Sansibars werden Strassenhunde oft missverstanden oder aufgrund kultureller und religiöser Einflüsse als 'unrein' betrachtet. Diese Fehlinformationen führen leider oft dazu, dass viele Hunde vernachlässigt oder sogar misshandelt werden.",
+            "Langfristige Veränderung erfordert einen Perspektivwechsel. Unsere Bildungs- und Aufklärungsprogramme zielen darauf ab, eine Kultur des Mitgefühls und des Respekts zu fördern. Wir führen Workshops durch und leiten gezielte Schulprojekte mit Dollar, um Kindern und Erwachsenen Wissen über Hundeverhalten und Sicherheit zu vermitteln.",
+            "Indem wir Mythen ausräumen und kulturelle Missverständnisse ansprechen, schaffen wir die Grundlage für ein harmonischeres Zusammenleben von Mensch und Tier. So lernen Kinder und Jugendliche schon früh, Hunde mit Respekt zu behandeln und erkennen, wie schon kleine Taten das Leben der Strassenhunde verbessern können.",
+            "Bildung ist das mächtigste Werkzeug, um eine nachhaltige und freundliche Zukunft für Sansibar zu schaffen."
           ],
         },
         {
-          slug: "veterinary-treatment",
-          category: "Medizinische Versorgung",
-          title: "Tierärztliche Behandlung",
-          description: "In Zusammenarbeit mit lokalen Tierärzten behandeln wir Krankheiten und Verletzungen – darunter Krebs, schwere Wunden sowie notwendige Sterilisationen und Tollwutimpfungen. Regelmässige Pflege wie Entwurmung und Flohbehandlung gehört ebenfalls zu unseren Leistungen.",
+          slug: "medical-care",
+          category: "Medizin",
+          title: "Medizinische Versorgung",
+          description: "In Zusammenarbeit mit lokalen Tierärzten sterilisieren, impfen und behandeln wir Straßenhunde regelmässig.",
           detail: [
-            "Unser medizinisches Interventionsprogramm ist umfassend und lebensrettend. In Partnerschaft mit mitfühlenden lokalen Tierärzten bieten wir eine breite Palette von Behandlungen an. Sterilisation und Kastration stehen im Mittelpunkt unserer Mission, um die Strassenhundepopulation human zu kontrollieren und zukünftiges Leid zu verhindern.",
-            "Wir führen auch Impfkampagnen gegen Tollwut und andere häufige Krankheiten durch, um sowohl die Hunde als auch die menschliche Gemeinschaft zu schützen. Über die Präventivpflege hinaus behandeln wir akute Verletzungen, Hauterkrankungen und schwere Krankheiten wie Krebs und bieten Hunden, die sonst keine Hoffnung hätten, eine Chance auf ein gesundes Leben.",
+            "Unser medizinisches Interventionsprogramm ist umfassend und lebensrettend. In Partnerschaft mit mitfühlenden lokalen Tierärzten bieten wir eine breite Palette von Behandlungen an, einschliesslich Impfkampagnen gegen Tollwut und andere häufige Krankheiten, um sowohl die Hunde als auch die menschliche Gemeinschaft zu schützen.",
+            "In Zusammenarbeit mit lokalen Tierärzten sterilisieren, impfen und behandeln wir Straßenhunde regelmässig, um Leid zu verhindern, bevor es überhaupt beginnt, und um Leben zu retten, die bereits in Gefahr sind.",
+            "Über die Präventivpflege hinaus behandeln wir akute Verletzungen, Hauterkrankungen und schwere Krankheiten wie Krebs. Regelmässige Pflege wie Entwurmung und Flohbehandlung gehört ebenfalls zu unseren Leistungen und bietet Hunden, die sonst keine Hoffnung hätten, eine Chance auf ein gesundes Leben."
           ],
         },
         {
-          slug: "successful-rehoming",
+          slug: "successful-placement",
           category: "Adoption",
           title: "Erfolgreiche Vermittlung",
-          description: "Wir konnten bereits sieben Strassenhunden, die zuvor unter lebensbedrohlichen Bedingungen lebten, ein liebevolles neues Zuhause bei passenden Adoptivfamilien geben.",
+          description: "Unser Ziel ist es, das Leben aller Strassenhunde zu verbessern, doch manche Hunde sind zu verletzlich.",
           detail: [
-            "Obwohl unser Ziel darin besteht, das Leben aller Strassenhunde zu verbessern, sind einige zu verletzlich, jung oder verletzt, um allein zu überleben. Für diese besonderen Fälle führen wir ein sorgfältiges und durchdachtes Adoptionsprogramm durch.",
-            "Wir haben bereits sieben Hunde erfolgreich in liebevolle, dauerhafte Zuhause bei Familien vermittelt, die ihre Bedürfnisse verstehen. Unser Prozess umfasst eine gründliche Überprüfung potenzieller Adoptiveltern, um eine perfekte Übereinstimmung zu gewährleisten und eine zweite Chance auf ein Leben voller Liebe, Sicherheit und Kameradschaft zu ermöglichen. Jede Adoption ist eine Geschichte der Hoffnung und Transformation.",
+            "Obwohl unser Ziel darin besteht, das Leben aller Strassenhunde zu verbessern, sind einige zu verletzlich, jung oder verletzt, um allein auf der Strasse zu überleben. Für diese besonderen Fälle führen wir ein sorgfältiges und durchdachtes Adoptionsprogramm durch.",
+            "Unser Ziel ist es, das Leben aller Strassenhunde zu verbessern, doch manche Hunde sind zu verletzlich, um alleine auf der Strasse zu überleben. Unser Adoptionsprogramm bringt diese besonderen Fälle sorgfältig mit liebevollen, dauerhaften Familien zusammen.",
+            "Unser Prozess umfasst eine gründliche Überprüfung potenzieller Adoptiveltern, um eine perfekte Übereinstimmung zu gewährleisten und eine zweite Chance auf ein Leben voller Liebe, Sicherheit und Kameradschaft zu ermöglichen. Jede Adoption ist eine Geschichte der Hoffnung und Transformation."
           ],
         },
         {
-          slug: "community-awareness",
-          category: "Bildung",
-          title: "Aufklärung",
-          description: "Darüber hinaus sensibilisieren wir Kinder und Erwachsene auf Sansibar für einen respektvollen Umgang mit Hunden und vermitteln Wissen über das Tier 'Hund' – ein wichtiger Schritt hin zu einem nachhaltigen Zusammenleben von Mensch und Tier.",
+          slug: "campaigns",
+          category: "Kampagnen",
+          title: "Kampagnen",
+          description: "Durch regelmässige Kastrationskampagnen werden notwendige Impfungen, Operationen und Kastrationen durchgeführt.",
           detail: [
-            "Langfristige Veränderung erfordert einen Perspektivwechsel. Unsere Bildungs- und Aufklärungsprogramme zielen darauf ab, eine Kultur des Mitgefühls und des Respekts für Tiere in der lokalen Gemeinschaft zu fördern.",
-            "Wir führen Workshops in Schulen und Gemeindezentren durch, um Kindern und Erwachsenen Wissen über Hundeverhalten, Sicherheit und die Bedeutung des Tierschutzes zu vermitteln. Indem wir Mythen ausräumen und kulturelle Missverständnisse ansprechen, schaffen wir die Grundlage für ein harmonischeres Zusammenleben von Mensch und Tier auf Sansibar. Bildung ist das mächtigste Werkzeug, um eine nachhaltige und freundliche Zukunft zu schaffen.",
+            "Sterilisation und Kastration stehen im Mittelpunkt unserer langfristigen Mission, um die Strassenhundepopulation human zu kontrollieren und zukünftiges Leid zu verhindern. Durch die Durchführung gross angelegter Kampagnen können wir die Ursache der Krise auf Sansibar angehen.",
+            "Durch regelmässige Kastrationskampagnen werden notwendige Impfungen, Operationen und Kastrationen durchgeführt. Diese Massnahmen sind entscheidend für die Gesundheit der Hunde und gleichzeitig ein wichtiger Schritt, um die Strassenhundepopulation nachhaltig zu regulieren und die Lebensqualität der Anwohner zu verbessern."
           ],
         },
       ],

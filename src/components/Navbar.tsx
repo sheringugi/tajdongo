@@ -50,8 +50,11 @@ const Navbar = () => {
         </div>
 
         {/* Center logo */}
-        <Link to="/" className="absolute left-1/2 -translate-x-1/2 z-10">
-          <img src={logo} alt="TAJDO" className="h-20 md:h-28 w-auto invert dark:invert-0" />
+        <Link to="/" className="absolute left-1/2 -translate-x-1/2 z-10 flex flex-col items-center">
+          <img src={logo} alt="TAJDO" className="h-12 md:h-20 w-auto invert dark:invert-0" />
+          <span className="label-caps text-[20px] md:text-[31px] mt-0.5 tracking-[0.1em] text-foreground">
+            TAJDO
+          </span>
         </Link>
 
         {/* Right - Language toggle + Donate */}
