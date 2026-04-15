@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ['"Cormorant Garamond"', 'Georgia', 'serif'],
-        body: ['"Jost"', 'system-ui', 'sans-serif'],
+        display: ['"Cormorant Garamond"'],
+        body: ['"Cormorant Garamond"'],
       },
       colors: {
         border: "hsl(var(--border))",

@@ -252,11 +252,11 @@ export const translations = {
     impact: {
       label: "Our Impact",
       stats: [
-        { number: "70", label: "Identified locations in Zanzibar" },
-        { number: "6", label: "Feeding and watering stations" },
+        { number: "70+", label: "Identified locations in Zanzibar" },
+        { number: "10", label: "Feeding and watering stations" },
         { number: "7", label: "Successfully adopted dogs" },
-        { number: "100", label: "Medically treated dogs" },
-        { number: "120", label: "School Projects" },
+        { number: "120", label: "Medically treated dogs" },
+        { number: "2", label: "School Projects" },
       ],
     },
     // Footer

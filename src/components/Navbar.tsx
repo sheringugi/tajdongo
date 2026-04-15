@@ -41,8 +41,9 @@ const Navbar = () => {
             <NavLink
               key={link.href}
               to={link.href}
-              className="label-caps text-[11px] transition-colors hover:text-foreground text-muted-foreground"
-              activeClassName="text-foreground"
+            end={link.href === "/"}
+            className="label-caps text-[11px] transition-colors hover:text-foreground text-muted-foreground relative py-1"
+            activeClassName="text-foreground font-medium after:absolute after:bottom-0 after:left-0 after:right-0 after:h-px after:bg-foreground"
             >
               {link.label}
             </NavLink>
@@ -52,7 +53,7 @@ const Navbar = () => {
         {/* Center logo */}
         <Link to="/" className="absolute left-1/2 -translate-x-1/2 z-10 flex flex-col items-center">
           <img src={logo} alt="TAJDO" className="h-12 md:h-20 w-auto invert dark:invert-0" />
-          <span className="label-caps text-[20px] md:text-[31px] mt-0.5 tracking-[0.1em] text-foreground">
+          <span className="label-caps text-[20px] md:text-[29px] mt-0.5 tracking-[0.1em] text-foreground">
             TAJDO
           </span>
         </Link>
@@ -102,8 +103,9 @@ const Navbar = () => {
                   key={link.href}
                   to={link.href}
                   onClick={() => setIsOpen(false)}
+                end={link.href === "/"}
                   className="px-6 py-3 label-caps text-xs transition-colors text-muted-foreground hover:text-foreground"
-                  activeClassName="text-foreground"
+                activeClassName="text-foreground bg-muted/30 font-medium"
                 >
                   {link.label}
                 </NavLink>
@@ -112,7 +114,8 @@ const Navbar = () => {
                 <NavLink
                   to="/donate"
                   onClick={() => setIsOpen(false)}
-                  className="label-caps text-xs transition-colors text-muted-foreground hover:text-foreground"
+                  className="px-6 py-3 label-caps text-xs transition-colors text-muted-foreground hover:text-foreground block"
+                  activeClassName="text-foreground bg-muted/30 font-medium"
                 >
                   {t.nav.donate}
                 </NavLink>

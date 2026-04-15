@@ -8,7 +8,7 @@ const ImpactNumbers = () => {
     <section className="bg-foreground text-primary-foreground py-20 section-padding">
       <div className="max-w-6xl mx-auto">
         <p className="label-caps text-primary-foreground/40 text-center mb-12">{t.impact.label}</p>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+        <div className="grid grid-cols-5 gap-4 md:gap-8 lg:gap-12">
           {t.impact.stats.map((stat, index) => (
             <motion.div
               key={index}
@@ -18,7 +18,7 @@ const ImpactNumbers = () => {
               transition={{ delay: index * 0.15, duration: 0.6 }}
               className="text-center"
             >
-              <p className="font-display text-4xl md:text-5xl lg:text-6xl font-light text-primary-foreground mb-2">
+              <p className="font-display text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-light text-primary-foreground mb-2">
                 {stat.number}
               </p>
               <p className="label-caps text-[10px] text-primary-foreground/60">{stat.label}</p>

@@ -34,7 +34,7 @@ const Projects = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
           >
-            <p className="label-caps mb-4">{t.projects.label}</p>
+            <p className="label text-2xl mb-4">{t.projects.label}</p>
             <h1 className="heading-display mb-6">{t.projects.title}</h1>
             <p className="body-text max-w-2xl mx-auto text-lg">{t.projects.subtitle}</p>
           </motion.div>

@@ -11,7 +11,9 @@ import { default as IMG_COMMUNITY } from "@/assets/tajdo-community.jpeg";
 import { default as IMG_EDUCATION } from "@/assets/tajdo-education.jpeg";
 import { IMG_RESCUE} from "@/lib/images";
 import { default as IMG_SHELTER} from "@/assets/tajdo-shelter.jpeg";
-import { IMG_TAJANA } from "@/lib/images";
+// import { IMG_TAJANA } from "@/lib/images";
+import { default as IMG_TAJANA} from "@/assets/tajdo-maintenance.jpeg";
+
 
 const missionImages = [IMG_SHELTER, IMG_VISION, IMG_EDUCATION];
 
@@ -36,7 +38,7 @@ const Index = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="max-w-xl"
           >
-            <p className="label-caps text-primary-foreground/70 mb-4">{t.index.heroLabel}</p>
+            <p className="label-bold text-3xl text-primary-foreground/70 mb-4">{t.index.heroLabel}</p>
             <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-light text-primary-foreground leading-[1.1] mb-6">
               {t.index.heroTitle1}<br />{t.index.heroTitle2}
             </h1>
