@@ -6,6 +6,8 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/components/ui/use-toast";
+import { PartnerAd } from "@/components/tajdo-ads";
+import { default as IMG_VISION } from "@/assets/tajdo-vision.jpeg";
 import { ArrowRight, ShoppingBag } from "lucide-react";
 
 const Donate = () => {
@@ -84,6 +86,18 @@ const Donate = () => {
               <p className="body-text text-sm">{t.donate.details.info.desc}</p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Partner Ad - New section for Donate page */}
+      <section className="section-padding py-12">
+        <div className="max-w-6xl mx-auto">
+          <PartnerAd
+            brandName={t.partners.vets.brand}
+            description={t.partners.vets.description}
+            ctaUrl={t.partners.vets.url}
+            logoUrl={IMG_VISION}
+          />
         </div>
       </section>
 

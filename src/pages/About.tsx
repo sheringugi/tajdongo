@@ -4,6 +4,9 @@ import { useLanguage } from "@/i18n/LanguageContext";
 // import { IMG_TAJANA } from "@/lib/images";
 import { default as IMG_RESCUE} from "@/assets/dollar.jpeg";
 import { default as IMG_TAJANA} from "@/assets/tajdo-origin-1.jpg";
+import { PartnerAd } from "@/components/tajdo-ads";
+import { default as IMG_SHELTER } from "@/assets/tajdo-shelter.jpeg";
+
 const About = () => {
   const { t } = useLanguage();
 
@@ -21,6 +24,18 @@ const About = () => {
             <h1 className="heading-display mb-6">{t.about.title}</h1>
             <p className="body-text max-w-2xl mx-auto text-lg">{t.about.subtitle}</p>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Partner Ad - Placed at the top for early visibility */}
+      <section className="section-padding py-12">
+        <div className="max-w-6xl mx-auto">
+          <PartnerAd
+            brandName={t.partners.vets.brand}
+            description={t.partners.vets.description}
+            ctaUrl={t.partners.vets.url}
+            logoUrl={IMG_SHELTER}
+          />
         </div>
       </section>
 

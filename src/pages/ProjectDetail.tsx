@@ -11,6 +11,7 @@ import { default as IMG_COMMUNITY } from "@/assets/tajdo-community.jpeg";
 import { default as IMG_FEED } from "@/assets/tajdo-feeding.jpeg";
 import { default as IMG_EDUCATION } from "@/assets/tajdo-education.jpeg";
 import { default as IMG_SHELTER} from "@/assets/tajdo-shelter.jpeg";
+import { PartnerAd } from "@/components/tajdo-ads";
 
 
 
@@ -59,6 +60,17 @@ const ProjectDetail = () => {
               <p key={index} className="body-text text-lg">{paragraph}</p>
             ))}
           </div>
+
+          {/* Partner Ad */}
+          <div className="my-12">
+            <PartnerAd
+              brandName={t.partners.tours.brand}
+              description={t.partners.tours.description}
+              ctaUrl={t.partners.tours.url}
+              logoUrl={IMG_VISION} // Using IMG_VISION for this ad
+            />
+          </div>
+
 
           {project.slug === "successful-placement" && <Adoption />}
 

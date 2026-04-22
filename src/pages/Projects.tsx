@@ -14,6 +14,7 @@ import { default as IMG_EDUCATION } from "@/assets/tajdo-education.jpeg";
 import { default as IMG_FOOD} from "@/assets/tajdo-feeding.jpeg";
 import { default as IMG_MEDICAL} from "@/assets/tajdo-medical.jpeg";
 import { default as IMG_SHELTER} from "@/assets/tajdo-shelter.jpeg";
+import { PartnerAd } from "@/components/tajdo-ads";
 import { default as IMG_NATURE} from "@/assets/tajdo-team.jpeg";
 
 
@@ -41,6 +42,17 @@ const Projects = () => {
         </div>
       </section>
 
+      {/* Partner Ad */}
+      <section className="section-padding py-12">
+        <div className="max-w-6xl mx-auto">
+          <PartnerAd
+            brandName={t.partners.welfare.brand}
+            description={t.partners.welfare.description}
+            ctaUrl={t.partners.welfare.url}
+            logoUrl={IMG_NATURE}
+          />
+        </div>
+      </section>
 
       {/* Project cards grid */}
       <section className="section-padding pb-24">

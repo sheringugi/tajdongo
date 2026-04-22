@@ -7,6 +7,7 @@ import ImpactNumbers from "@/components/ImpactNumbers";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { IMG_RESCUE, IMG_TAJANA, IMG_NATURE } from "@/lib/images";
 import { default as IMG_VISION } from "@/assets/tajdo-vision.jpeg";
+import { PartnerAd } from "@/components/tajdo-ads";
 import { default as IMG_COMMUNITY } from "@/assets/tajdo-community.jpeg";
 import { default as IMG_SHELTER} from "@/assets/tajdo-shelter.jpeg";
 
@@ -55,7 +56,24 @@ const Mission = () => {
       {/* Mission sections */}
       {t.mission.sections.map((section, index) => {
         const Icon = icons[index];
+        const isThirdPillar = index === 2;
+        
         return (
+          <>
+          {/* Inject Ad between Pillar 2 and 3 */}
+          {isThirdPillar && (
+            <section className="section-padding py-12">
+              <div className="max-w-6xl mx-auto">
+                <PartnerAd
+                  brandName={t.partners.welfare.brand}
+                  description={t.partners.welfare.description}
+                  ctaUrl={t.partners.welfare.url}
+                  logoUrl={IMG_NATURE}
+                />
+              </div>
+            </section>
+          )}
+          
           <section
             key={index}
             ref={(el) => (sectionRefs.current[index] = el)}
@@ -95,6 +113,7 @@ const Mission = () => {
               </motion.div>
             </div>
           </section>
+          </>
         );
       })}
 

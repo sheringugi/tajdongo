@@ -11,6 +11,7 @@ import { default as IMG_COMMUNITY } from "@/assets/tajdo-community.jpeg";
 import { default as IMG_EDUCATION } from "@/assets/tajdo-education.jpeg";
 import { IMG_RESCUE} from "@/lib/images";
 import { default as IMG_SHELTER} from "@/assets/tajdo-shelter.jpeg";
+import { PartnerAd } from "@/components/tajdo-ads";
 // import { IMG_TAJANA } from "@/lib/images";
 import { default as IMG_TAJANA} from "@/assets/tajdo-maintenance.jpeg";
 
@@ -90,6 +91,18 @@ const Index = () => {
               {t.index.readStory}
             </Link>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Partner Ad - Higher placement for variety */}
+      <section className="section-padding py-12 bg-[#F5F0E8]">
+        <div className="max-w-6xl mx-auto">
+          <PartnerAd
+            brandName={t.partners.tours.brand}
+            description={t.partners.tours.description}
+            ctaUrl={t.partners.tours.url}
+            logoUrl={IMG_COMMUNITY}
+          />
         </div>
       </section>
 

@@ -271,6 +271,34 @@ export const translations = {
         "For any inquiries or to exercise your rights, please contact our Data Protection Officer at info@tajdo.ch or via mail at Sennweidstrasse 2A, CH-6276 Hohenrain.",
       ],
     },
+    // Ads
+    ads: {
+      sponsored: "Sponsored",
+      spotlight: "Partner Spotlight",
+      learnMore: "Learn More",
+      visitSite: "Visit Site",
+      logo: "Logo",
+    },
+    // Partner Ads Content
+    partners: {
+      tours: {
+        brand: "Zanzibar Eco Tours",
+        tagline: "Explore Zanzibar Responsibly",
+        description: "We offer sustainable eco-tours across Zanzibar and proudly support the dogs and communities TAJDO serves.",
+        url: "https://www.tajdo.shop",
+      },
+      welfare: {
+        brand: "Swiss Animal Welfare Co.",
+        description: "Supporting the rescue and rehabilitation of street animals worldwide.",
+        url: "https://www.tajdo.shop",
+      },
+      vets: {
+        brand: "Global Vet Alliance",
+        tagline: "Quality Care for Every Animal",
+        description: "Partnering with TAJDO to provide essential medical supplies and expertise for Zanzibar's dogs.",
+        url: "https://www.tajdo.shop",
+      }
+    },
     // Footer
     footer: {
       stayConnected: "Stay Connected",
@@ -547,6 +575,34 @@ export const translations = {
         "Als betroffene Person haben Sie das Recht auf Auskunft, Berichtigung oder Löschung Ihrer persönlichen Daten. Sie können zudem die Verarbeitung einschränken, die Datenübertragbarkeit verlangen oder eine Einwilligung jederzeit widerrufen. Wir verwenden auch Cookies zur Verbesserung Ihres Nutzererlebnisses; diese können Sie über Ihre Browsereinstellungen verwalten.",
         "Für Anfragen oder zur Ausübung Ihrer Rechte kontaktieren Sie bitte unseren Datenschutzbeauftragten unter info@tajdo.ch oder per Post an die Sennweidstrasse 2A, CH-6276 Hohenrain.",
       ],
+    },
+    // Ads
+    ads: {
+      sponsored: "Gesponsert",
+      spotlight: "Partner im Fokus",
+      learnMore: "Mehr erfahren",
+      visitSite: "Website besuchen",
+      logo: "Logo",
+    },
+    // Partner Ads Content
+    partners: {
+      tours: {
+        brand: "Zanzibar Eco Tours",
+        tagline: "Sansibar verantwortungsbewusst erkunden",
+        description: "Wir bieten nachhaltige Öko-Touren auf ganz Sansibar an und unterstützen stolz die Hunde und Gemeinschaften, denen TAJDO dient.",
+        url: "https://www.tajdo.shop",
+      },
+      welfare: {
+        brand: "Swiss Animal Welfare Co.",
+        description: "Unterstützung der Rettung und Rehabilitation von Strassentieren weltweit.",
+        url: "https://www.tajdo.shop",
+      },
+      vets: {
+        brand: "Global Vet Alliance",
+        tagline: "Qualitätspflege für jedes Tier",
+        description: "Zusammenarbeit mit TAJDO zur Bereitstellung wichtiger medizinischer Versorgung und Fachwissen für die Hunde auf Sansibar.",
+        url: "https://www.tajdo.shop",
+      }
     },
     footer: {
       stayConnected: "Bleiben Sie verbunden",
