@@ -259,6 +259,18 @@ export const translations = {
         { number: "2", label: "School Projects" },
       ],
     },
+    // Privacy page
+    privacy: {
+      content: [
+        "TAJDO is committed to safeguarding the privacy and protection of personal data entrusted to it by donors, volunteers, and partners. This policy explains how we collect, use, store, and protect your data in accordance with applicable laws, including the Swiss Federal Act on Data Protection (FADP) and the EU General Data Protection Regulation (GDPR).",
+        "We collect various categories of data to support our mission, including identification data (name, date of birth), contact details (email, phone), and financial data for processing donations. We also collect technical data such as IP addresses and device identifiers to improve our digital platforms and analytics tools.",
+        "Your data is processed only for legitimate charitable purposes: providing our services, managing donor accounts, communicating updates about our projects in Zanzibar, and complying with legal obligations. We adhere to core principles of data minimization, purpose limitation, and accuracy.",
+        "TAJDO does not sell personal data. We may share information with authorized service providers (e.g., payment processors) under strict confidentiality agreements or with regulators when required by law. Cross-border transfers are conducted only with adequate safeguards like Standard Contractual Clauses.",
+        "We implement robust technical and organizational security measures, including encryption at rest and in transit, access controls, and regular vulnerability management. Data is retained only as long as necessary to fulfill the purpose of collection or as required by statutory retention periods.",
+        "As a data subject, you have the right to access, correct, or delete your personal data. You may also restrict processing, request data portability, or withdraw consent at any time. We also use cookies to enhance your experience; you can manage these through your browser settings.",
+        "For any inquiries or to exercise your rights, please contact our Data Protection Officer at info@tajdo.ch or via mail at Sennweidstrasse 2A, CH-6276 Hohenrain.",
+      ],
+    },
     // Footer
     footer: {
       stayConnected: "Stay Connected",
@@ -522,6 +534,18 @@ export const translations = {
         { number: "6", label: "Futter- und Wasserstellen" },
         { number: "7", label: "Erfolgreich vermittelte Hunde" },
         { number: "100", label: "Medizinisch behandelte Hunde" },
+      ],
+    },
+    // Privacy page
+    privacy: {
+      content: [
+        "TAJDO setzt sich für den Schutz Ihrer persönlichen Daten und Ihrer Privatsphäre ein, die uns von Spendern, Freiwilligen und Partnern anvertraut werden. Diese Richtlinie erläutert, wie wir Ihre Informationen sammeln, verwenden, speichern und schützen, gemäss den geltenden Gesetzen, einschliesslich des Schweizer Bundesgesetzes über den Datenschutz (DSG) und der EU-Datenschutz-Grundverordnung (DSGVO).",
+        "Wir sammeln verschiedene Datenkategorien zur Unterstützung unserer Mission, darunter Identifikationsdaten (Name, Geburtsdatum), Kontaktdaten (E-Mail, Telefon) und Finanzdaten zur Bearbeitung von Spenden. Zudem erfassen wir technische Daten wie IP-Adressen und Geräte-IDs, um unsere digitalen Plattformen und Analysetools zu verbessern.",
+        "Ihre Daten werden nur für legitime gemeinnützige Zwecke verarbeitet: zur Erbringung unserer Dienstleistungen, zur Verwaltung von Spenderkonten, zur Mitteilung von Updates über unsere Projekte auf Sansibar und zur Erfüllung rechtlicher Verpflichtungen. Wir halten uns an die Grundsätze der Datenminimierung, Zweckbindung und Richtigkeit.",
+        "TAJDO verkauft keine persönlichen Daten. Wir geben Informationen nur an autorisierte Dienstleister (z. B. Zahlungsabwickler) unter strengen Vertraulichkeitsvereinbarungen oder an Behörden weiter, wenn dies gesetzlich vorgeschrieben ist. Grenzüberschreitende Datentransfers erfolgen nur mit angemessenen Garantien wie Standardvertragsklauseln.",
+        "Wir implementieren robuste technische und organisatorische Sicherheitsmassnahmen, einschliesslich Verschlüsselung bei Speicherung und Übertragung, Zugriffskontrollen und regelmässigem Schwachstellenmanagement. Daten werden nur so lange aufbewahrt, wie es für den Zweck der Erhebung oder aufgrund gesetzlicher Aufbewahrungsfristen erforderlich ist.",
+        "Als betroffene Person haben Sie das Recht auf Auskunft, Berichtigung oder Löschung Ihrer persönlichen Daten. Sie können zudem die Verarbeitung einschränken, die Datenübertragbarkeit verlangen oder eine Einwilligung jederzeit widerrufen. Wir verwenden auch Cookies zur Verbesserung Ihres Nutzererlebnisses; diese können Sie über Ihre Browsereinstellungen verwalten.",
+        "Für Anfragen oder zur Ausübung Ihrer Rechte kontaktieren Sie bitte unseren Datenschutzbeauftragten unter info@tajdo.ch oder per Post an die Sennweidstrasse 2A, CH-6276 Hohenrain.",
       ],
     },
     footer: {
