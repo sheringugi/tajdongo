@@ -106,72 +106,8 @@ const Index = () => {
         </div>
       </section>
 
-       {/* Mission Preview */}
-<section className="bg-secondary section-padding py-24">
-  <div className="max-w-6xl mx-auto">
-    <h2 className="heading-section text-center mb-16">{t.index.missionTitle}</h2>
+       Mission Preview
 
-    {/* Tab Buttons Row */}
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-2 mb-12">
-      {t.index.missionItems.map((item, index) => (
-        <motion.button
-          key={index}
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: index * 0.15, duration: 0.6 }}
-          className={`w-full text-left px-6 py-5 transition-all duration-300 border-b-2 ${
-            activeTab === index
-              ? "border-foreground bg-primary-foreground text-foreground shadow-md"
-              : "border-transparent bg-primary-foreground/10 text-foreground/50 hover:bg-primary-foreground/20 hover:text-foreground/70"
-          }`}
-          onClick={() => setActiveTab(index)}
-        >
-          <h3 className={`heading-card transition-all duration-300 ${
-            activeTab === index ? "text-foreground text-lg" : "text-foreground/50 text-base"
-          }`}>
-            {item.title}
-          </h3>
-        </motion.button>
-      ))}
-    </div>
-
-    {/* Active Tab Content — full width below tabs */}
-    {t.index.missionItems.map((item, index) => (
-      activeTab === index && (
-        <motion.div
-          key={index}
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
-        >
-          {/* Image */}
-          <div className="overflow-hidden">
-            <img
-              src={missionImages[index]}
-              alt={item.title}
-              className="w-full aspect-[4/3] object-cover"
-            />
-          </div>
-
-          {/* Text */}
-          <div className="space-y-6">
-            <h3 className="heading-section">{item.title}</h3>
-            <p className="body-text leading-relaxed">{item.description}</p>
-            <Link 
-              to="/mission" 
-              state={{ activeSection: index }}
-              className="btn-secondary inline-flex"
-            >
-              {t.index.learnMore}
-            </Link>
-          </div>
-        </motion.div>
-      )
-    ))}
-  </div>
-</section>
 
       {/* Impact Numbers */}
       <ImpactNumbers />

@@ -3,6 +3,8 @@ import Layout from "@/components/Layout";
 import { useLanguage } from "@/i18n/LanguageContext";
 // import { IMG_TAJANA } from "@/lib/images";
 import { default as IMG_RESCUE} from "@/assets/dollar.jpeg";
+import { default as IMG_TAJDO} from "@/assets/tajana-dollar.png";
+
 import { default as IMG_TAJANA} from "@/assets/tajdo-origin-1.jpg";
 import { PartnerAd } from "@/components/tajdo-ads";
 import { default as IMG_SHELTER } from "@/assets/tajdo-shelter.jpeg";
@@ -24,6 +26,12 @@ const About = () => {
             <h1 className="heading-display mb-6">{t.about.title}</h1>
             <p className="body-text max-w-2xl mx-auto text-lg">{t.about.subtitle}</p>
           </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.3 }}
+          ><img src={IMG_TAJDO} alt="TAJDO Rescue" className="w-full h-auto object-cover rounded-lg mt-8" /></motion.div>
         </div>
       </section>
 
