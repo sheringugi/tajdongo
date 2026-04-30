@@ -2,8 +2,8 @@
 import { defineConfig } from "tinacms";
 var config_default = defineConfig({
   branch: process.env.GITHUB_BRANCH || process.env.VERCEL_GIT_COMMIT_REF || "main",
-  clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID || "",
-  token: process.env.TINA_TOKEN || "",
+  clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
+  token: process.env.TINA_TOKEN,
   build: {
     outputFolder: "admin",
     publicFolder: "public"
@@ -23,7 +23,6 @@ var config_default = defineConfig({
         format: "json",
         match: {
           include: "global-*"
-          // exclude: ["**/__generated__/**", "**/tina/**", "**/node_modules/**", "**/*.jsx", "**/*.tsx"],
         },
         fields: [
           {
@@ -140,17 +139,7 @@ var config_default = defineConfig({
         path: "content",
         format: "json",
         match: {
-          include: "{en,de}"
-          // Include all other JSON files
-          //  exclude: ["global/**", "global-*.json", "**/__generated__/**", "**/tina/**", "**/node_modules/**", "**/*.jsx", "**/*.tsx"], // Exclude global folder and JSON, generated, Tina, node_modules, and JSX/TSX files
-        },
-        ui: {
-          router: ({ document }) => {
-            if (document._sys.filename === "index") {
-              return "/";
-            }
-            return `/${document._sys.filename}`;
-          }
+          include: ["en", "de"]
         },
         fields: [
           {
