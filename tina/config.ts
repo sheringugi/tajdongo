@@ -1,10 +1,9 @@
-// test change
 import { defineConfig } from "tinacms";
 
 export default defineConfig({
   branch: process.env.GITHUB_BRANCH || process.env.VERCEL_GIT_COMMIT_REF || "main",
   clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
-token: process.env.TINA_TOKEN,
+  token: process.env.TINA_TOKEN,
   build: {
     outputFolder: "admin",
     publicFolder: "public",
@@ -140,8 +139,8 @@ token: process.env.TINA_TOKEN,
         path: "content",
         format: "json",
         match: {
-  include: ["en", "de"],
-},
+          include: ["en", "de"],
+        },
         fields: [
           {
             type: "string",
