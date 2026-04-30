@@ -22,6 +22,8 @@ const Index = () => {
   const { t } = useLanguage();
   const [activeTab, setActiveTab] = useState(0);
 
+  if (!t?.index) return null;
+
   return (
     <Layout>
       {/* Hero */}
@@ -98,9 +100,9 @@ const Index = () => {
       <section className="section-padding py-12 bg-[#F5F0E8]">
         <div className="max-w-6xl mx-auto">
           <PartnerAd
-            brandName={t.partners.tours.brand}
-            description={t.partners.tours.description}
-            ctaUrl={t.partners.tours.url}
+           brandName={t?.partners?.tours?.brand}
+description={t?.partners?.tours?.description}
+ctaUrl={t?.partners?.tours?.url}
             logoUrl={IMG_COMMUNITY}
           />
         </div>

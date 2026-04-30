@@ -1,0 +1,194 @@
+fragment GlobalParts on Global {
+  __typename
+  language
+  nav {
+    __typename
+    home
+    about
+    mission
+    projects
+    donate
+  }
+  announcement
+  ads {
+    __typename
+    sponsored
+    spotlight
+    learnMore
+    visitSite
+  }
+  partners {
+    __typename
+    tours {
+      __typename
+      brand
+      description
+      url
+    }
+    welfare {
+      __typename
+      brand
+      description
+      url
+    }
+    vets {
+      __typename
+      brand
+      description
+      url
+    }
+    tours_alt {
+      __typename
+      brand
+      description
+      url
+    }
+  }
+  impact {
+    __typename
+    label
+    stats {
+      __typename
+      number
+      label
+    }
+  }
+  footer {
+    __typename
+    stayConnected
+    together
+    rights
+  }
+}
+
+fragment TranslationsParts on Translations {
+  __typename
+  language
+  index {
+    __typename
+    heroLabel
+    heroTitle1
+    heroTitle2
+    heroDesc
+    donateNow
+    ourStory
+    aboutLabel
+    aboutTitle
+    aboutP1
+    aboutP2
+    aboutP3
+    readStory
+    missionLabel
+    missionTitle
+    missionItems {
+      __typename
+      title
+      description
+    }
+    missionTag
+    learnMore
+    ctaLabel
+    ctaTitle
+    ctaDesc
+    shopSupport
+  }
+  about {
+    __typename
+    storyLabel
+    title
+    subtitle
+    team {
+      __typename
+      name
+      role
+      image
+      bio
+    }
+    beginningLabel
+    beginningTitle
+    communityLabel
+    communityTitle
+  }
+  mission {
+    __typename
+    label
+    title
+    subtitle
+    sections {
+      __typename
+      label
+      title
+      paragraphs
+    }
+  }
+  projects {
+    __typename
+    label
+    title
+    subtitle
+    items {
+      __typename
+      slug
+      category
+      title
+      description
+      detail
+    }
+    ctaTitle
+    ctaDesc
+    socialMedia {
+      __typename
+      title
+      subtitle
+      viewMore
+      followUs
+    }
+    adoption {
+      __typename
+      title
+      subtitle
+      testimonials {
+        __typename
+        quote
+        author
+      }
+      form {
+        __typename
+        title
+        subtitle
+        namePlaceholder
+        emailPlaceholder
+        messagePlaceholder
+        submitButton
+      }
+    }
+  }
+  donate {
+    __typename
+    heroTitle
+    heroDesc
+    donateNow
+    mainTitle
+    mainDesc
+    shopCTA
+    shopTitle
+    shopButton
+    details {
+      __typename
+      bank {
+        __typename
+        title
+        name
+        iban
+        bic
+      }
+    }
+    fundsLabel
+    fundsTitle
+    fundsItems {
+      __typename
+      title
+      desc
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "language": "en",
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "mission": "Mission",
+    "projects": "Projects",
+    "donate": "Donate"
+  },
+  "announcement": "Every purchase on our online store supports the rescue and rehabilitation of street dogs in Zanzibar",
+  "ads": {
+    "sponsored": "Sponsored",
+    "spotlight": "Partner Spotlight",
+    "learnMore": "Learn More",
+    "visitSite": "Visit Site"
+  },
+  "partners": {
+    "tours": {
+      "brand": "Zanzibar Eco Tours",
+      "description": "We offer sustainable eco-tours across Zanzibar and proudly support the dogs and communities TAJDO serves.",
+      "url": "https://www.tajdo.shop"
+    },
+    "welfare": {
+      "brand": "Swiss Animal Welfare Co.",
+      "description": "Supporting the rescue and rehabilitation of street animals worldwide.",
+      "url": "https://www.tajdo.shop"
+    },
+    "vets": {
+      "brand": "Global Vet Alliance",
+      "description": "Partnering with TAJDO to provide essential medical supplies and expertise for Zanzibar's dogs.",
+      "url": "https://www.tajdo.shop"
+    },
+    "tours_alt": {
+      "brand": "Zanzibar Eco Tours",
+      "description": "We offer sustainable eco-tours across Zanzibar and proudly support the dogs and communities TAJDO serves.",
+      "url": "https://www.tajdo.shop"
+    }
+  },
+  "impact": {
+    "label": "Our Impact",
+    "stats": [
+      {
+        "number": "70+",
+        "label": "Identified locations in Zanzibar"
+      },
+      {
+        "number": "10",
+        "label": "Feeding and watering stations"
+      },
+      {
+        "number": "7",
+        "label": "Successfully adopted dogs"
+      },
+      {
+        "number": "120",
+        "label": "Medically treated dogs"
+      },
+      {
+        "number": "2",
+        "label": "School Projects"
+      }
+    ]
+  },
+  "footer": {
+    "stayConnected": "Stay Connected",
+    "together": "Together for each other.",
+    "rights": "All rights reserved."
+  }
+}

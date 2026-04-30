@@ -1,0 +1,255 @@
+{
+  "privacy": {
+    "content": [
+      "TAJDO is committed to safeguarding the privacy and protection of personal data entrusted to it by donors, volunteers, and partners. This policy explains how we collect, use, store, and protect your data in accordance with applicable laws, including the Swiss Federal Act on Data Protection (FADP) and the EU General Data Protection Regulation (GDPR).",
+      "We collect various categories of data to support our mission, including identification data (name, date of birth), contact details (email, phone), and financial data for processing donations. We also collect technical data such as IP addresses and device identifiers to improve our digital platforms and analytics tools.",
+      "Your data is processed only for legitimate charitable purposes: providing our services, managing donor accounts, communicating updates about our projects in Zanzibar, and complying with legal obligations. We adhere to core principles of data minimization, purpose limitation, and accuracy.",
+      "TAJDO does not sell personal data. We may share information with authorized service providers (e.g., payment processors) under strict confidentiality agreements or with regulators when required by law. Cross-border transfers are conducted only with adequate safeguards like Standard Contractual Clauses.",
+      "We implement robust technical and organizational security measures, including encryption at rest and in transit, access controls, and regular vulnerability management. Data is retained only as long as necessary to fulfill the purpose of collection or as required by statutory retention periods.",
+      "As a data subject, you have the right to access, correct, or delete your personal data. You may also restrict processing, request data portability, or withdraw consent at any time. We also use cookies to enhance your experience; you can manage these through your browser settings.",
+      "For any inquiries or to exercise your rights, please contact our Data Protection Officer at info@tajdo.ch or via mail at Sennweidstrasse 2A, CH-6276 Hohenrain."
+    ]
+  },
+  "language": "en",
+  "index": {
+    "heroLabel": "Together for each other",
+    "heroTitle1": "Rescuing Lives",
+    "heroTitle2": "in Zanzibar",
+    "heroDesc": "TAJDO is dedicated to rescuing, rehabilitating, and caring for the street dogs of Zanzibar. Every life matters.",
+    "donateNow": "Donate Now",
+    "ourStory": "Our Story",
+    "aboutLabel": "About TAJDO",
+    "aboutTitle": "Together for each other",
+    "aboutP1": "TAJDO is more than just an organization – we are a community of people who are wholeheartedly and passionately committed to helping the street dogs of Zanzibar. Our goal is to enable every dog to live a safe, loving and healthy life.",
+    "aboutP2": "We believe that even small acts can have a big impact: A little food, a shady spot, or medical care can change a dog's life forever.",
+    "aboutP3": "With every project we launch and every bit of help we provide, we demonstrate that solidarity, care, and responsibility are not just empty words – but the foundation for a better future for both humans and animals.",
+    "readStory": "Read Our Story",
+    "missionLabel": "What We Do",
+    "missionTitle": "Our Mission",
+    "missionItems": [
+      {
+        "title": "Maintenance & Care",
+        "description": " TAJDO's primary focus is the well-being of street dogs. We regularly provide fresh food and clean water to ensure the animals' survival. In addition, we develop thoughtfully designed feeding bowls and build doghouses in local communities to offer the dogs a safe and loving environment. We also place a strong emphasis on medical care: in cooperation with local veterinarians, we administer vaccinations, spaying/neutering, and perform necessary surgeries to ensure the animals' long-term health."
+      },
+      {
+        "title": "Development & Vision",
+        "description": "TAJDO is working towards the goal of one day establishing a dog shelter in Zanzibar. But our work means more than just a concrete goal: it fosters the development of potential – both in the dogs and in our own actions. Every step TAJDO takes is designed sustainably and responsibly. In this way, we grow continuously and realize our vision step by step."
+      },
+      {
+        "title": "Education & Enlightenment",
+        "description": "TAJDO aims to raise awareness about the needs and challenges faced by street dogs. Many people in Zanzibar are poorly informed or completely uninformed about these animals, which often leads to mistreatment. Religious prejudices are frequently cited as justification, even though Islam does not prescribe harming animals. We focus on education and raising awareness: Firstly, we want to foster respect, understanding, and love for our four-legged friends among the local population. Secondly, we inform people about how everyone can contribute to tangibly improving the lives of street dogs through small acts of kindness."
+      }
+    ],
+    "missionTag": "Mission",
+    "learnMore": "Learn More",
+    "ctaLabel": "Make a Difference",
+    "ctaTitle": "Every Contribution Counts",
+    "ctaDesc": "Your donation helps us feed, vaccinate, sterilise and shelter the street dogs of Zanzibar. Together, we can create a safer world for them.",
+    "shopSupport": "Shop to Support"
+  },
+  "about": {
+    "storyLabel": "Our Story",
+    "title": "About TAJDO",
+    "subtitle": "The name TAJDO is a combination of the names Tajana and Dollar (or Dog). That's us, Dollar and Tajana, an unbeatable team from Switzerland to Zanzibar, from the mountains to the Indian Oceans",
+    "team": [
+      {
+        "name": "Tajana Bieri",
+        "role": "Team leader",
+        "image": "IMG_TAJANA",
+        "bio": [
+          "My name is Tajana, I'm 24 years old, and I was born and raised in Switzerland. Since 2024, I've been living with my dog, Dollar, in Zanzibar, Tanzania. I dedicate my entire life to the street dogs there.,I grew up in a very loving family with an older sister and a younger brother. My father is deaf and my mother is hard of hearing, which meant I grew up partly in the world of the hearing impaired and using sign language. This has probably contributed greatly to my open-mindedness.,My love and connection to animals, especially dogs, has been with me since childhood. The older I got, the stronger my desire for my own dog became. My dog, Dollar, found his way to me from an animal shelter in Italy. For seven years now, we have been each other's companions through life.,Nevertheless, I completed my training as a specialist in care for people with disabilities and remained in this field. The strong need for responsibility and the promotion of community spirit, generosity, and a positive outlook on life continued to drive me. It was my first time in Zanzibar, Tanzania, and I felt at home. As a young woman, I felt safe in a country that wasn't mine, and I experienced the feeling of being truly welcome.,TAJDO was born out of love for our four-legged friends, out of the joy of taking on responsibility, and out of the desire to make a meaningful difference."
+        ]
+      },
+      {
+        "name": "Dollar",
+        "role": "Team favorite",
+        "image": "IMG_RESCUE",
+        "bio": [
+          "I'm Dollar, about 14 years old in dog years, which is roughly equivalent to 98 in human years. I originally lived on the streets of Italy. Then I was taken in by an animal shelter, where I lived for five years with many other street dogs.",
+          "Since my mom, Tajana, took me in from there, she never knew exactly how old I really was. For the past seven years, I've lived lovingly and adventurously with my mom. We've traveled to many European countries together, all by car, of course. Now I get to spend my last years as a dog as an 'old man' on the beach in Zanzibar, and I was also a significant part of the inspiration for TAJDO."
+        ]
+      }
+    ],
+    "beginningLabel": "About me",
+    "beginningTitle": "Tajana Bieri",
+    "communityLabel": "About me",
+    "communityTitle": "Dollar"
+  },
+  "mission": {
+    "label": "What Drives Us",
+    "title": "Our Mission",
+    "subtitle": "Three pillars guide everything we do — care, vision, and education. Together, they form the foundation of lasting change for street dogs in Zanzibar.",
+    "sections": [
+      {
+        "label": "Pillar One",
+        "title": "Maintenance & Care",
+        "paragraphs": [
+          "TAJDO's main mission is to sustainably improve the welfare of street dogs in Zanzibar and Tanzania. We are committed to ensuring that every animal has access to food, water, medical care, and a safe environment – a right every dog deserves.",
+          "A key component of our work is the construction of dog bars in strategic locations. These dog bars are built by dedicated locals using locally sourced materials and feature a thoughtful design that meets both the hygienic and practical needs of dogs. Each dog bar includes two sections: one for fresh dog food and one for clean water.To ensure the dog bars are continuously used, the TAJDO team conducts weekly tours of the island. During these tours, the locations are checked, the dog bars are cleaned, and refilled with food and water. This way, we can guarantee that the street dogs are always well cared for."
+        ]
+      },
+      {
+        "label": "Pillar Two",
+        "title": "Development & Vision",
+        "paragraphs": [
+          "Our mission goes far beyond simply providing for basic needs. We place street dogs in loving families so that they can find a safe and happy home.At the same time, TAJDO works closely with a local veterinarian to ensure the medical care of the street dogs. This includes regular vaccinations, necessary surgeries, and spaying/neutering. These measures are not only crucial for the dogs' health but also serve a sustainable goal:The controlled regulation of the street dog population.",
+          "Experienced animal caretakers carefully carry out the sterilizations to limit the spread of the dogs in the long term. This ensures the welfare of the animals while simultaneously contributing to an improved quality of life for local residents. Through this sustainable approach, TAJDO strikes a balance between protecting the dogs and harmonious coexistence with the community. Furthermore, it is our vision to be able to build a dog shelter in Zanzibar."
+        ]
+      },
+      {
+        "label": "Pillar Three",
+        "title": "Education & Enlightenment",
+        "paragraphs": [
+          "In many parts of Zanzibar, shaped by a strong Muslim culture, street dogs are often considered 'unclean' and are only tolerated if they are deemed useful. This misinformation has unfortunately led to many dogs being neglected or even abused – despite the fact that the Quran offers no justification for the mistreatment of animals, especially dogs.",
+          "TAJDO is working on several levels to change this situation.",
+          "Furthermore, educating people is a key concern for us. We want to raise awareness of the needs and rights of dogs and promote respect for these loyal creatures. TAJDO is firmly convinced that this commitment has a positive impact on the entire community: By promoting both humans and animals, harmonious coexistence, respect and a conscious approach to living beings in Zanzibar become possible."
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "label": "Milestones achieved in 2024/2026",
+    "title": "Our projects at a glance",
+    "subtitle": "We create safe spaces, medical care and new life prospects for Zanzibar's street dogs.",
+    "items": [
+      {
+        "slug": "care",
+        "category": "Care",
+        "title": "Care",
+        "description": "Our team regularly cleans and refills our specially designed feeding stations with clean water and fresh food.",
+        "detail": [
+          "Consistent access to nutrition and clean water is fundamental to the health of the street dog population. Our feeding stations are more than just bowls; they are custom-built 'dog bars' designed for durability and hygiene. Our dedicated TAJDO team conducts regular rounds to thoroughly clean and refill these stations.",
+          "This cleaning and maintenance routine is critical. It not only prevents the spread of disease but also builds trust with the local dog populations, making them more receptive to future medical care and interaction. It's a simple act that provides daily comfort and life-sustaining support.",
+          "To protect the dogs from Zanzibar's harsh climate, including intense sun and heavy rains, we also construct simple yet durable, weatherproof doghouses in key locations. These shelters offer a safe and dry place for dogs to rest, recover from illness, or raise their puppies.",
+          "Dog kennels are being built at various locations in local villages to provide the dogs with a safe and loving environment, as well as protection from bad weather."
+        ]
+      },
+      {
+        "slug": "education",
+        "category": "Education",
+        "title": "Education and Awareness",
+        "description": "In Zanzibar, there is often a lack of knowledge about how to handle dogs, partly due to cultural and religious influences.",
+        "detail": [
+          "In many parts of Zanzibar, street dogs are often misunderstood or considered 'unclean' due to cultural and religious influences. This misinformation can unfortunately lead to neglect or mistreatment, despite the fact that compassionate care for animals is a universal value.",
+          "Long-term change requires a shift in perspective. Our education and awareness programs are designed to foster a culture of compassion and respect. We conduct workshops and run targeted school projects with Dollar to teach children and adults about dog behavior and safety.",
+          "By dispelling myths and addressing cultural misconceptions, we are building a foundation for a more harmonious coexistence between humans and animals. In this way, young people learn from an early age to treat dogs with respect and recognise how even small actions can improve lives.",
+          "Education is the most powerful tool for creating a sustainable and kind future for Zanzibar."
+        ]
+      },
+      {
+        "slug": "medical-care",
+        "category": "Medical",
+        "title": "Medical Care",
+        "description": "In collaboration with local vets, we regularly neuter, vaccinate and treat stray dogs to prevent suffering.",
+        "detail": [
+          "Our medical intervention program is comprehensive and life-saving. In partnership with compassionate local veterinarians, we provide a wide range of treatments including vaccinations against rabies and other common diseases, protecting both dogs and the human community.",
+          "In collaboration with local vets, we regularly neuter, vaccinate and treat stray dogs to prevent suffering before it even begins, and to save lives that are already in danger.",
+          "Beyond preventative care, we treat acute injuries, skin conditions, and serious illnesses like cancer. Regular care such as deworming and flea treatment is also a vital part of our services, offering a chance at a healthy life to dogs who would otherwise have no hope."
+        ]
+      },
+      {
+        "slug": "successful-placement",
+        "category": "Adoption",
+        "title": "Successful Placement",
+        "description": "Our aim is to improve the lives of all street dogs, but some dogs are too vulnerable to survive on their own.",
+        "detail": [
+          "While our goal is to improve the lives of all street dogs, some are too vulnerable, young, or injured to survive on their own on the streets. For these special cases, we run a careful and considered adoption program.",
+          "Our aim is to improve the lives of all street dogs, but some dogs are too vulnerable to survive on their own on the streets. Our adoption programme carefully matches these special cases with loving, permanent families.",
+          "Our process involves thorough vetting of potential adopters to ensure a perfect match, providing a second chance for a life filled with love, safety, and companionship. Each adoption is a story of hope and transformation."
+        ]
+      },
+      {
+        "slug": "campaigns",
+        "category": "Campaigns",
+        "title": "Campaigns",
+        "description": "Through regular neutering campaigns, necessary vaccinations, operations and neutering are carried out.",
+        "detail": [
+          "Neutering and sterilization are at the core of our long-term mission to humanely control the street dog population and prevent future suffering. By conducting large-scale campaigns, we can address the root cause of the crisis in Zanzibar.",
+          "Through regular neutering campaigns, necessary vaccinations, operations and neutering are carried out. These measures are crucial for the health of the dogs and, at the same time, an important step towards sustainably regulating the stray dog population and improving the quality of life for local residents."
+        ]
+      }
+    ],
+    "ctaTitle": "Want to Support a Project?",
+    "ctaDesc": "Your donation directly funds these initiatives. Every contribution, no matter the size, helps us save more lives.",
+    "socialMedia": {
+      "title": "Social media",
+      "subtitle": "Each of the listed projects, which were completed in 2024 and 2025, can be discovered on Instagram or TikTok.",
+      "viewMore": "View more",
+      "followUs": "Follow us"
+    },
+    "adoption": {
+      "title": "Adoption",
+      "subtitle": "Some dogs have already found a loving home through successful rehoming. Here are some experiences from our new dog parents:",
+      "testimonials": [
+        {
+          "quote": "The adoption process was absolutely straightforward and handled with such care. Our Simba felt like a member of the family from day one. We are overjoyed – thank you for your wonderful work!",
+          "author": "Name"
+        },
+        {
+          "quote": "You can immediately tell how much passion has gone into this. I received excellent advice, all my questions were taken seriously, and Mali enriched my life with his zest for life from day one.",
+          "author": "Levke Kersting"
+        },
+        {
+          "quote": "From the initial contact until our dog moved in, we felt extremely well cared for. Professional and incredibly empathetic. Our adoption couldn't have gone better.",
+          "author": "Name"
+        }
+      ],
+      "form": {
+        "title": "Do you want to adopt?",
+        "subtitle": "If you would like to offer a small furry friend a species-appropriate and loving home, contact us.",
+        "namePlaceholder": "Name",
+        "emailPlaceholder": "Email",
+        "messagePlaceholder": "News",
+        "submitButton": "Send Inquiry"
+      }
+    }
+  },
+  "donate": {
+    "heroTitle": "Your support",
+    "heroDesc": [
+      "Your support makes it possible to further expand our projects and achieve a sustainable impact.",
+      "Every contribution strengthens our work on the ground and helps us create long-term improvements for animals and people.",
+      "Together we are setting an example for responsibility, compassion and change.",
+      "Thank you for being part of this development."
+    ],
+    "donateNow": "Donate now",
+    "mainTitle": "We appreciate any support – whether small or large, one-off or monthly.",
+    "mainDesc": [
+      "Your donation helps us ensure the animals receive continuous food, medical care, and loving attention. Transparency is especially important to us: On our social media channels, we regularly provide insights into our projects and show how your help directly impacts the animals on the ground.",
+      "Thanks to your contributions, we can not only handle acute emergencies, but also plan and implement long-term rescue and rehabilitation programs – and thus create additional jobs.",
+      "We would like to thank you from the bottom of our hearts for your generosity and trust.",
+      "TAJDO"
+    ],
+    "shopCTA": "Double the Impact",
+    "shopTitle": "Shop to Save Lives",
+    "shopButton": "Visit Our Shop",
+    "details": {
+      "bank": {
+        "title": "Bank details",
+        "name": "TAJDO",
+        "iban": "IBAN: CH2209000000163182559",
+        "bic": "BIC: POFICHBEXXX"
+      }
+    },
+    "fundsLabel": "Where It Goes",
+    "fundsTitle": "What Your Donation Funds",
+    "fundsItems": [
+      {
+        "title": "Feeding Stations",
+        "desc": "Building numerous food and water bowls and placing them at various locations. Our team continuously cleans and refills them so the animals always have access to food and fresh water."
+      },
+      {
+        "title": "Medical Care",
+        "desc": "Treating illnesses and injuries, sterilizations and rabies vaccinations and regular care such as deworming and flea treatment."
+      },
+      {
+        "title": "Shelter Building",
+        "desc": "Building weatherproof doghouses that offer shelter and a safe retreat for street dogs."
+      },
+      {
+        "title": "Education",
+        "desc": "Raising awareness among children and adults in Zanzibar about treating dogs with respect."
+      }
+    ]
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "language": "de",
+  "nav": {
+    "home": "Startseite",
+    "about": "Über Uns",
+    "mission": "Mission",
+    "projects": "Projekte",
+    "donate": "Spenden"
+  },
+  "announcement": "Jeder Einkauf in unserem Online-Shop unterstützt die Rettung und Rehabilitation von Strassenhunden auf Sansibar",
+  "ads": {
+    "sponsored": "Gesponsert",
+    "spotlight": "Partner im Fokus",
+    "learnMore": "Mehr erfahren",
+    "visitSite": "Website besuchen"
+  },
+  "partners": {
+    "tours": {
+      "brand": "Zanzibar Eco Tours",
+      "description": "Wir bieten nachhaltige Öko-Touren auf ganz Sansibar an und unterstützen stolz die Hunde und Gemeinschaften, denen TAJDO dient.",
+      "url": "https://www.tajdo.shop"
+    },
+    "welfare": {
+      "brand": "Swiss Animal Welfare Co.",
+      "description": "Unterstützung der Rettung und rehabilitation von Strassentieren weltweit.",
+      "url": "https://www.tajdo.shop"
+    },
+    "vets": {
+      "brand": "Global Vet Alliance",
+      "description": "Zusammenarbeit mit TAJDO zur Bereitstellung wichtiger medizinischer Versorgung und Fachwissen für die Hunde auf Sansibar.",
+      "url": "https://www.tajdo.shop"
+    },
+    "tours_alt": {
+      "brand": "Zanzibar Eco Tours",
+      "description": "Wir bieten nachhaltige Öko-Touren auf ganz Sansibar an und unterstützen stolz die Hunde und Gemeinschaften, denen TAJDO dient.",
+      "url": "https://www.tajdo.shop"
+    }
+  },
+  "impact": {
+    "label": "Unsere Wirkung",
+    "stats": [
+      {
+        "number": "70",
+        "label": "Identifizierte Standorte auf Sansibar"
+      },
+      {
+        "number": "6",
+        "label": "Futter- und Wasserstellen"
+      },
+      {
+        "number": "7",
+        "label": "Erfolgreich vermittelte Hunde"
+      },
+      {
+        "number": "100",
+        "label": "Medizinisch behandelte Hunde"
+      }
+    ]
+  },
+  "footer": {
+    "stayConnected": "Bleiben Sie verbunden",
+    "together": "Füeinander da.",
+    "rights": "Alle Rechte vorbehalten."
+  }
+}

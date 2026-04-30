@@ -1,19 +1,18 @@
+// tina/config.ts
 import { defineConfig } from "tinacms";
-
-export default defineConfig({
+var config_default = defineConfig({
   branch: process.env.GITHUB_BRANCH || process.env.VERCEL_GIT_COMMIT_REF || "main",
   clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID || "",
   token: process.env.TINA_TOKEN || "",
   build: {
     outputFolder: "admin",
-    publicFolder: "public",
+    publicFolder: "public"
   },
   media: {
     tina: {
       mediaRoot: "uploads",
-      publicFolder: "public",
-    },
-    
+      publicFolder: "public"
+    }
   },
   schema: {
     collections: [
@@ -31,7 +30,7 @@ export default defineConfig({
             type: "string",
             name: "language",
             label: "Language",
-            required: true,
+            required: true
           },
           {
             type: "object",
@@ -42,8 +41,8 @@ export default defineConfig({
               { type: "string", name: "about", label: "About Us" },
               { type: "string", name: "mission", label: "Mission" },
               { type: "string", name: "projects", label: "Projects" },
-              { type: "string", name: "donate", label: "Donate" },
-            ],
+              { type: "string", name: "donate", label: "Donate" }
+            ]
           },
           { type: "string", name: "announcement", label: "Announcement Bar", ui: { component: "textarea" } },
           {
@@ -54,8 +53,8 @@ export default defineConfig({
               { type: "string", name: "sponsored", label: "Sponsored Label" },
               { type: "string", name: "spotlight", label: "Spotlight Label" },
               { type: "string", name: "learnMore", label: "Learn More Label" },
-              { type: "string", name: "visitSite", label: "Visit Site Label" },
-            ],
+              { type: "string", name: "visitSite", label: "Visit Site Label" }
+            ]
           },
           {
             type: "object",
@@ -69,8 +68,8 @@ export default defineConfig({
                 fields: [
                   { type: "string", name: "brand", label: "Brand Name" },
                   { type: "string", name: "description", label: "Description", ui: { component: "textarea" } },
-                  { type: "string", name: "url", label: "CTA URL" },
-                ],
+                  { type: "string", name: "url", label: "CTA URL" }
+                ]
               },
               {
                 type: "object",
@@ -79,8 +78,8 @@ export default defineConfig({
                 fields: [
                   { type: "string", name: "brand", label: "Brand Name" },
                   { type: "string", name: "description", label: "Description", ui: { component: "textarea" } },
-                  { type: "string", name: "url", label: "CTA URL" },
-                ],
+                  { type: "string", name: "url", label: "CTA URL" }
+                ]
               },
               {
                 type: "object",
@@ -89,8 +88,8 @@ export default defineConfig({
                 fields: [
                   { type: "string", name: "brand", label: "Brand Name" },
                   { type: "string", name: "description", label: "Description", ui: { component: "textarea" } },
-                  { type: "string", name: "url", label: "CTA URL" },
-                ],
+                  { type: "string", name: "url", label: "CTA URL" }
+                ]
               },
               {
                 type: "object",
@@ -99,10 +98,10 @@ export default defineConfig({
                 fields: [
                   { type: "string", name: "brand", label: "Brand Name" },
                   { type: "string", name: "description", label: "Description", ui: { component: "textarea" } },
-                  { type: "string", name: "url", label: "CTA URL" },
-                ],
-              },
-            ],
+                  { type: "string", name: "url", label: "CTA URL" }
+                ]
+              }
+            ]
           },
           {
             type: "object",
@@ -115,13 +114,13 @@ export default defineConfig({
                 list: true,
                 name: "stats",
                 label: "Stats List",
-                ui: { itemProps: (item: any) => ({ label: item?.label }) },
+                ui: { itemProps: (item) => ({ label: item?.label }) },
                 fields: [
                   { type: "string", name: "number", label: "Stat Number" },
-                  { type: "string", name: "label", label: "Stat Label" },
-                ],
-              },
-            ],
+                  { type: "string", name: "label", label: "Stat Label" }
+                ]
+              }
+            ]
           },
           {
             type: "object",
@@ -130,10 +129,10 @@ export default defineConfig({
             fields: [
               { type: "string", name: "stayConnected", label: "Stay Connected Title" },
               { type: "string", name: "together", label: "Motto Text" },
-              { type: "string", name: "rights", label: "Copyright Text" },
-            ],
-          },
-        ],
+              { type: "string", name: "rights", label: "Copyright Text" }
+            ]
+          }
+        ]
       },
       {
         name: "translations",
@@ -141,23 +140,24 @@ export default defineConfig({
         path: "content",
         format: "json",
         match: {
-          include: "{en,de}", // Include all other JSON files
+          include: "{en,de}"
+          // Include all other JSON files
           //  exclude: ["global/**", "global-*.json", "**/__generated__/**", "**/tina/**", "**/node_modules/**", "**/*.jsx", "**/*.tsx"], // Exclude global folder and JSON, generated, Tina, node_modules, and JSX/TSX files
         },
         ui: {
-          router: ({ document }: { document: any }) => {
+          router: ({ document }) => {
             if (document._sys.filename === "index") {
               return "/";
             }
             return `/${document._sys.filename}`;
-          },
+          }
         },
         fields: [
           {
             type: "string",
             name: "language",
             label: "Language",
-            required: true,
+            required: true
           },
           {
             type: "object",
@@ -183,19 +183,19 @@ export default defineConfig({
                 list: true,
                 name: "missionItems",
                 label: "Mission Summary Items",
-                ui: { itemProps: (item: any) => ({ label: item?.title || 'Mission Item' }) },
+                ui: { itemProps: (item) => ({ label: item?.title || "Mission Item" }) },
                 fields: [
                   { type: "string", name: "title", label: "Title" },
-                  { type: "string", name: "description", label: "Description", ui: { component: "textarea" } },
-                ],
+                  { type: "string", name: "description", label: "Description", ui: { component: "textarea" } }
+                ]
               },
               { type: "string", name: "missionTag", label: "Mission Tag" },
               { type: "string", name: "learnMore", label: "Learn More Button" },
               { type: "string", name: "ctaLabel", label: "CTA Label" },
               { type: "string", name: "ctaTitle", label: "CTA Title" },
               { type: "string", name: "ctaDesc", label: "CTA Description", ui: { component: "textarea" } },
-              { type: "string", name: "shopSupport", label: "Shop Support Text" },
-            ],
+              { type: "string", name: "shopSupport", label: "Shop Support Text" }
+            ]
           },
           {
             type: "object",
@@ -210,19 +210,19 @@ export default defineConfig({
                 list: true,
                 name: "team",
                 label: "Team Members",
-                ui: { itemProps: (item: any) => ({ label: item?.name || 'Team Member' }) },
+                ui: { itemProps: (item) => ({ label: item?.name || "Team Member" }) },
                 fields: [
                   { type: "string", name: "name", label: "Name" },
                   { type: "string", name: "role", label: "Role" },
                   { type: "image", name: "image", label: "Image Reference" },
-                  { type: "string", list: true, name: "bio", label: "Bio Paragraphs", ui: { component: "textarea" } },
-                ],
+                  { type: "string", list: true, name: "bio", label: "Bio Paragraphs", ui: { component: "textarea" } }
+                ]
               },
               { type: "string", name: "beginningLabel", label: "Beginning Label" },
               { type: "string", name: "beginningTitle", label: "Beginning Title" },
               { type: "string", name: "communityLabel", label: "Community Label" },
-              { type: "string", name: "communityTitle", label: "Community Title" },
-            ],
+              { type: "string", name: "communityTitle", label: "Community Title" }
+            ]
           },
           {
             type: "object",
@@ -237,14 +237,14 @@ export default defineConfig({
                 list: true,
                 name: "sections",
                 label: "Pillar Sections",
-                ui: { itemProps: (item: any) => ({ label: item?.title || 'Section' }) },
+                ui: { itemProps: (item) => ({ label: item?.title || "Section" }) },
                 fields: [
                   { type: "string", name: "label", label: "Section Label" },
                   { type: "string", name: "title", label: "Section Title" },
-                  { type: "string", list: true, name: "paragraphs", label: "Paragraphs", ui: { component: "textarea" } },
-                ],
-              },
-            ],
+                  { type: "string", list: true, name: "paragraphs", label: "Paragraphs", ui: { component: "textarea" } }
+                ]
+              }
+            ]
           },
           {
             type: "object",
@@ -259,14 +259,14 @@ export default defineConfig({
                 list: true,
                 name: "items",
                 label: "Project Items",
-                ui: { itemProps: (item: any) => ({ label: item?.title || 'Project Item' }) },
+                ui: { itemProps: (item) => ({ label: item?.title || "Project Item" }) },
                 fields: [
                   { type: "string", name: "slug", label: "Slug" },
                   { type: "string", name: "category", label: "Category" },
                   { type: "string", name: "title", label: "Title" },
                   { type: "string", name: "description", label: "Description", ui: { component: "textarea" } },
-                  { type: "string", list: true, name: "detail", label: "Detail Paragraphs", ui: { component: "textarea" } },
-                ],
+                  { type: "string", list: true, name: "detail", label: "Detail Paragraphs", ui: { component: "textarea" } }
+                ]
               },
               { type: "string", name: "ctaTitle", label: "CTA Title" },
               { type: "string", name: "ctaDesc", label: "CTA Description", ui: { component: "textarea" } },
@@ -278,8 +278,8 @@ export default defineConfig({
                   { type: "string", name: "title", label: "Title" },
                   { type: "string", name: "subtitle", label: "Subtitle" },
                   { type: "string", name: "viewMore", label: "View More Button" },
-                  { type: "string", name: "followUs", label: "Follow Us Button" },
-                ],
+                  { type: "string", name: "followUs", label: "Follow Us Button" }
+                ]
               },
               {
                 type: "object",
@@ -293,11 +293,11 @@ export default defineConfig({
                     list: true,
                     name: "testimonials",
                     label: "Testimonials",
-                    ui: { itemProps: (item: any) => ({ label: item?.author || 'Testimonial' }) },
+                    ui: { itemProps: (item) => ({ label: item?.author || "Testimonial" }) },
                     fields: [
                       { type: "string", name: "quote", label: "Quote", ui: { component: "textarea" } },
-                      { type: "string", name: "author", label: "Author" },
-                    ],
+                      { type: "string", name: "author", label: "Author" }
+                    ]
                   },
                   {
                     type: "object",
@@ -309,12 +309,12 @@ export default defineConfig({
                       { type: "string", name: "namePlaceholder", label: "Name Placeholder" },
                       { type: "string", name: "emailPlaceholder", label: "Email Placeholder" },
                       { type: "string", name: "messagePlaceholder", label: "Message Placeholder" },
-                      { type: "string", name: "submitButton", label: "Submit Button" },
-                    ],
-                  },
-                ],
-              },
-            ],
+                      { type: "string", name: "submitButton", label: "Submit Button" }
+                    ]
+                  }
+                ]
+              }
+            ]
           },
           {
             type: "object",
@@ -342,10 +342,10 @@ export default defineConfig({
                       { type: "string", name: "title", label: "Title" },
                       { type: "string", name: "name", label: "Name" },
                       { type: "string", name: "iban", label: "IBAN" },
-                      { type: "string", name: "bic", label: "BIC" },
-                    ],
-                  },
-                ],
+                      { type: "string", name: "bic", label: "BIC" }
+                    ]
+                  }
+                ]
               },
               { type: "string", name: "fundsLabel", label: "Funds Label" },
               { type: "string", name: "fundsTitle", label: "Funds Title" },
@@ -354,16 +354,19 @@ export default defineConfig({
                 list: true,
                 name: "fundsItems",
                 label: "Allocation Items",
-                ui: { itemProps: (item: any) => ({ label: item?.title || 'Allocation Item' }) },
+                ui: { itemProps: (item) => ({ label: item?.title || "Allocation Item" }) },
                 fields: [
                   { type: "string", name: "title", label: "Item Title" },
-                  { type: "string", name: "desc", label: "Item Description", ui: { component: "textarea" } },
-                ],
-              },
-            ],
-          },
-        ],
-      },
-    ],
-  },
+                  { type: "string", name: "desc", label: "Item Description", ui: { component: "textarea" } }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
 });
+export {
+  config_default as default
+};
