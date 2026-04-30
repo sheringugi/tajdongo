@@ -38,7 +38,7 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   };
 
   fetchData();
-  const interval = setInterval(fetchData, 10000); // refetch every 30 seconds
+  const interval = setInterval(fetchData, 10000); // refetch every 10 seconds
   return () => clearInterval(interval);
 }, [language]);
 
