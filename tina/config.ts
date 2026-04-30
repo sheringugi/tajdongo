@@ -1,6 +1,5 @@
 import { defineConfig } from "tinacms";
 
-// temporary force sync flag
 
 export default defineConfig({
   branch: process.env.GITHUB_BRANCH || process.env.VERCEL_GIT_COMMIT_REF || "main",
