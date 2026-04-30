@@ -13,7 +13,6 @@ export default defineConfig({
       mediaRoot: "uploads",
       publicFolder: "public",
     },
-    
   },
   schema: {
     collections: [
@@ -23,8 +22,7 @@ export default defineConfig({
         path: "content/global",
         format: "json",
         match: {
-          include: "global-*"
-          // exclude: ["**/__generated__/**", "**/tina/**", "**/node_modules/**", "**/*.jsx", "**/*.tsx"],
+          include: "global-*",
         },
         fields: [
           {
@@ -141,16 +139,7 @@ export default defineConfig({
         path: "content",
         format: "json",
         match: {
-          include: "{en,de}", // Include all other JSON files
-          //  exclude: ["global/**", "global-*.json", "**/__generated__/**", "**/tina/**", "**/node_modules/**", "**/*.jsx", "**/*.tsx"], // Exclude global folder and JSON, generated, Tina, node_modules, and JSX/TSX files
-        },
-        ui: {
-          router: ({ document }: { document: any }) => {
-            if (document._sys.filename === "index") {
-              return "/";
-            }
-            return `/${document._sys.filename}`;
-          },
+          include: "{en,de}",
         },
         fields: [
           {
@@ -183,7 +172,7 @@ export default defineConfig({
                 list: true,
                 name: "missionItems",
                 label: "Mission Summary Items",
-                ui: { itemProps: (item: any) => ({ label: item?.title || 'Mission Item' }) },
+                ui: { itemProps: (item: any) => ({ label: item?.title || "Mission Item" }) },
                 fields: [
                   { type: "string", name: "title", label: "Title" },
                   { type: "string", name: "description", label: "Description", ui: { component: "textarea" } },
@@ -210,7 +199,7 @@ export default defineConfig({
                 list: true,
                 name: "team",
                 label: "Team Members",
-                ui: { itemProps: (item: any) => ({ label: item?.name || 'Team Member' }) },
+                ui: { itemProps: (item: any) => ({ label: item?.name || "Team Member" }) },
                 fields: [
                   { type: "string", name: "name", label: "Name" },
                   { type: "string", name: "role", label: "Role" },
@@ -237,7 +226,7 @@ export default defineConfig({
                 list: true,
                 name: "sections",
                 label: "Pillar Sections",
-                ui: { itemProps: (item: any) => ({ label: item?.title || 'Section' }) },
+                ui: { itemProps: (item: any) => ({ label: item?.title || "Section" }) },
                 fields: [
                   { type: "string", name: "label", label: "Section Label" },
                   { type: "string", name: "title", label: "Section Title" },
@@ -259,7 +248,7 @@ export default defineConfig({
                 list: true,
                 name: "items",
                 label: "Project Items",
-                ui: { itemProps: (item: any) => ({ label: item?.title || 'Project Item' }) },
+                ui: { itemProps: (item: any) => ({ label: item?.title || "Project Item" }) },
                 fields: [
                   { type: "string", name: "slug", label: "Slug" },
                   { type: "string", name: "category", label: "Category" },
@@ -293,7 +282,7 @@ export default defineConfig({
                     list: true,
                     name: "testimonials",
                     label: "Testimonials",
-                    ui: { itemProps: (item: any) => ({ label: item?.author || 'Testimonial' }) },
+                    ui: { itemProps: (item: any) => ({ label: item?.author || "Testimonial" }) },
                     fields: [
                       { type: "string", name: "quote", label: "Quote", ui: { component: "textarea" } },
                       { type: "string", name: "author", label: "Author" },
@@ -354,7 +343,7 @@ export default defineConfig({
                 list: true,
                 name: "fundsItems",
                 label: "Allocation Items",
-                ui: { itemProps: (item: any) => ({ label: item?.title || 'Allocation Item' }) },
+                ui: { itemProps: (item: any) => ({ label: item?.title || "Allocation Item" }) },
                 fields: [
                   { type: "string", name: "title", label: "Item Title" },
                   { type: "string", name: "desc", label: "Item Description", ui: { component: "textarea" } },
