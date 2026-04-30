@@ -10,6 +10,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
   const { language, setLanguage, t } = useLanguage();
+  console.log('navbar t.nav:', t?.nav); // ← add this
 
   const navLinks = [
     { label: t.nav.home, href: "/" },

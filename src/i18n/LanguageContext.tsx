@@ -18,24 +18,28 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   const [t, setT] = useState<TranslationData>(translations["en"]);
 
  useEffect(() => {
-  Promise.all([
-    client.queries.translations({ relativePath: `${language}.json` }),
-    client.queries.global({ relativePath: `global-${language}.json` }),
-  ])
-    .then(([translationsRes, globalRes]) => {
-      const merged = {
-        ...translations[language],
-        ...(translationsRes.data?.translations || {}),
-        nav: globalRes.data?.global?.nav || translations[language].nav,
-        footer: globalRes.data?.global?.footer || translations[language].footer,
-        partners: globalRes.data?.global?.partners || translations[language].partners,
-        impact: globalRes.data?.global?.impact || translations[language].impact,
-      };
-      setT(merged);
-    })
-    .catch(() => {
-      setT(translations[language]);
-    });
+  const fetchData = () => {
+    client.queries.global({ relativePath: `global-${language}.json` })
+      .then((globalRes) => {
+        const globalData = globalRes.data?.global;
+        if (globalData) {
+          setT({
+            ...translations[language],
+            nav: globalData.nav || translations[language].nav,
+            footer: globalData.footer || translations[language].footer,
+            partners: globalData.partners || translations[language].partners,
+            impact: globalData.impact || translations[language].impact,
+          });
+        }
+      })
+      .catch((error) => {
+        console.error('TinaCloud global fetch failed:', error);
+      });
+  };
+
+  fetchData();
+  const interval = setInterval(fetchData, 10000); // refetch every 30 seconds
+  return () => clearInterval(interval);
 }, [language]);
 
   return (
