@@ -1,5 +1,6 @@
 // tina/config.ts
 import { defineConfig } from "tinacms";
+var FORCE_TINA_SYNC = "v2-" + Date.now();
 var config_default = defineConfig({
   branch: process.env.GITHUB_BRANCH || process.env.VERCEL_GIT_COMMIT_REF || "main",
   clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
