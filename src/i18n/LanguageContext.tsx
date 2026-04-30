@@ -18,11 +18,20 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   const [t, setT] = useState<TranslationData>(translations["en"]);
 
  useEffect(() => {
-  client.queries.translations({ relativePath: `${language}.json` })
-    .then((res) => {
-      if (res.data?.translations) {
-        setT({ ...translations[language], ...res.data.translations });
-      }
+  Promise.all([
+    client.queries.translations({ relativePath: `${language}.json` }),
+    client.queries.global({ relativePath: `global-${language}.json` }),
+  ])
+    .then(([translationsRes, globalRes]) => {
+      const merged = {
+        ...translations[language],
+        ...(translationsRes.data?.translations || {}),
+        nav: globalRes.data?.global?.nav || translations[language].nav,
+        footer: globalRes.data?.global?.footer || translations[language].footer,
+        partners: globalRes.data?.global?.partners || translations[language].partners,
+        impact: globalRes.data?.global?.impact || translations[language].impact,
+      };
+      setT(merged);
     })
     .catch(() => {
       setT(translations[language]);
