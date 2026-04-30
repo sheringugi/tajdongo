@@ -12,21 +12,24 @@
     "sponsored": "Gesponsert",
     "spotlight": "Partner im Fokus",
     "learnMore": "Mehr erfahren",
-    "visitSite": "Website besuchen"
+    "visitSite": "Website besuchen",
+    "logo": "Logo"
   },
   "partners": {
     "tours": {
       "brand": "Zanzibar Eco Tours",
+      "tagline": "Sansibar verantwortungsbewusst erkunden",
       "description": "Wir bieten nachhaltige Öko-Touren auf ganz Sansibar an und unterstützen stolz die Hunde und Gemeinschaften, denen TAJDO dient.",
       "url": "https://www.tajdo.shop"
     },
     "welfare": {
       "brand": "Swiss Animal Welfare Co.",
-      "description": "Unterstützung der Rettung und rehabilitation von Strassentieren weltweit.",
+      "description": "Unterstützung der Rettung und Rehabilitation von Strassentieren weltweit.",
       "url": "https://www.tajdo.shop"
     },
     "vets": {
       "brand": "Global Vet Alliance",
+      "tagline": "Qualitätspflege für jedes Tier",
       "description": "Zusammenarbeit mit TAJDO zur Bereitstellung wichtiger medizinischer Versorgung und Fachwissen für die Hunde auf Sansibar.",
       "url": "https://www.tajdo.shop"
     },
@@ -59,7 +62,15 @@
   },
   "footer": {
     "stayConnected": "Bleiben Sie verbunden",
-    "together": "Füeinander da.",
-    "rights": "Alle Rechte vorbehalten."
+    "stayConnectedDesc": "Verfolgen Sie unsere Reise und erhalten Sie Updates über die Hunde, die wir auf Sansibar retten und rehabilitieren.",
+    "navigation": "Navigation",
+    "shop": "Shop",
+    "onlineStore": "Online-Shop",
+    "allProducts": "Alle Produkte",
+    "contact": "Kontakt",
+    "bankTransferLink": "Kontaktieren Sie uns für Banküberweisungsdetails",
+    "together": "Füreinander da.",
+    "rights": "Alle Rechte vorbehalten.",
+    "privacy": "Datenschutz"
   }
 }
