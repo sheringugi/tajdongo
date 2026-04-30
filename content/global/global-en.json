@@ -7,18 +7,16 @@
     "projects": "Projects",
     "donate": "Donate"
   },
-  "announcement": "Every purchase on our online store supports the rescue and rehabilitation of street dogs in Zanzibar",
+  "announcement": "Every purchase on our online store supports the rescue and rehabilitation of street dogs in ",
   "ads": {
     "sponsored": "Sponsored",
     "spotlight": "Partner Spotlight",
     "learnMore": "Learn More",
-    "visitSite": "Visit Site",
-    "logo": "Logo"
+    "visitSite": "Visit Site"
   },
   "partners": {
     "tours": {
       "brand": "Zanzibar Eco Tours",
-      "tagline": "Explore Zanzibar Responsibly",
       "description": "We offer sustainable eco-tours across Zanzibar and proudly support the dogs and communities TAJDO serves.",
       "url": "https://www.tajdo.shop"
     },
@@ -29,7 +27,6 @@
     },
     "vets": {
       "brand": "Global Vet Alliance",
-      "tagline": "Quality Care for Every Animal",
       "description": "Partnering with TAJDO to provide essential medical supplies and expertise for Zanzibar's dogs.",
       "url": "https://www.tajdo.shop"
     },
@@ -66,15 +63,7 @@
   },
   "footer": {
     "stayConnected": "Stay Connected",
-    "stayConnectedDesc": "Follow our journey and receive updates on the dogs we rescue and rehabilitate in Zanzibar.",
-    "navigation": "Navigation",
-    "shop": "Shop",
-    "onlineStore": "Online Store",
-    "allProducts": "All Products",
-    "contact": "Contact",
-    "bankTransferLink": "Contact us for bank transfer details",
     "together": "Together for each other.",
-    "rights": "All rights reserved.",
-    "privacy": "Privacy Policy"
+    "rights": "All rights reserved."
   }
 }
