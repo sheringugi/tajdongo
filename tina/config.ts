@@ -18,7 +18,7 @@ export default defineConfig({
     collections: [
       {
         name: "global",
-        label: "Global Content",
+        label: "Website Content",
         path: "content/global",
         format: "json",
         match: {
@@ -58,6 +58,7 @@ export default defineConfig({
               { type: "string", name: "spotlight", label: "Spotlight Label" },
               { type: "string", name: "learnMore", label: "Learn More Label" },
               { type: "string", name: "visitSite", label: "Visit Site Label" },
+              { type: "string", name: "logo", label: "Logo Label" },
             ],
           },
           {
@@ -71,6 +72,7 @@ export default defineConfig({
                 label: "Eco Tours Partner",
                 fields: [
                   { type: "string", name: "brand", label: "Brand Name" },
+                  { type: "string", name: "tagline", label: "Tagline" },
                   { type: "string", name: "description", label: "Description", ui: { component: "textarea" } },
                   { type: "string", name: "url", label: "CTA URL" },
                 ],
@@ -81,6 +83,7 @@ export default defineConfig({
                 label: "Animal Welfare Partner",
                 fields: [
                   { type: "string", name: "brand", label: "Brand Name" },
+                  { type: "string", name: "tagline", label: "Tagline" },
                   { type: "string", name: "description", label: "Description", ui: { component: "textarea" } },
                   { type: "string", name: "url", label: "CTA URL" },
                 ],
@@ -132,26 +135,17 @@ export default defineConfig({
             label: "Footer Content",
             fields: [
               { type: "string", name: "stayConnected", label: "Stay Connected Title" },
+              { type: "string", name: "stayConnectedDesc", label: "Stay Connected Description", ui: { component: "textarea" } },
+              { type: "string", name: "navigation", label: "Navigation Title" },
+              { type: "string", name: "shop", label: "Shop Title" },
+              { type: "string", name: "onlineStore", label: "Online Store Label" },
+              { type: "string", name: "allProducts", label: "All Products Label" },
+              { type: "string", name: "contact", label: "Contact Title" },
+              { type: "string", name: "bankTransferLink", label: "Bank Transfer Link Text" },
               { type: "string", name: "together", label: "Motto Text" },
               { type: "string", name: "rights", label: "Copyright Text" },
+              { type: "string", name: "privacy", label: "Privacy Policy Link Label" },
             ],
-          },
-        ],
-      },
-      {
-        name: "translations",
-        label: "Website Content",
-        path: "content",
-        format: "json",
-        match: {
-          include: "{en,de}",
-        },
-        fields: [
-          {
-            type: "string",
-            name: "language",
-            label: "Language",
-            required: true,
           },
           {
             type: "object",
@@ -339,6 +333,26 @@ export default defineConfig({
                       { type: "string", name: "bic", label: "BIC" },
                     ],
                   },
+                  {
+                    type: "object",
+                    name: "address",
+                    label: "Address",
+                    fields: [
+                      { type: "string", name: "title", label: "Title" },
+                      { type: "string", name: "name", label: "Name" },
+                      { type: "string", name: "line1", label: "Line 1" },
+                      { type: "string", name: "line2", label: "Line 2" },
+                    ],
+                  },
+                  {
+                    type: "object",
+                    name: "info",
+                    label: "Information",
+                    fields: [
+                      { type: "string", name: "title", label: "Title" },
+                      { type: "string", name: "desc", label: "Description", ui: { component: "textarea" } },
+                    ],
+                  },
                 ],
               },
               { type: "string", name: "fundsLabel", label: "Funds Label" },
@@ -354,6 +368,27 @@ export default defineConfig({
                   { type: "string", name: "desc", label: "Item Description", ui: { component: "textarea" } },
                 ],
               },
+              {
+                type: "object",
+                name: "adoptionForm",
+                label: "Adoption Inquiry Form",
+                fields: [
+                  { type: "string", name: "title", label: "Title" },
+                  { type: "string", name: "subtitle", label: "Subtitle" },
+                  { type: "string", name: "namePlaceholder", label: "Name Placeholder" },
+                  { type: "string", name: "emailPlaceholder", label: "Email Placeholder" },
+                  { type: "string", name: "messagePlaceholder", label: "Message Placeholder" },
+                  { type: "string", name: "submitButton", label: "Submit Button" },
+                ],
+              },
+            ],
+          },
+          {
+            type: "object",
+            name: "privacy",
+            label: "Privacy Policy",
+            fields: [
+              { type: "string", list: true, name: "content", label: "Content Paragraphs", ui: { component: "textarea" } },
             ],
           },
         ],

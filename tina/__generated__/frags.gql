@@ -16,18 +16,21 @@ fragment GlobalParts on Global {
     spotlight
     learnMore
     visitSite
+    logo
   }
   partners {
     __typename
     tours {
       __typename
       brand
+      tagline
       description
       url
     }
     welfare {
       __typename
       brand
+      tagline
       description
       url
     }
@@ -56,14 +59,17 @@ fragment GlobalParts on Global {
   footer {
     __typename
     stayConnected
+    stayConnectedDesc
+    navigation
+    shop
+    onlineStore
+    allProducts
+    contact
+    bankTransferLink
     together
     rights
+    privacy
   }
-}
-
-fragment TranslationsParts on Translations {
-  __typename
-  language
   index {
     __typename
     heroLabel
@@ -182,6 +188,18 @@ fragment TranslationsParts on Translations {
         iban
         bic
       }
+      address {
+        __typename
+        title
+        name
+        line1
+        line2
+      }
+      info {
+        __typename
+        title
+        desc
+      }
     }
     fundsLabel
     fundsTitle
@@ -190,5 +208,18 @@ fragment TranslationsParts on Translations {
       title
       desc
     }
+    adoptionForm {
+      __typename
+      title
+      subtitle
+      namePlaceholder
+      emailPlaceholder
+      messagePlaceholder
+      submitButton
+    }
+  }
+  privacy {
+    __typename
+    content
   }
 }

@@ -84,8 +84,6 @@ export type Query = {
   document: DocumentNode;
   global: Global;
   globalConnection: GlobalConnection;
-  translations: Translations;
-  translationsConnection: TranslationsConnection;
 };
 
 
@@ -124,24 +122,8 @@ export type QueryGlobalConnectionArgs = {
   filter?: InputMaybe<GlobalFilter>;
 };
 
-
-export type QueryTranslationsArgs = {
-  relativePath?: InputMaybe<Scalars['String']['input']>;
-};
-
-
-export type QueryTranslationsConnectionArgs = {
-  before?: InputMaybe<Scalars['String']['input']>;
-  after?: InputMaybe<Scalars['String']['input']>;
-  first?: InputMaybe<Scalars['Float']['input']>;
-  last?: InputMaybe<Scalars['Float']['input']>;
-  sort?: InputMaybe<Scalars['String']['input']>;
-  filter?: InputMaybe<TranslationsFilter>;
-};
-
 export type DocumentFilter = {
   global?: InputMaybe<GlobalFilter>;
-  translations?: InputMaybe<TranslationsFilter>;
 };
 
 export type DocumentConnectionEdges = {
@@ -181,7 +163,7 @@ export type CollectionDocumentsArgs = {
   folder?: InputMaybe<Scalars['String']['input']>;
 };
 
-export type DocumentNode = Global | Translations | Folder;
+export type DocumentNode = Global | Folder;
 
 export type GlobalNav = {
   __typename?: 'GlobalNav';
@@ -198,11 +180,13 @@ export type GlobalAds = {
   spotlight?: Maybe<Scalars['String']['output']>;
   learnMore?: Maybe<Scalars['String']['output']>;
   visitSite?: Maybe<Scalars['String']['output']>;
+  logo?: Maybe<Scalars['String']['output']>;
 };
 
 export type GlobalPartnersTours = {
   __typename?: 'GlobalPartnersTours';
   brand?: Maybe<Scalars['String']['output']>;
+  tagline?: Maybe<Scalars['String']['output']>;
   description?: Maybe<Scalars['String']['output']>;
   url?: Maybe<Scalars['String']['output']>;
 };
@@ -210,6 +194,7 @@ export type GlobalPartnersTours = {
 export type GlobalPartnersWelfare = {
   __typename?: 'GlobalPartnersWelfare';
   brand?: Maybe<Scalars['String']['output']>;
+  tagline?: Maybe<Scalars['String']['output']>;
   description?: Maybe<Scalars['String']['output']>;
   url?: Maybe<Scalars['String']['output']>;
 };
@@ -251,8 +236,202 @@ export type GlobalImpact = {
 export type GlobalFooter = {
   __typename?: 'GlobalFooter';
   stayConnected?: Maybe<Scalars['String']['output']>;
+  stayConnectedDesc?: Maybe<Scalars['String']['output']>;
+  navigation?: Maybe<Scalars['String']['output']>;
+  shop?: Maybe<Scalars['String']['output']>;
+  onlineStore?: Maybe<Scalars['String']['output']>;
+  allProducts?: Maybe<Scalars['String']['output']>;
+  contact?: Maybe<Scalars['String']['output']>;
+  bankTransferLink?: Maybe<Scalars['String']['output']>;
   together?: Maybe<Scalars['String']['output']>;
   rights?: Maybe<Scalars['String']['output']>;
+  privacy?: Maybe<Scalars['String']['output']>;
+};
+
+export type GlobalIndexMissionItems = {
+  __typename?: 'GlobalIndexMissionItems';
+  title?: Maybe<Scalars['String']['output']>;
+  description?: Maybe<Scalars['String']['output']>;
+};
+
+export type GlobalIndex = {
+  __typename?: 'GlobalIndex';
+  heroLabel?: Maybe<Scalars['String']['output']>;
+  heroTitle1?: Maybe<Scalars['String']['output']>;
+  heroTitle2?: Maybe<Scalars['String']['output']>;
+  heroDesc?: Maybe<Scalars['String']['output']>;
+  donateNow?: Maybe<Scalars['String']['output']>;
+  ourStory?: Maybe<Scalars['String']['output']>;
+  aboutLabel?: Maybe<Scalars['String']['output']>;
+  aboutTitle?: Maybe<Scalars['String']['output']>;
+  aboutP1?: Maybe<Scalars['String']['output']>;
+  aboutP2?: Maybe<Scalars['String']['output']>;
+  aboutP3?: Maybe<Scalars['String']['output']>;
+  readStory?: Maybe<Scalars['String']['output']>;
+  missionLabel?: Maybe<Scalars['String']['output']>;
+  missionTitle?: Maybe<Scalars['String']['output']>;
+  missionItems?: Maybe<Array<Maybe<GlobalIndexMissionItems>>>;
+  missionTag?: Maybe<Scalars['String']['output']>;
+  learnMore?: Maybe<Scalars['String']['output']>;
+  ctaLabel?: Maybe<Scalars['String']['output']>;
+  ctaTitle?: Maybe<Scalars['String']['output']>;
+  ctaDesc?: Maybe<Scalars['String']['output']>;
+  shopSupport?: Maybe<Scalars['String']['output']>;
+};
+
+export type GlobalAboutTeam = {
+  __typename?: 'GlobalAboutTeam';
+  name?: Maybe<Scalars['String']['output']>;
+  role?: Maybe<Scalars['String']['output']>;
+  image?: Maybe<Scalars['String']['output']>;
+  bio?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+};
+
+export type GlobalAbout = {
+  __typename?: 'GlobalAbout';
+  storyLabel?: Maybe<Scalars['String']['output']>;
+  title?: Maybe<Scalars['String']['output']>;
+  subtitle?: Maybe<Scalars['String']['output']>;
+  team?: Maybe<Array<Maybe<GlobalAboutTeam>>>;
+  beginningLabel?: Maybe<Scalars['String']['output']>;
+  beginningTitle?: Maybe<Scalars['String']['output']>;
+  communityLabel?: Maybe<Scalars['String']['output']>;
+  communityTitle?: Maybe<Scalars['String']['output']>;
+};
+
+export type GlobalMissionSections = {
+  __typename?: 'GlobalMissionSections';
+  label?: Maybe<Scalars['String']['output']>;
+  title?: Maybe<Scalars['String']['output']>;
+  paragraphs?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+};
+
+export type GlobalMission = {
+  __typename?: 'GlobalMission';
+  label?: Maybe<Scalars['String']['output']>;
+  title?: Maybe<Scalars['String']['output']>;
+  subtitle?: Maybe<Scalars['String']['output']>;
+  sections?: Maybe<Array<Maybe<GlobalMissionSections>>>;
+};
+
+export type GlobalProjectsItems = {
+  __typename?: 'GlobalProjectsItems';
+  slug?: Maybe<Scalars['String']['output']>;
+  category?: Maybe<Scalars['String']['output']>;
+  title?: Maybe<Scalars['String']['output']>;
+  description?: Maybe<Scalars['String']['output']>;
+  detail?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+};
+
+export type GlobalProjectsSocialMedia = {
+  __typename?: 'GlobalProjectsSocialMedia';
+  title?: Maybe<Scalars['String']['output']>;
+  subtitle?: Maybe<Scalars['String']['output']>;
+  viewMore?: Maybe<Scalars['String']['output']>;
+  followUs?: Maybe<Scalars['String']['output']>;
+};
+
+export type GlobalProjectsAdoptionTestimonials = {
+  __typename?: 'GlobalProjectsAdoptionTestimonials';
+  quote?: Maybe<Scalars['String']['output']>;
+  author?: Maybe<Scalars['String']['output']>;
+};
+
+export type GlobalProjectsAdoptionForm = {
+  __typename?: 'GlobalProjectsAdoptionForm';
+  title?: Maybe<Scalars['String']['output']>;
+  subtitle?: Maybe<Scalars['String']['output']>;
+  namePlaceholder?: Maybe<Scalars['String']['output']>;
+  emailPlaceholder?: Maybe<Scalars['String']['output']>;
+  messagePlaceholder?: Maybe<Scalars['String']['output']>;
+  submitButton?: Maybe<Scalars['String']['output']>;
+};
+
+export type GlobalProjectsAdoption = {
+  __typename?: 'GlobalProjectsAdoption';
+  title?: Maybe<Scalars['String']['output']>;
+  subtitle?: Maybe<Scalars['String']['output']>;
+  testimonials?: Maybe<Array<Maybe<GlobalProjectsAdoptionTestimonials>>>;
+  form?: Maybe<GlobalProjectsAdoptionForm>;
+};
+
+export type GlobalProjects = {
+  __typename?: 'GlobalProjects';
+  label?: Maybe<Scalars['String']['output']>;
+  title?: Maybe<Scalars['String']['output']>;
+  subtitle?: Maybe<Scalars['String']['output']>;
+  items?: Maybe<Array<Maybe<GlobalProjectsItems>>>;
+  ctaTitle?: Maybe<Scalars['String']['output']>;
+  ctaDesc?: Maybe<Scalars['String']['output']>;
+  socialMedia?: Maybe<GlobalProjectsSocialMedia>;
+  adoption?: Maybe<GlobalProjectsAdoption>;
+};
+
+export type GlobalDonateDetailsBank = {
+  __typename?: 'GlobalDonateDetailsBank';
+  title?: Maybe<Scalars['String']['output']>;
+  name?: Maybe<Scalars['String']['output']>;
+  iban?: Maybe<Scalars['String']['output']>;
+  bic?: Maybe<Scalars['String']['output']>;
+};
+
+export type GlobalDonateDetailsAddress = {
+  __typename?: 'GlobalDonateDetailsAddress';
+  title?: Maybe<Scalars['String']['output']>;
+  name?: Maybe<Scalars['String']['output']>;
+  line1?: Maybe<Scalars['String']['output']>;
+  line2?: Maybe<Scalars['String']['output']>;
+};
+
+export type GlobalDonateDetailsInfo = {
+  __typename?: 'GlobalDonateDetailsInfo';
+  title?: Maybe<Scalars['String']['output']>;
+  desc?: Maybe<Scalars['String']['output']>;
+};
+
+export type GlobalDonateDetails = {
+  __typename?: 'GlobalDonateDetails';
+  bank?: Maybe<GlobalDonateDetailsBank>;
+  address?: Maybe<GlobalDonateDetailsAddress>;
+  info?: Maybe<GlobalDonateDetailsInfo>;
+};
+
+export type GlobalDonateFundsItems = {
+  __typename?: 'GlobalDonateFundsItems';
+  title?: Maybe<Scalars['String']['output']>;
+  desc?: Maybe<Scalars['String']['output']>;
+};
+
+export type GlobalDonateAdoptionForm = {
+  __typename?: 'GlobalDonateAdoptionForm';
+  title?: Maybe<Scalars['String']['output']>;
+  subtitle?: Maybe<Scalars['String']['output']>;
+  namePlaceholder?: Maybe<Scalars['String']['output']>;
+  emailPlaceholder?: Maybe<Scalars['String']['output']>;
+  messagePlaceholder?: Maybe<Scalars['String']['output']>;
+  submitButton?: Maybe<Scalars['String']['output']>;
+};
+
+export type GlobalDonate = {
+  __typename?: 'GlobalDonate';
+  heroTitle?: Maybe<Scalars['String']['output']>;
+  heroDesc?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  donateNow?: Maybe<Scalars['String']['output']>;
+  mainTitle?: Maybe<Scalars['String']['output']>;
+  mainDesc?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  shopCTA?: Maybe<Scalars['String']['output']>;
+  shopTitle?: Maybe<Scalars['String']['output']>;
+  shopButton?: Maybe<Scalars['String']['output']>;
+  details?: Maybe<GlobalDonateDetails>;
+  fundsLabel?: Maybe<Scalars['String']['output']>;
+  fundsTitle?: Maybe<Scalars['String']['output']>;
+  fundsItems?: Maybe<Array<Maybe<GlobalDonateFundsItems>>>;
+  adoptionForm?: Maybe<GlobalDonateAdoptionForm>;
+};
+
+export type GlobalPrivacy = {
+  __typename?: 'GlobalPrivacy';
+  content?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
 };
 
 export type Global = Node & Document & {
@@ -264,6 +443,12 @@ export type Global = Node & Document & {
   partners?: Maybe<GlobalPartners>;
   impact?: Maybe<GlobalImpact>;
   footer?: Maybe<GlobalFooter>;
+  index?: Maybe<GlobalIndex>;
+  about?: Maybe<GlobalAbout>;
+  mission?: Maybe<GlobalMission>;
+  projects?: Maybe<GlobalProjects>;
+  donate?: Maybe<GlobalDonate>;
+  privacy?: Maybe<GlobalPrivacy>;
   id: Scalars['ID']['output'];
   _sys: SystemInfo;
   _values: Scalars['JSON']['output'];
@@ -289,16 +474,19 @@ export type GlobalAdsFilter = {
   spotlight?: InputMaybe<StringFilter>;
   learnMore?: InputMaybe<StringFilter>;
   visitSite?: InputMaybe<StringFilter>;
+  logo?: InputMaybe<StringFilter>;
 };
 
 export type GlobalPartnersToursFilter = {
   brand?: InputMaybe<StringFilter>;
+  tagline?: InputMaybe<StringFilter>;
   description?: InputMaybe<StringFilter>;
   url?: InputMaybe<StringFilter>;
 };
 
 export type GlobalPartnersWelfareFilter = {
   brand?: InputMaybe<StringFilter>;
+  tagline?: InputMaybe<StringFilter>;
   description?: InputMaybe<StringFilter>;
   url?: InputMaybe<StringFilter>;
 };
@@ -334,206 +522,24 @@ export type GlobalImpactFilter = {
 
 export type GlobalFooterFilter = {
   stayConnected?: InputMaybe<StringFilter>;
+  stayConnectedDesc?: InputMaybe<StringFilter>;
+  navigation?: InputMaybe<StringFilter>;
+  shop?: InputMaybe<StringFilter>;
+  onlineStore?: InputMaybe<StringFilter>;
+  allProducts?: InputMaybe<StringFilter>;
+  contact?: InputMaybe<StringFilter>;
+  bankTransferLink?: InputMaybe<StringFilter>;
   together?: InputMaybe<StringFilter>;
   rights?: InputMaybe<StringFilter>;
+  privacy?: InputMaybe<StringFilter>;
 };
 
-export type GlobalFilter = {
-  language?: InputMaybe<StringFilter>;
-  nav?: InputMaybe<GlobalNavFilter>;
-  announcement?: InputMaybe<StringFilter>;
-  ads?: InputMaybe<GlobalAdsFilter>;
-  partners?: InputMaybe<GlobalPartnersFilter>;
-  impact?: InputMaybe<GlobalImpactFilter>;
-  footer?: InputMaybe<GlobalFooterFilter>;
-};
-
-export type GlobalConnectionEdges = {
-  __typename?: 'GlobalConnectionEdges';
-  cursor: Scalars['String']['output'];
-  node?: Maybe<Global>;
-};
-
-export type GlobalConnection = Connection & {
-  __typename?: 'GlobalConnection';
-  pageInfo: PageInfo;
-  totalCount: Scalars['Float']['output'];
-  edges?: Maybe<Array<Maybe<GlobalConnectionEdges>>>;
-};
-
-export type TranslationsIndexMissionItems = {
-  __typename?: 'TranslationsIndexMissionItems';
-  title?: Maybe<Scalars['String']['output']>;
-  description?: Maybe<Scalars['String']['output']>;
-};
-
-export type TranslationsIndex = {
-  __typename?: 'TranslationsIndex';
-  heroLabel?: Maybe<Scalars['String']['output']>;
-  heroTitle1?: Maybe<Scalars['String']['output']>;
-  heroTitle2?: Maybe<Scalars['String']['output']>;
-  heroDesc?: Maybe<Scalars['String']['output']>;
-  donateNow?: Maybe<Scalars['String']['output']>;
-  ourStory?: Maybe<Scalars['String']['output']>;
-  aboutLabel?: Maybe<Scalars['String']['output']>;
-  aboutTitle?: Maybe<Scalars['String']['output']>;
-  aboutP1?: Maybe<Scalars['String']['output']>;
-  aboutP2?: Maybe<Scalars['String']['output']>;
-  aboutP3?: Maybe<Scalars['String']['output']>;
-  readStory?: Maybe<Scalars['String']['output']>;
-  missionLabel?: Maybe<Scalars['String']['output']>;
-  missionTitle?: Maybe<Scalars['String']['output']>;
-  missionItems?: Maybe<Array<Maybe<TranslationsIndexMissionItems>>>;
-  missionTag?: Maybe<Scalars['String']['output']>;
-  learnMore?: Maybe<Scalars['String']['output']>;
-  ctaLabel?: Maybe<Scalars['String']['output']>;
-  ctaTitle?: Maybe<Scalars['String']['output']>;
-  ctaDesc?: Maybe<Scalars['String']['output']>;
-  shopSupport?: Maybe<Scalars['String']['output']>;
-};
-
-export type TranslationsAboutTeam = {
-  __typename?: 'TranslationsAboutTeam';
-  name?: Maybe<Scalars['String']['output']>;
-  role?: Maybe<Scalars['String']['output']>;
-  image?: Maybe<Scalars['String']['output']>;
-  bio?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
-};
-
-export type TranslationsAbout = {
-  __typename?: 'TranslationsAbout';
-  storyLabel?: Maybe<Scalars['String']['output']>;
-  title?: Maybe<Scalars['String']['output']>;
-  subtitle?: Maybe<Scalars['String']['output']>;
-  team?: Maybe<Array<Maybe<TranslationsAboutTeam>>>;
-  beginningLabel?: Maybe<Scalars['String']['output']>;
-  beginningTitle?: Maybe<Scalars['String']['output']>;
-  communityLabel?: Maybe<Scalars['String']['output']>;
-  communityTitle?: Maybe<Scalars['String']['output']>;
-};
-
-export type TranslationsMissionSections = {
-  __typename?: 'TranslationsMissionSections';
-  label?: Maybe<Scalars['String']['output']>;
-  title?: Maybe<Scalars['String']['output']>;
-  paragraphs?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
-};
-
-export type TranslationsMission = {
-  __typename?: 'TranslationsMission';
-  label?: Maybe<Scalars['String']['output']>;
-  title?: Maybe<Scalars['String']['output']>;
-  subtitle?: Maybe<Scalars['String']['output']>;
-  sections?: Maybe<Array<Maybe<TranslationsMissionSections>>>;
-};
-
-export type TranslationsProjectsItems = {
-  __typename?: 'TranslationsProjectsItems';
-  slug?: Maybe<Scalars['String']['output']>;
-  category?: Maybe<Scalars['String']['output']>;
-  title?: Maybe<Scalars['String']['output']>;
-  description?: Maybe<Scalars['String']['output']>;
-  detail?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
-};
-
-export type TranslationsProjectsSocialMedia = {
-  __typename?: 'TranslationsProjectsSocialMedia';
-  title?: Maybe<Scalars['String']['output']>;
-  subtitle?: Maybe<Scalars['String']['output']>;
-  viewMore?: Maybe<Scalars['String']['output']>;
-  followUs?: Maybe<Scalars['String']['output']>;
-};
-
-export type TranslationsProjectsAdoptionTestimonials = {
-  __typename?: 'TranslationsProjectsAdoptionTestimonials';
-  quote?: Maybe<Scalars['String']['output']>;
-  author?: Maybe<Scalars['String']['output']>;
-};
-
-export type TranslationsProjectsAdoptionForm = {
-  __typename?: 'TranslationsProjectsAdoptionForm';
-  title?: Maybe<Scalars['String']['output']>;
-  subtitle?: Maybe<Scalars['String']['output']>;
-  namePlaceholder?: Maybe<Scalars['String']['output']>;
-  emailPlaceholder?: Maybe<Scalars['String']['output']>;
-  messagePlaceholder?: Maybe<Scalars['String']['output']>;
-  submitButton?: Maybe<Scalars['String']['output']>;
-};
-
-export type TranslationsProjectsAdoption = {
-  __typename?: 'TranslationsProjectsAdoption';
-  title?: Maybe<Scalars['String']['output']>;
-  subtitle?: Maybe<Scalars['String']['output']>;
-  testimonials?: Maybe<Array<Maybe<TranslationsProjectsAdoptionTestimonials>>>;
-  form?: Maybe<TranslationsProjectsAdoptionForm>;
-};
-
-export type TranslationsProjects = {
-  __typename?: 'TranslationsProjects';
-  label?: Maybe<Scalars['String']['output']>;
-  title?: Maybe<Scalars['String']['output']>;
-  subtitle?: Maybe<Scalars['String']['output']>;
-  items?: Maybe<Array<Maybe<TranslationsProjectsItems>>>;
-  ctaTitle?: Maybe<Scalars['String']['output']>;
-  ctaDesc?: Maybe<Scalars['String']['output']>;
-  socialMedia?: Maybe<TranslationsProjectsSocialMedia>;
-  adoption?: Maybe<TranslationsProjectsAdoption>;
-};
-
-export type TranslationsDonateDetailsBank = {
-  __typename?: 'TranslationsDonateDetailsBank';
-  title?: Maybe<Scalars['String']['output']>;
-  name?: Maybe<Scalars['String']['output']>;
-  iban?: Maybe<Scalars['String']['output']>;
-  bic?: Maybe<Scalars['String']['output']>;
-};
-
-export type TranslationsDonateDetails = {
-  __typename?: 'TranslationsDonateDetails';
-  bank?: Maybe<TranslationsDonateDetailsBank>;
-};
-
-export type TranslationsDonateFundsItems = {
-  __typename?: 'TranslationsDonateFundsItems';
-  title?: Maybe<Scalars['String']['output']>;
-  desc?: Maybe<Scalars['String']['output']>;
-};
-
-export type TranslationsDonate = {
-  __typename?: 'TranslationsDonate';
-  heroTitle?: Maybe<Scalars['String']['output']>;
-  heroDesc?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
-  donateNow?: Maybe<Scalars['String']['output']>;
-  mainTitle?: Maybe<Scalars['String']['output']>;
-  mainDesc?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
-  shopCTA?: Maybe<Scalars['String']['output']>;
-  shopTitle?: Maybe<Scalars['String']['output']>;
-  shopButton?: Maybe<Scalars['String']['output']>;
-  details?: Maybe<TranslationsDonateDetails>;
-  fundsLabel?: Maybe<Scalars['String']['output']>;
-  fundsTitle?: Maybe<Scalars['String']['output']>;
-  fundsItems?: Maybe<Array<Maybe<TranslationsDonateFundsItems>>>;
-};
-
-export type Translations = Node & Document & {
-  __typename?: 'Translations';
-  language: Scalars['String']['output'];
-  index?: Maybe<TranslationsIndex>;
-  about?: Maybe<TranslationsAbout>;
-  mission?: Maybe<TranslationsMission>;
-  projects?: Maybe<TranslationsProjects>;
-  donate?: Maybe<TranslationsDonate>;
-  id: Scalars['ID']['output'];
-  _sys: SystemInfo;
-  _values: Scalars['JSON']['output'];
-};
-
-export type TranslationsIndexMissionItemsFilter = {
+export type GlobalIndexMissionItemsFilter = {
   title?: InputMaybe<StringFilter>;
   description?: InputMaybe<StringFilter>;
 };
 
-export type TranslationsIndexFilter = {
+export type GlobalIndexFilter = {
   heroLabel?: InputMaybe<StringFilter>;
   heroTitle1?: InputMaybe<StringFilter>;
   heroTitle2?: InputMaybe<StringFilter>;
@@ -548,7 +554,7 @@ export type TranslationsIndexFilter = {
   readStory?: InputMaybe<StringFilter>;
   missionLabel?: InputMaybe<StringFilter>;
   missionTitle?: InputMaybe<StringFilter>;
-  missionItems?: InputMaybe<TranslationsIndexMissionItemsFilter>;
+  missionItems?: InputMaybe<GlobalIndexMissionItemsFilter>;
   missionTag?: InputMaybe<StringFilter>;
   learnMore?: InputMaybe<StringFilter>;
   ctaLabel?: InputMaybe<StringFilter>;
@@ -564,38 +570,38 @@ export type ImageFilter = {
   in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
 };
 
-export type TranslationsAboutTeamFilter = {
+export type GlobalAboutTeamFilter = {
   name?: InputMaybe<StringFilter>;
   role?: InputMaybe<StringFilter>;
   image?: InputMaybe<ImageFilter>;
   bio?: InputMaybe<StringFilter>;
 };
 
-export type TranslationsAboutFilter = {
+export type GlobalAboutFilter = {
   storyLabel?: InputMaybe<StringFilter>;
   title?: InputMaybe<StringFilter>;
   subtitle?: InputMaybe<StringFilter>;
-  team?: InputMaybe<TranslationsAboutTeamFilter>;
+  team?: InputMaybe<GlobalAboutTeamFilter>;
   beginningLabel?: InputMaybe<StringFilter>;
   beginningTitle?: InputMaybe<StringFilter>;
   communityLabel?: InputMaybe<StringFilter>;
   communityTitle?: InputMaybe<StringFilter>;
 };
 
-export type TranslationsMissionSectionsFilter = {
+export type GlobalMissionSectionsFilter = {
   label?: InputMaybe<StringFilter>;
   title?: InputMaybe<StringFilter>;
   paragraphs?: InputMaybe<StringFilter>;
 };
 
-export type TranslationsMissionFilter = {
+export type GlobalMissionFilter = {
   label?: InputMaybe<StringFilter>;
   title?: InputMaybe<StringFilter>;
   subtitle?: InputMaybe<StringFilter>;
-  sections?: InputMaybe<TranslationsMissionSectionsFilter>;
+  sections?: InputMaybe<GlobalMissionSectionsFilter>;
 };
 
-export type TranslationsProjectsItemsFilter = {
+export type GlobalProjectsItemsFilter = {
   slug?: InputMaybe<StringFilter>;
   category?: InputMaybe<StringFilter>;
   title?: InputMaybe<StringFilter>;
@@ -603,19 +609,19 @@ export type TranslationsProjectsItemsFilter = {
   detail?: InputMaybe<StringFilter>;
 };
 
-export type TranslationsProjectsSocialMediaFilter = {
+export type GlobalProjectsSocialMediaFilter = {
   title?: InputMaybe<StringFilter>;
   subtitle?: InputMaybe<StringFilter>;
   viewMore?: InputMaybe<StringFilter>;
   followUs?: InputMaybe<StringFilter>;
 };
 
-export type TranslationsProjectsAdoptionTestimonialsFilter = {
+export type GlobalProjectsAdoptionTestimonialsFilter = {
   quote?: InputMaybe<StringFilter>;
   author?: InputMaybe<StringFilter>;
 };
 
-export type TranslationsProjectsAdoptionFormFilter = {
+export type GlobalProjectsAdoptionFormFilter = {
   title?: InputMaybe<StringFilter>;
   subtitle?: InputMaybe<StringFilter>;
   namePlaceholder?: InputMaybe<StringFilter>;
@@ -624,41 +630,64 @@ export type TranslationsProjectsAdoptionFormFilter = {
   submitButton?: InputMaybe<StringFilter>;
 };
 
-export type TranslationsProjectsAdoptionFilter = {
+export type GlobalProjectsAdoptionFilter = {
   title?: InputMaybe<StringFilter>;
   subtitle?: InputMaybe<StringFilter>;
-  testimonials?: InputMaybe<TranslationsProjectsAdoptionTestimonialsFilter>;
-  form?: InputMaybe<TranslationsProjectsAdoptionFormFilter>;
+  testimonials?: InputMaybe<GlobalProjectsAdoptionTestimonialsFilter>;
+  form?: InputMaybe<GlobalProjectsAdoptionFormFilter>;
 };
 
-export type TranslationsProjectsFilter = {
+export type GlobalProjectsFilter = {
   label?: InputMaybe<StringFilter>;
   title?: InputMaybe<StringFilter>;
   subtitle?: InputMaybe<StringFilter>;
-  items?: InputMaybe<TranslationsProjectsItemsFilter>;
+  items?: InputMaybe<GlobalProjectsItemsFilter>;
   ctaTitle?: InputMaybe<StringFilter>;
   ctaDesc?: InputMaybe<StringFilter>;
-  socialMedia?: InputMaybe<TranslationsProjectsSocialMediaFilter>;
-  adoption?: InputMaybe<TranslationsProjectsAdoptionFilter>;
+  socialMedia?: InputMaybe<GlobalProjectsSocialMediaFilter>;
+  adoption?: InputMaybe<GlobalProjectsAdoptionFilter>;
 };
 
-export type TranslationsDonateDetailsBankFilter = {
+export type GlobalDonateDetailsBankFilter = {
   title?: InputMaybe<StringFilter>;
   name?: InputMaybe<StringFilter>;
   iban?: InputMaybe<StringFilter>;
   bic?: InputMaybe<StringFilter>;
 };
 
-export type TranslationsDonateDetailsFilter = {
-  bank?: InputMaybe<TranslationsDonateDetailsBankFilter>;
+export type GlobalDonateDetailsAddressFilter = {
+  title?: InputMaybe<StringFilter>;
+  name?: InputMaybe<StringFilter>;
+  line1?: InputMaybe<StringFilter>;
+  line2?: InputMaybe<StringFilter>;
 };
 
-export type TranslationsDonateFundsItemsFilter = {
+export type GlobalDonateDetailsInfoFilter = {
   title?: InputMaybe<StringFilter>;
   desc?: InputMaybe<StringFilter>;
 };
 
-export type TranslationsDonateFilter = {
+export type GlobalDonateDetailsFilter = {
+  bank?: InputMaybe<GlobalDonateDetailsBankFilter>;
+  address?: InputMaybe<GlobalDonateDetailsAddressFilter>;
+  info?: InputMaybe<GlobalDonateDetailsInfoFilter>;
+};
+
+export type GlobalDonateFundsItemsFilter = {
+  title?: InputMaybe<StringFilter>;
+  desc?: InputMaybe<StringFilter>;
+};
+
+export type GlobalDonateAdoptionFormFilter = {
+  title?: InputMaybe<StringFilter>;
+  subtitle?: InputMaybe<StringFilter>;
+  namePlaceholder?: InputMaybe<StringFilter>;
+  emailPlaceholder?: InputMaybe<StringFilter>;
+  messagePlaceholder?: InputMaybe<StringFilter>;
+  submitButton?: InputMaybe<StringFilter>;
+};
+
+export type GlobalDonateFilter = {
   heroTitle?: InputMaybe<StringFilter>;
   heroDesc?: InputMaybe<StringFilter>;
   donateNow?: InputMaybe<StringFilter>;
@@ -667,32 +696,44 @@ export type TranslationsDonateFilter = {
   shopCTA?: InputMaybe<StringFilter>;
   shopTitle?: InputMaybe<StringFilter>;
   shopButton?: InputMaybe<StringFilter>;
-  details?: InputMaybe<TranslationsDonateDetailsFilter>;
+  details?: InputMaybe<GlobalDonateDetailsFilter>;
   fundsLabel?: InputMaybe<StringFilter>;
   fundsTitle?: InputMaybe<StringFilter>;
-  fundsItems?: InputMaybe<TranslationsDonateFundsItemsFilter>;
+  fundsItems?: InputMaybe<GlobalDonateFundsItemsFilter>;
+  adoptionForm?: InputMaybe<GlobalDonateAdoptionFormFilter>;
 };
 
-export type TranslationsFilter = {
+export type GlobalPrivacyFilter = {
+  content?: InputMaybe<StringFilter>;
+};
+
+export type GlobalFilter = {
   language?: InputMaybe<StringFilter>;
-  index?: InputMaybe<TranslationsIndexFilter>;
-  about?: InputMaybe<TranslationsAboutFilter>;
-  mission?: InputMaybe<TranslationsMissionFilter>;
-  projects?: InputMaybe<TranslationsProjectsFilter>;
-  donate?: InputMaybe<TranslationsDonateFilter>;
+  nav?: InputMaybe<GlobalNavFilter>;
+  announcement?: InputMaybe<StringFilter>;
+  ads?: InputMaybe<GlobalAdsFilter>;
+  partners?: InputMaybe<GlobalPartnersFilter>;
+  impact?: InputMaybe<GlobalImpactFilter>;
+  footer?: InputMaybe<GlobalFooterFilter>;
+  index?: InputMaybe<GlobalIndexFilter>;
+  about?: InputMaybe<GlobalAboutFilter>;
+  mission?: InputMaybe<GlobalMissionFilter>;
+  projects?: InputMaybe<GlobalProjectsFilter>;
+  donate?: InputMaybe<GlobalDonateFilter>;
+  privacy?: InputMaybe<GlobalPrivacyFilter>;
 };
 
-export type TranslationsConnectionEdges = {
-  __typename?: 'TranslationsConnectionEdges';
+export type GlobalConnectionEdges = {
+  __typename?: 'GlobalConnectionEdges';
   cursor: Scalars['String']['output'];
-  node?: Maybe<Translations>;
+  node?: Maybe<Global>;
 };
 
-export type TranslationsConnection = Connection & {
-  __typename?: 'TranslationsConnection';
+export type GlobalConnection = Connection & {
+  __typename?: 'GlobalConnection';
   pageInfo: PageInfo;
   totalCount: Scalars['Float']['output'];
-  edges?: Maybe<Array<Maybe<TranslationsConnectionEdges>>>;
+  edges?: Maybe<Array<Maybe<GlobalConnectionEdges>>>;
 };
 
 export type Mutation = {
@@ -704,8 +745,6 @@ export type Mutation = {
   createFolder: DocumentNode;
   updateGlobal: Global;
   createGlobal: Global;
-  updateTranslations: Translations;
-  createTranslations: Translations;
 };
 
 
@@ -753,27 +792,13 @@ export type MutationCreateGlobalArgs = {
   params: GlobalMutation;
 };
 
-
-export type MutationUpdateTranslationsArgs = {
-  relativePath: Scalars['String']['input'];
-  params: TranslationsMutation;
-};
-
-
-export type MutationCreateTranslationsArgs = {
-  relativePath: Scalars['String']['input'];
-  params: TranslationsMutation;
-};
-
 export type DocumentUpdateMutation = {
   global?: InputMaybe<GlobalMutation>;
-  translations?: InputMaybe<TranslationsMutation>;
   relativePath?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type DocumentMutation = {
   global?: InputMaybe<GlobalMutation>;
-  translations?: InputMaybe<TranslationsMutation>;
 };
 
 export type GlobalNavMutation = {
@@ -789,16 +814,19 @@ export type GlobalAdsMutation = {
   spotlight?: InputMaybe<Scalars['String']['input']>;
   learnMore?: InputMaybe<Scalars['String']['input']>;
   visitSite?: InputMaybe<Scalars['String']['input']>;
+  logo?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type GlobalPartnersToursMutation = {
   brand?: InputMaybe<Scalars['String']['input']>;
+  tagline?: InputMaybe<Scalars['String']['input']>;
   description?: InputMaybe<Scalars['String']['input']>;
   url?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type GlobalPartnersWelfareMutation = {
   brand?: InputMaybe<Scalars['String']['input']>;
+  tagline?: InputMaybe<Scalars['String']['input']>;
   description?: InputMaybe<Scalars['String']['input']>;
   url?: InputMaybe<Scalars['String']['input']>;
 };
@@ -834,26 +862,24 @@ export type GlobalImpactMutation = {
 
 export type GlobalFooterMutation = {
   stayConnected?: InputMaybe<Scalars['String']['input']>;
+  stayConnectedDesc?: InputMaybe<Scalars['String']['input']>;
+  navigation?: InputMaybe<Scalars['String']['input']>;
+  shop?: InputMaybe<Scalars['String']['input']>;
+  onlineStore?: InputMaybe<Scalars['String']['input']>;
+  allProducts?: InputMaybe<Scalars['String']['input']>;
+  contact?: InputMaybe<Scalars['String']['input']>;
+  bankTransferLink?: InputMaybe<Scalars['String']['input']>;
   together?: InputMaybe<Scalars['String']['input']>;
   rights?: InputMaybe<Scalars['String']['input']>;
+  privacy?: InputMaybe<Scalars['String']['input']>;
 };
 
-export type GlobalMutation = {
-  language?: InputMaybe<Scalars['String']['input']>;
-  nav?: InputMaybe<GlobalNavMutation>;
-  announcement?: InputMaybe<Scalars['String']['input']>;
-  ads?: InputMaybe<GlobalAdsMutation>;
-  partners?: InputMaybe<GlobalPartnersMutation>;
-  impact?: InputMaybe<GlobalImpactMutation>;
-  footer?: InputMaybe<GlobalFooterMutation>;
-};
-
-export type TranslationsIndexMissionItemsMutation = {
+export type GlobalIndexMissionItemsMutation = {
   title?: InputMaybe<Scalars['String']['input']>;
   description?: InputMaybe<Scalars['String']['input']>;
 };
 
-export type TranslationsIndexMutation = {
+export type GlobalIndexMutation = {
   heroLabel?: InputMaybe<Scalars['String']['input']>;
   heroTitle1?: InputMaybe<Scalars['String']['input']>;
   heroTitle2?: InputMaybe<Scalars['String']['input']>;
@@ -868,7 +894,7 @@ export type TranslationsIndexMutation = {
   readStory?: InputMaybe<Scalars['String']['input']>;
   missionLabel?: InputMaybe<Scalars['String']['input']>;
   missionTitle?: InputMaybe<Scalars['String']['input']>;
-  missionItems?: InputMaybe<Array<InputMaybe<TranslationsIndexMissionItemsMutation>>>;
+  missionItems?: InputMaybe<Array<InputMaybe<GlobalIndexMissionItemsMutation>>>;
   missionTag?: InputMaybe<Scalars['String']['input']>;
   learnMore?: InputMaybe<Scalars['String']['input']>;
   ctaLabel?: InputMaybe<Scalars['String']['input']>;
@@ -877,38 +903,38 @@ export type TranslationsIndexMutation = {
   shopSupport?: InputMaybe<Scalars['String']['input']>;
 };
 
-export type TranslationsAboutTeamMutation = {
+export type GlobalAboutTeamMutation = {
   name?: InputMaybe<Scalars['String']['input']>;
   role?: InputMaybe<Scalars['String']['input']>;
   image?: InputMaybe<Scalars['String']['input']>;
   bio?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
 };
 
-export type TranslationsAboutMutation = {
+export type GlobalAboutMutation = {
   storyLabel?: InputMaybe<Scalars['String']['input']>;
   title?: InputMaybe<Scalars['String']['input']>;
   subtitle?: InputMaybe<Scalars['String']['input']>;
-  team?: InputMaybe<Array<InputMaybe<TranslationsAboutTeamMutation>>>;
+  team?: InputMaybe<Array<InputMaybe<GlobalAboutTeamMutation>>>;
   beginningLabel?: InputMaybe<Scalars['String']['input']>;
   beginningTitle?: InputMaybe<Scalars['String']['input']>;
   communityLabel?: InputMaybe<Scalars['String']['input']>;
   communityTitle?: InputMaybe<Scalars['String']['input']>;
 };
 
-export type TranslationsMissionSectionsMutation = {
+export type GlobalMissionSectionsMutation = {
   label?: InputMaybe<Scalars['String']['input']>;
   title?: InputMaybe<Scalars['String']['input']>;
   paragraphs?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
 };
 
-export type TranslationsMissionMutation = {
+export type GlobalMissionMutation = {
   label?: InputMaybe<Scalars['String']['input']>;
   title?: InputMaybe<Scalars['String']['input']>;
   subtitle?: InputMaybe<Scalars['String']['input']>;
-  sections?: InputMaybe<Array<InputMaybe<TranslationsMissionSectionsMutation>>>;
+  sections?: InputMaybe<Array<InputMaybe<GlobalMissionSectionsMutation>>>;
 };
 
-export type TranslationsProjectsItemsMutation = {
+export type GlobalProjectsItemsMutation = {
   slug?: InputMaybe<Scalars['String']['input']>;
   category?: InputMaybe<Scalars['String']['input']>;
   title?: InputMaybe<Scalars['String']['input']>;
@@ -916,19 +942,19 @@ export type TranslationsProjectsItemsMutation = {
   detail?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
 };
 
-export type TranslationsProjectsSocialMediaMutation = {
+export type GlobalProjectsSocialMediaMutation = {
   title?: InputMaybe<Scalars['String']['input']>;
   subtitle?: InputMaybe<Scalars['String']['input']>;
   viewMore?: InputMaybe<Scalars['String']['input']>;
   followUs?: InputMaybe<Scalars['String']['input']>;
 };
 
-export type TranslationsProjectsAdoptionTestimonialsMutation = {
+export type GlobalProjectsAdoptionTestimonialsMutation = {
   quote?: InputMaybe<Scalars['String']['input']>;
   author?: InputMaybe<Scalars['String']['input']>;
 };
 
-export type TranslationsProjectsAdoptionFormMutation = {
+export type GlobalProjectsAdoptionFormMutation = {
   title?: InputMaybe<Scalars['String']['input']>;
   subtitle?: InputMaybe<Scalars['String']['input']>;
   namePlaceholder?: InputMaybe<Scalars['String']['input']>;
@@ -937,41 +963,64 @@ export type TranslationsProjectsAdoptionFormMutation = {
   submitButton?: InputMaybe<Scalars['String']['input']>;
 };
 
-export type TranslationsProjectsAdoptionMutation = {
+export type GlobalProjectsAdoptionMutation = {
   title?: InputMaybe<Scalars['String']['input']>;
   subtitle?: InputMaybe<Scalars['String']['input']>;
-  testimonials?: InputMaybe<Array<InputMaybe<TranslationsProjectsAdoptionTestimonialsMutation>>>;
-  form?: InputMaybe<TranslationsProjectsAdoptionFormMutation>;
+  testimonials?: InputMaybe<Array<InputMaybe<GlobalProjectsAdoptionTestimonialsMutation>>>;
+  form?: InputMaybe<GlobalProjectsAdoptionFormMutation>;
 };
 
-export type TranslationsProjectsMutation = {
+export type GlobalProjectsMutation = {
   label?: InputMaybe<Scalars['String']['input']>;
   title?: InputMaybe<Scalars['String']['input']>;
   subtitle?: InputMaybe<Scalars['String']['input']>;
-  items?: InputMaybe<Array<InputMaybe<TranslationsProjectsItemsMutation>>>;
+  items?: InputMaybe<Array<InputMaybe<GlobalProjectsItemsMutation>>>;
   ctaTitle?: InputMaybe<Scalars['String']['input']>;
   ctaDesc?: InputMaybe<Scalars['String']['input']>;
-  socialMedia?: InputMaybe<TranslationsProjectsSocialMediaMutation>;
-  adoption?: InputMaybe<TranslationsProjectsAdoptionMutation>;
+  socialMedia?: InputMaybe<GlobalProjectsSocialMediaMutation>;
+  adoption?: InputMaybe<GlobalProjectsAdoptionMutation>;
 };
 
-export type TranslationsDonateDetailsBankMutation = {
+export type GlobalDonateDetailsBankMutation = {
   title?: InputMaybe<Scalars['String']['input']>;
   name?: InputMaybe<Scalars['String']['input']>;
   iban?: InputMaybe<Scalars['String']['input']>;
   bic?: InputMaybe<Scalars['String']['input']>;
 };
 
-export type TranslationsDonateDetailsMutation = {
-  bank?: InputMaybe<TranslationsDonateDetailsBankMutation>;
+export type GlobalDonateDetailsAddressMutation = {
+  title?: InputMaybe<Scalars['String']['input']>;
+  name?: InputMaybe<Scalars['String']['input']>;
+  line1?: InputMaybe<Scalars['String']['input']>;
+  line2?: InputMaybe<Scalars['String']['input']>;
 };
 
-export type TranslationsDonateFundsItemsMutation = {
+export type GlobalDonateDetailsInfoMutation = {
   title?: InputMaybe<Scalars['String']['input']>;
   desc?: InputMaybe<Scalars['String']['input']>;
 };
 
-export type TranslationsDonateMutation = {
+export type GlobalDonateDetailsMutation = {
+  bank?: InputMaybe<GlobalDonateDetailsBankMutation>;
+  address?: InputMaybe<GlobalDonateDetailsAddressMutation>;
+  info?: InputMaybe<GlobalDonateDetailsInfoMutation>;
+};
+
+export type GlobalDonateFundsItemsMutation = {
+  title?: InputMaybe<Scalars['String']['input']>;
+  desc?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type GlobalDonateAdoptionFormMutation = {
+  title?: InputMaybe<Scalars['String']['input']>;
+  subtitle?: InputMaybe<Scalars['String']['input']>;
+  namePlaceholder?: InputMaybe<Scalars['String']['input']>;
+  emailPlaceholder?: InputMaybe<Scalars['String']['input']>;
+  messagePlaceholder?: InputMaybe<Scalars['String']['input']>;
+  submitButton?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type GlobalDonateMutation = {
   heroTitle?: InputMaybe<Scalars['String']['input']>;
   heroDesc?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
   donateNow?: InputMaybe<Scalars['String']['input']>;
@@ -980,31 +1029,41 @@ export type TranslationsDonateMutation = {
   shopCTA?: InputMaybe<Scalars['String']['input']>;
   shopTitle?: InputMaybe<Scalars['String']['input']>;
   shopButton?: InputMaybe<Scalars['String']['input']>;
-  details?: InputMaybe<TranslationsDonateDetailsMutation>;
+  details?: InputMaybe<GlobalDonateDetailsMutation>;
   fundsLabel?: InputMaybe<Scalars['String']['input']>;
   fundsTitle?: InputMaybe<Scalars['String']['input']>;
-  fundsItems?: InputMaybe<Array<InputMaybe<TranslationsDonateFundsItemsMutation>>>;
+  fundsItems?: InputMaybe<Array<InputMaybe<GlobalDonateFundsItemsMutation>>>;
+  adoptionForm?: InputMaybe<GlobalDonateAdoptionFormMutation>;
 };
 
-export type TranslationsMutation = {
+export type GlobalPrivacyMutation = {
+  content?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
+export type GlobalMutation = {
   language?: InputMaybe<Scalars['String']['input']>;
-  index?: InputMaybe<TranslationsIndexMutation>;
-  about?: InputMaybe<TranslationsAboutMutation>;
-  mission?: InputMaybe<TranslationsMissionMutation>;
-  projects?: InputMaybe<TranslationsProjectsMutation>;
-  donate?: InputMaybe<TranslationsDonateMutation>;
+  nav?: InputMaybe<GlobalNavMutation>;
+  announcement?: InputMaybe<Scalars['String']['input']>;
+  ads?: InputMaybe<GlobalAdsMutation>;
+  partners?: InputMaybe<GlobalPartnersMutation>;
+  impact?: InputMaybe<GlobalImpactMutation>;
+  footer?: InputMaybe<GlobalFooterMutation>;
+  index?: InputMaybe<GlobalIndexMutation>;
+  about?: InputMaybe<GlobalAboutMutation>;
+  mission?: InputMaybe<GlobalMissionMutation>;
+  projects?: InputMaybe<GlobalProjectsMutation>;
+  donate?: InputMaybe<GlobalDonateMutation>;
+  privacy?: InputMaybe<GlobalPrivacyMutation>;
 };
 
-export type GlobalPartsFragment = { __typename: 'Global', language: string, announcement?: string | null, nav?: { __typename: 'GlobalNav', home?: string | null, about?: string | null, mission?: string | null, projects?: string | null, donate?: string | null } | null, ads?: { __typename: 'GlobalAds', sponsored?: string | null, spotlight?: string | null, learnMore?: string | null, visitSite?: string | null } | null, partners?: { __typename: 'GlobalPartners', tours?: { __typename: 'GlobalPartnersTours', brand?: string | null, description?: string | null, url?: string | null } | null, welfare?: { __typename: 'GlobalPartnersWelfare', brand?: string | null, description?: string | null, url?: string | null } | null, vets?: { __typename: 'GlobalPartnersVets', brand?: string | null, description?: string | null, url?: string | null } | null, tours_alt?: { __typename: 'GlobalPartnersTours_alt', brand?: string | null, description?: string | null, url?: string | null } | null } | null, impact?: { __typename: 'GlobalImpact', label?: string | null, stats?: Array<{ __typename: 'GlobalImpactStats', number?: string | null, label?: string | null } | null> | null } | null, footer?: { __typename: 'GlobalFooter', stayConnected?: string | null, together?: string | null, rights?: string | null } | null };
-
-export type TranslationsPartsFragment = { __typename: 'Translations', language: string, index?: { __typename: 'TranslationsIndex', heroLabel?: string | null, heroTitle1?: string | null, heroTitle2?: string | null, heroDesc?: string | null, donateNow?: string | null, ourStory?: string | null, aboutLabel?: string | null, aboutTitle?: string | null, aboutP1?: string | null, aboutP2?: string | null, aboutP3?: string | null, readStory?: string | null, missionLabel?: string | null, missionTitle?: string | null, missionTag?: string | null, learnMore?: string | null, ctaLabel?: string | null, ctaTitle?: string | null, ctaDesc?: string | null, shopSupport?: string | null, missionItems?: Array<{ __typename: 'TranslationsIndexMissionItems', title?: string | null, description?: string | null } | null> | null } | null, about?: { __typename: 'TranslationsAbout', storyLabel?: string | null, title?: string | null, subtitle?: string | null, beginningLabel?: string | null, beginningTitle?: string | null, communityLabel?: string | null, communityTitle?: string | null, team?: Array<{ __typename: 'TranslationsAboutTeam', name?: string | null, role?: string | null, image?: string | null, bio?: Array<string | null> | null } | null> | null } | null, mission?: { __typename: 'TranslationsMission', label?: string | null, title?: string | null, subtitle?: string | null, sections?: Array<{ __typename: 'TranslationsMissionSections', label?: string | null, title?: string | null, paragraphs?: Array<string | null> | null } | null> | null } | null, projects?: { __typename: 'TranslationsProjects', label?: string | null, title?: string | null, subtitle?: string | null, ctaTitle?: string | null, ctaDesc?: string | null, items?: Array<{ __typename: 'TranslationsProjectsItems', slug?: string | null, category?: string | null, title?: string | null, description?: string | null, detail?: Array<string | null> | null } | null> | null, socialMedia?: { __typename: 'TranslationsProjectsSocialMedia', title?: string | null, subtitle?: string | null, viewMore?: string | null, followUs?: string | null } | null, adoption?: { __typename: 'TranslationsProjectsAdoption', title?: string | null, subtitle?: string | null, testimonials?: Array<{ __typename: 'TranslationsProjectsAdoptionTestimonials', quote?: string | null, author?: string | null } | null> | null, form?: { __typename: 'TranslationsProjectsAdoptionForm', title?: string | null, subtitle?: string | null, namePlaceholder?: string | null, emailPlaceholder?: string | null, messagePlaceholder?: string | null, submitButton?: string | null } | null } | null } | null, donate?: { __typename: 'TranslationsDonate', heroTitle?: string | null, heroDesc?: Array<string | null> | null, donateNow?: string | null, mainTitle?: string | null, mainDesc?: Array<string | null> | null, shopCTA?: string | null, shopTitle?: string | null, shopButton?: string | null, fundsLabel?: string | null, fundsTitle?: string | null, details?: { __typename: 'TranslationsDonateDetails', bank?: { __typename: 'TranslationsDonateDetailsBank', title?: string | null, name?: string | null, iban?: string | null, bic?: string | null } | null } | null, fundsItems?: Array<{ __typename: 'TranslationsDonateFundsItems', title?: string | null, desc?: string | null } | null> | null } | null };
+export type GlobalPartsFragment = { __typename: 'Global', language: string, announcement?: string | null, nav?: { __typename: 'GlobalNav', home?: string | null, about?: string | null, mission?: string | null, projects?: string | null, donate?: string | null } | null, ads?: { __typename: 'GlobalAds', sponsored?: string | null, spotlight?: string | null, learnMore?: string | null, visitSite?: string | null, logo?: string | null } | null, partners?: { __typename: 'GlobalPartners', tours?: { __typename: 'GlobalPartnersTours', brand?: string | null, tagline?: string | null, description?: string | null, url?: string | null } | null, welfare?: { __typename: 'GlobalPartnersWelfare', brand?: string | null, tagline?: string | null, description?: string | null, url?: string | null } | null, vets?: { __typename: 'GlobalPartnersVets', brand?: string | null, description?: string | null, url?: string | null } | null, tours_alt?: { __typename: 'GlobalPartnersTours_alt', brand?: string | null, description?: string | null, url?: string | null } | null } | null, impact?: { __typename: 'GlobalImpact', label?: string | null, stats?: Array<{ __typename: 'GlobalImpactStats', number?: string | null, label?: string | null } | null> | null } | null, footer?: { __typename: 'GlobalFooter', stayConnected?: string | null, stayConnectedDesc?: string | null, navigation?: string | null, shop?: string | null, onlineStore?: string | null, allProducts?: string | null, contact?: string | null, bankTransferLink?: string | null, together?: string | null, rights?: string | null, privacy?: string | null } | null, index?: { __typename: 'GlobalIndex', heroLabel?: string | null, heroTitle1?: string | null, heroTitle2?: string | null, heroDesc?: string | null, donateNow?: string | null, ourStory?: string | null, aboutLabel?: string | null, aboutTitle?: string | null, aboutP1?: string | null, aboutP2?: string | null, aboutP3?: string | null, readStory?: string | null, missionLabel?: string | null, missionTitle?: string | null, missionTag?: string | null, learnMore?: string | null, ctaLabel?: string | null, ctaTitle?: string | null, ctaDesc?: string | null, shopSupport?: string | null, missionItems?: Array<{ __typename: 'GlobalIndexMissionItems', title?: string | null, description?: string | null } | null> | null } | null, about?: { __typename: 'GlobalAbout', storyLabel?: string | null, title?: string | null, subtitle?: string | null, beginningLabel?: string | null, beginningTitle?: string | null, communityLabel?: string | null, communityTitle?: string | null, team?: Array<{ __typename: 'GlobalAboutTeam', name?: string | null, role?: string | null, image?: string | null, bio?: Array<string | null> | null } | null> | null } | null, mission?: { __typename: 'GlobalMission', label?: string | null, title?: string | null, subtitle?: string | null, sections?: Array<{ __typename: 'GlobalMissionSections', label?: string | null, title?: string | null, paragraphs?: Array<string | null> | null } | null> | null } | null, projects?: { __typename: 'GlobalProjects', label?: string | null, title?: string | null, subtitle?: string | null, ctaTitle?: string | null, ctaDesc?: string | null, items?: Array<{ __typename: 'GlobalProjectsItems', slug?: string | null, category?: string | null, title?: string | null, description?: string | null, detail?: Array<string | null> | null } | null> | null, socialMedia?: { __typename: 'GlobalProjectsSocialMedia', title?: string | null, subtitle?: string | null, viewMore?: string | null, followUs?: string | null } | null, adoption?: { __typename: 'GlobalProjectsAdoption', title?: string | null, subtitle?: string | null, testimonials?: Array<{ __typename: 'GlobalProjectsAdoptionTestimonials', quote?: string | null, author?: string | null } | null> | null, form?: { __typename: 'GlobalProjectsAdoptionForm', title?: string | null, subtitle?: string | null, namePlaceholder?: string | null, emailPlaceholder?: string | null, messagePlaceholder?: string | null, submitButton?: string | null } | null } | null } | null, donate?: { __typename: 'GlobalDonate', heroTitle?: string | null, heroDesc?: Array<string | null> | null, donateNow?: string | null, mainTitle?: string | null, mainDesc?: Array<string | null> | null, shopCTA?: string | null, shopTitle?: string | null, shopButton?: string | null, fundsLabel?: string | null, fundsTitle?: string | null, details?: { __typename: 'GlobalDonateDetails', bank?: { __typename: 'GlobalDonateDetailsBank', title?: string | null, name?: string | null, iban?: string | null, bic?: string | null } | null, address?: { __typename: 'GlobalDonateDetailsAddress', title?: string | null, name?: string | null, line1?: string | null, line2?: string | null } | null, info?: { __typename: 'GlobalDonateDetailsInfo', title?: string | null, desc?: string | null } | null } | null, fundsItems?: Array<{ __typename: 'GlobalDonateFundsItems', title?: string | null, desc?: string | null } | null> | null, adoptionForm?: { __typename: 'GlobalDonateAdoptionForm', title?: string | null, subtitle?: string | null, namePlaceholder?: string | null, emailPlaceholder?: string | null, messagePlaceholder?: string | null, submitButton?: string | null } | null } | null, privacy?: { __typename: 'GlobalPrivacy', content?: Array<string | null> | null } | null };
 
 export type GlobalQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
 }>;
 
 
-export type GlobalQuery = { __typename?: 'Query', global: { __typename: 'Global', id: string, language: string, announcement?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, nav?: { __typename: 'GlobalNav', home?: string | null, about?: string | null, mission?: string | null, projects?: string | null, donate?: string | null } | null, ads?: { __typename: 'GlobalAds', sponsored?: string | null, spotlight?: string | null, learnMore?: string | null, visitSite?: string | null } | null, partners?: { __typename: 'GlobalPartners', tours?: { __typename: 'GlobalPartnersTours', brand?: string | null, description?: string | null, url?: string | null } | null, welfare?: { __typename: 'GlobalPartnersWelfare', brand?: string | null, description?: string | null, url?: string | null } | null, vets?: { __typename: 'GlobalPartnersVets', brand?: string | null, description?: string | null, url?: string | null } | null, tours_alt?: { __typename: 'GlobalPartnersTours_alt', brand?: string | null, description?: string | null, url?: string | null } | null } | null, impact?: { __typename: 'GlobalImpact', label?: string | null, stats?: Array<{ __typename: 'GlobalImpactStats', number?: string | null, label?: string | null } | null> | null } | null, footer?: { __typename: 'GlobalFooter', stayConnected?: string | null, together?: string | null, rights?: string | null } | null } };
+export type GlobalQuery = { __typename?: 'Query', global: { __typename: 'Global', id: string, language: string, announcement?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, nav?: { __typename: 'GlobalNav', home?: string | null, about?: string | null, mission?: string | null, projects?: string | null, donate?: string | null } | null, ads?: { __typename: 'GlobalAds', sponsored?: string | null, spotlight?: string | null, learnMore?: string | null, visitSite?: string | null, logo?: string | null } | null, partners?: { __typename: 'GlobalPartners', tours?: { __typename: 'GlobalPartnersTours', brand?: string | null, tagline?: string | null, description?: string | null, url?: string | null } | null, welfare?: { __typename: 'GlobalPartnersWelfare', brand?: string | null, tagline?: string | null, description?: string | null, url?: string | null } | null, vets?: { __typename: 'GlobalPartnersVets', brand?: string | null, description?: string | null, url?: string | null } | null, tours_alt?: { __typename: 'GlobalPartnersTours_alt', brand?: string | null, description?: string | null, url?: string | null } | null } | null, impact?: { __typename: 'GlobalImpact', label?: string | null, stats?: Array<{ __typename: 'GlobalImpactStats', number?: string | null, label?: string | null } | null> | null } | null, footer?: { __typename: 'GlobalFooter', stayConnected?: string | null, stayConnectedDesc?: string | null, navigation?: string | null, shop?: string | null, onlineStore?: string | null, allProducts?: string | null, contact?: string | null, bankTransferLink?: string | null, together?: string | null, rights?: string | null, privacy?: string | null } | null, index?: { __typename: 'GlobalIndex', heroLabel?: string | null, heroTitle1?: string | null, heroTitle2?: string | null, heroDesc?: string | null, donateNow?: string | null, ourStory?: string | null, aboutLabel?: string | null, aboutTitle?: string | null, aboutP1?: string | null, aboutP2?: string | null, aboutP3?: string | null, readStory?: string | null, missionLabel?: string | null, missionTitle?: string | null, missionTag?: string | null, learnMore?: string | null, ctaLabel?: string | null, ctaTitle?: string | null, ctaDesc?: string | null, shopSupport?: string | null, missionItems?: Array<{ __typename: 'GlobalIndexMissionItems', title?: string | null, description?: string | null } | null> | null } | null, about?: { __typename: 'GlobalAbout', storyLabel?: string | null, title?: string | null, subtitle?: string | null, beginningLabel?: string | null, beginningTitle?: string | null, communityLabel?: string | null, communityTitle?: string | null, team?: Array<{ __typename: 'GlobalAboutTeam', name?: string | null, role?: string | null, image?: string | null, bio?: Array<string | null> | null } | null> | null } | null, mission?: { __typename: 'GlobalMission', label?: string | null, title?: string | null, subtitle?: string | null, sections?: Array<{ __typename: 'GlobalMissionSections', label?: string | null, title?: string | null, paragraphs?: Array<string | null> | null } | null> | null } | null, projects?: { __typename: 'GlobalProjects', label?: string | null, title?: string | null, subtitle?: string | null, ctaTitle?: string | null, ctaDesc?: string | null, items?: Array<{ __typename: 'GlobalProjectsItems', slug?: string | null, category?: string | null, title?: string | null, description?: string | null, detail?: Array<string | null> | null } | null> | null, socialMedia?: { __typename: 'GlobalProjectsSocialMedia', title?: string | null, subtitle?: string | null, viewMore?: string | null, followUs?: string | null } | null, adoption?: { __typename: 'GlobalProjectsAdoption', title?: string | null, subtitle?: string | null, testimonials?: Array<{ __typename: 'GlobalProjectsAdoptionTestimonials', quote?: string | null, author?: string | null } | null> | null, form?: { __typename: 'GlobalProjectsAdoptionForm', title?: string | null, subtitle?: string | null, namePlaceholder?: string | null, emailPlaceholder?: string | null, messagePlaceholder?: string | null, submitButton?: string | null } | null } | null } | null, donate?: { __typename: 'GlobalDonate', heroTitle?: string | null, heroDesc?: Array<string | null> | null, donateNow?: string | null, mainTitle?: string | null, mainDesc?: Array<string | null> | null, shopCTA?: string | null, shopTitle?: string | null, shopButton?: string | null, fundsLabel?: string | null, fundsTitle?: string | null, details?: { __typename: 'GlobalDonateDetails', bank?: { __typename: 'GlobalDonateDetailsBank', title?: string | null, name?: string | null, iban?: string | null, bic?: string | null } | null, address?: { __typename: 'GlobalDonateDetailsAddress', title?: string | null, name?: string | null, line1?: string | null, line2?: string | null } | null, info?: { __typename: 'GlobalDonateDetailsInfo', title?: string | null, desc?: string | null } | null } | null, fundsItems?: Array<{ __typename: 'GlobalDonateFundsItems', title?: string | null, desc?: string | null } | null> | null, adoptionForm?: { __typename: 'GlobalDonateAdoptionForm', title?: string | null, subtitle?: string | null, namePlaceholder?: string | null, emailPlaceholder?: string | null, messagePlaceholder?: string | null, submitButton?: string | null } | null } | null, privacy?: { __typename: 'GlobalPrivacy', content?: Array<string | null> | null } | null } };
 
 export type GlobalConnectionQueryVariables = Exact<{
   before?: InputMaybe<Scalars['String']['input']>;
@@ -1016,26 +1075,7 @@ export type GlobalConnectionQueryVariables = Exact<{
 }>;
 
 
-export type GlobalConnectionQuery = { __typename?: 'Query', globalConnection: { __typename?: 'GlobalConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'GlobalConnectionEdges', cursor: string, node?: { __typename: 'Global', id: string, language: string, announcement?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, nav?: { __typename: 'GlobalNav', home?: string | null, about?: string | null, mission?: string | null, projects?: string | null, donate?: string | null } | null, ads?: { __typename: 'GlobalAds', sponsored?: string | null, spotlight?: string | null, learnMore?: string | null, visitSite?: string | null } | null, partners?: { __typename: 'GlobalPartners', tours?: { __typename: 'GlobalPartnersTours', brand?: string | null, description?: string | null, url?: string | null } | null, welfare?: { __typename: 'GlobalPartnersWelfare', brand?: string | null, description?: string | null, url?: string | null } | null, vets?: { __typename: 'GlobalPartnersVets', brand?: string | null, description?: string | null, url?: string | null } | null, tours_alt?: { __typename: 'GlobalPartnersTours_alt', brand?: string | null, description?: string | null, url?: string | null } | null } | null, impact?: { __typename: 'GlobalImpact', label?: string | null, stats?: Array<{ __typename: 'GlobalImpactStats', number?: string | null, label?: string | null } | null> | null } | null, footer?: { __typename: 'GlobalFooter', stayConnected?: string | null, together?: string | null, rights?: string | null } | null } | null } | null> | null } };
-
-export type TranslationsQueryVariables = Exact<{
-  relativePath: Scalars['String']['input'];
-}>;
-
-
-export type TranslationsQuery = { __typename?: 'Query', translations: { __typename: 'Translations', id: string, language: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, index?: { __typename: 'TranslationsIndex', heroLabel?: string | null, heroTitle1?: string | null, heroTitle2?: string | null, heroDesc?: string | null, donateNow?: string | null, ourStory?: string | null, aboutLabel?: string | null, aboutTitle?: string | null, aboutP1?: string | null, aboutP2?: string | null, aboutP3?: string | null, readStory?: string | null, missionLabel?: string | null, missionTitle?: string | null, missionTag?: string | null, learnMore?: string | null, ctaLabel?: string | null, ctaTitle?: string | null, ctaDesc?: string | null, shopSupport?: string | null, missionItems?: Array<{ __typename: 'TranslationsIndexMissionItems', title?: string | null, description?: string | null } | null> | null } | null, about?: { __typename: 'TranslationsAbout', storyLabel?: string | null, title?: string | null, subtitle?: string | null, beginningLabel?: string | null, beginningTitle?: string | null, communityLabel?: string | null, communityTitle?: string | null, team?: Array<{ __typename: 'TranslationsAboutTeam', name?: string | null, role?: string | null, image?: string | null, bio?: Array<string | null> | null } | null> | null } | null, mission?: { __typename: 'TranslationsMission', label?: string | null, title?: string | null, subtitle?: string | null, sections?: Array<{ __typename: 'TranslationsMissionSections', label?: string | null, title?: string | null, paragraphs?: Array<string | null> | null } | null> | null } | null, projects?: { __typename: 'TranslationsProjects', label?: string | null, title?: string | null, subtitle?: string | null, ctaTitle?: string | null, ctaDesc?: string | null, items?: Array<{ __typename: 'TranslationsProjectsItems', slug?: string | null, category?: string | null, title?: string | null, description?: string | null, detail?: Array<string | null> | null } | null> | null, socialMedia?: { __typename: 'TranslationsProjectsSocialMedia', title?: string | null, subtitle?: string | null, viewMore?: string | null, followUs?: string | null } | null, adoption?: { __typename: 'TranslationsProjectsAdoption', title?: string | null, subtitle?: string | null, testimonials?: Array<{ __typename: 'TranslationsProjectsAdoptionTestimonials', quote?: string | null, author?: string | null } | null> | null, form?: { __typename: 'TranslationsProjectsAdoptionForm', title?: string | null, subtitle?: string | null, namePlaceholder?: string | null, emailPlaceholder?: string | null, messagePlaceholder?: string | null, submitButton?: string | null } | null } | null } | null, donate?: { __typename: 'TranslationsDonate', heroTitle?: string | null, heroDesc?: Array<string | null> | null, donateNow?: string | null, mainTitle?: string | null, mainDesc?: Array<string | null> | null, shopCTA?: string | null, shopTitle?: string | null, shopButton?: string | null, fundsLabel?: string | null, fundsTitle?: string | null, details?: { __typename: 'TranslationsDonateDetails', bank?: { __typename: 'TranslationsDonateDetailsBank', title?: string | null, name?: string | null, iban?: string | null, bic?: string | null } | null } | null, fundsItems?: Array<{ __typename: 'TranslationsDonateFundsItems', title?: string | null, desc?: string | null } | null> | null } | null } };
-
-export type TranslationsConnectionQueryVariables = Exact<{
-  before?: InputMaybe<Scalars['String']['input']>;
-  after?: InputMaybe<Scalars['String']['input']>;
-  first?: InputMaybe<Scalars['Float']['input']>;
-  last?: InputMaybe<Scalars['Float']['input']>;
-  sort?: InputMaybe<Scalars['String']['input']>;
-  filter?: InputMaybe<TranslationsFilter>;
-}>;
-
-
-export type TranslationsConnectionQuery = { __typename?: 'Query', translationsConnection: { __typename?: 'TranslationsConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'TranslationsConnectionEdges', cursor: string, node?: { __typename: 'Translations', id: string, language: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, index?: { __typename: 'TranslationsIndex', heroLabel?: string | null, heroTitle1?: string | null, heroTitle2?: string | null, heroDesc?: string | null, donateNow?: string | null, ourStory?: string | null, aboutLabel?: string | null, aboutTitle?: string | null, aboutP1?: string | null, aboutP2?: string | null, aboutP3?: string | null, readStory?: string | null, missionLabel?: string | null, missionTitle?: string | null, missionTag?: string | null, learnMore?: string | null, ctaLabel?: string | null, ctaTitle?: string | null, ctaDesc?: string | null, shopSupport?: string | null, missionItems?: Array<{ __typename: 'TranslationsIndexMissionItems', title?: string | null, description?: string | null } | null> | null } | null, about?: { __typename: 'TranslationsAbout', storyLabel?: string | null, title?: string | null, subtitle?: string | null, beginningLabel?: string | null, beginningTitle?: string | null, communityLabel?: string | null, communityTitle?: string | null, team?: Array<{ __typename: 'TranslationsAboutTeam', name?: string | null, role?: string | null, image?: string | null, bio?: Array<string | null> | null } | null> | null } | null, mission?: { __typename: 'TranslationsMission', label?: string | null, title?: string | null, subtitle?: string | null, sections?: Array<{ __typename: 'TranslationsMissionSections', label?: string | null, title?: string | null, paragraphs?: Array<string | null> | null } | null> | null } | null, projects?: { __typename: 'TranslationsProjects', label?: string | null, title?: string | null, subtitle?: string | null, ctaTitle?: string | null, ctaDesc?: string | null, items?: Array<{ __typename: 'TranslationsProjectsItems', slug?: string | null, category?: string | null, title?: string | null, description?: string | null, detail?: Array<string | null> | null } | null> | null, socialMedia?: { __typename: 'TranslationsProjectsSocialMedia', title?: string | null, subtitle?: string | null, viewMore?: string | null, followUs?: string | null } | null, adoption?: { __typename: 'TranslationsProjectsAdoption', title?: string | null, subtitle?: string | null, testimonials?: Array<{ __typename: 'TranslationsProjectsAdoptionTestimonials', quote?: string | null, author?: string | null } | null> | null, form?: { __typename: 'TranslationsProjectsAdoptionForm', title?: string | null, subtitle?: string | null, namePlaceholder?: string | null, emailPlaceholder?: string | null, messagePlaceholder?: string | null, submitButton?: string | null } | null } | null } | null, donate?: { __typename: 'TranslationsDonate', heroTitle?: string | null, heroDesc?: Array<string | null> | null, donateNow?: string | null, mainTitle?: string | null, mainDesc?: Array<string | null> | null, shopCTA?: string | null, shopTitle?: string | null, shopButton?: string | null, fundsLabel?: string | null, fundsTitle?: string | null, details?: { __typename: 'TranslationsDonateDetails', bank?: { __typename: 'TranslationsDonateDetailsBank', title?: string | null, name?: string | null, iban?: string | null, bic?: string | null } | null } | null, fundsItems?: Array<{ __typename: 'TranslationsDonateFundsItems', title?: string | null, desc?: string | null } | null> | null } | null } | null } | null> | null } };
+export type GlobalConnectionQuery = { __typename?: 'Query', globalConnection: { __typename?: 'GlobalConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'GlobalConnectionEdges', cursor: string, node?: { __typename: 'Global', id: string, language: string, announcement?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, hasReferences?: boolean | null, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, nav?: { __typename: 'GlobalNav', home?: string | null, about?: string | null, mission?: string | null, projects?: string | null, donate?: string | null } | null, ads?: { __typename: 'GlobalAds', sponsored?: string | null, spotlight?: string | null, learnMore?: string | null, visitSite?: string | null, logo?: string | null } | null, partners?: { __typename: 'GlobalPartners', tours?: { __typename: 'GlobalPartnersTours', brand?: string | null, tagline?: string | null, description?: string | null, url?: string | null } | null, welfare?: { __typename: 'GlobalPartnersWelfare', brand?: string | null, tagline?: string | null, description?: string | null, url?: string | null } | null, vets?: { __typename: 'GlobalPartnersVets', brand?: string | null, description?: string | null, url?: string | null } | null, tours_alt?: { __typename: 'GlobalPartnersTours_alt', brand?: string | null, description?: string | null, url?: string | null } | null } | null, impact?: { __typename: 'GlobalImpact', label?: string | null, stats?: Array<{ __typename: 'GlobalImpactStats', number?: string | null, label?: string | null } | null> | null } | null, footer?: { __typename: 'GlobalFooter', stayConnected?: string | null, stayConnectedDesc?: string | null, navigation?: string | null, shop?: string | null, onlineStore?: string | null, allProducts?: string | null, contact?: string | null, bankTransferLink?: string | null, together?: string | null, rights?: string | null, privacy?: string | null } | null, index?: { __typename: 'GlobalIndex', heroLabel?: string | null, heroTitle1?: string | null, heroTitle2?: string | null, heroDesc?: string | null, donateNow?: string | null, ourStory?: string | null, aboutLabel?: string | null, aboutTitle?: string | null, aboutP1?: string | null, aboutP2?: string | null, aboutP3?: string | null, readStory?: string | null, missionLabel?: string | null, missionTitle?: string | null, missionTag?: string | null, learnMore?: string | null, ctaLabel?: string | null, ctaTitle?: string | null, ctaDesc?: string | null, shopSupport?: string | null, missionItems?: Array<{ __typename: 'GlobalIndexMissionItems', title?: string | null, description?: string | null } | null> | null } | null, about?: { __typename: 'GlobalAbout', storyLabel?: string | null, title?: string | null, subtitle?: string | null, beginningLabel?: string | null, beginningTitle?: string | null, communityLabel?: string | null, communityTitle?: string | null, team?: Array<{ __typename: 'GlobalAboutTeam', name?: string | null, role?: string | null, image?: string | null, bio?: Array<string | null> | null } | null> | null } | null, mission?: { __typename: 'GlobalMission', label?: string | null, title?: string | null, subtitle?: string | null, sections?: Array<{ __typename: 'GlobalMissionSections', label?: string | null, title?: string | null, paragraphs?: Array<string | null> | null } | null> | null } | null, projects?: { __typename: 'GlobalProjects', label?: string | null, title?: string | null, subtitle?: string | null, ctaTitle?: string | null, ctaDesc?: string | null, items?: Array<{ __typename: 'GlobalProjectsItems', slug?: string | null, category?: string | null, title?: string | null, description?: string | null, detail?: Array<string | null> | null } | null> | null, socialMedia?: { __typename: 'GlobalProjectsSocialMedia', title?: string | null, subtitle?: string | null, viewMore?: string | null, followUs?: string | null } | null, adoption?: { __typename: 'GlobalProjectsAdoption', title?: string | null, subtitle?: string | null, testimonials?: Array<{ __typename: 'GlobalProjectsAdoptionTestimonials', quote?: string | null, author?: string | null } | null> | null, form?: { __typename: 'GlobalProjectsAdoptionForm', title?: string | null, subtitle?: string | null, namePlaceholder?: string | null, emailPlaceholder?: string | null, messagePlaceholder?: string | null, submitButton?: string | null } | null } | null } | null, donate?: { __typename: 'GlobalDonate', heroTitle?: string | null, heroDesc?: Array<string | null> | null, donateNow?: string | null, mainTitle?: string | null, mainDesc?: Array<string | null> | null, shopCTA?: string | null, shopTitle?: string | null, shopButton?: string | null, fundsLabel?: string | null, fundsTitle?: string | null, details?: { __typename: 'GlobalDonateDetails', bank?: { __typename: 'GlobalDonateDetailsBank', title?: string | null, name?: string | null, iban?: string | null, bic?: string | null } | null, address?: { __typename: 'GlobalDonateDetailsAddress', title?: string | null, name?: string | null, line1?: string | null, line2?: string | null } | null, info?: { __typename: 'GlobalDonateDetailsInfo', title?: string | null, desc?: string | null } | null } | null, fundsItems?: Array<{ __typename: 'GlobalDonateFundsItems', title?: string | null, desc?: string | null } | null> | null, adoptionForm?: { __typename: 'GlobalDonateAdoptionForm', title?: string | null, subtitle?: string | null, namePlaceholder?: string | null, emailPlaceholder?: string | null, messagePlaceholder?: string | null, submitButton?: string | null } | null } | null, privacy?: { __typename: 'GlobalPrivacy', content?: Array<string | null> | null } | null } | null } | null> | null } };
 
 export const GlobalPartsFragmentDoc = gql`
     fragment GlobalParts on Global {
@@ -1056,18 +1096,21 @@ export const GlobalPartsFragmentDoc = gql`
     spotlight
     learnMore
     visitSite
+    logo
   }
   partners {
     __typename
     tours {
       __typename
       brand
+      tagline
       description
       url
     }
     welfare {
       __typename
       brand
+      tagline
       description
       url
     }
@@ -1096,15 +1139,17 @@ export const GlobalPartsFragmentDoc = gql`
   footer {
     __typename
     stayConnected
+    stayConnectedDesc
+    navigation
+    shop
+    onlineStore
+    allProducts
+    contact
+    bankTransferLink
     together
     rights
+    privacy
   }
-}
-    `;
-export const TranslationsPartsFragmentDoc = gql`
-    fragment TranslationsParts on Translations {
-  __typename
-  language
   index {
     __typename
     heroLabel
@@ -1223,6 +1268,18 @@ export const TranslationsPartsFragmentDoc = gql`
         iban
         bic
       }
+      address {
+        __typename
+        title
+        name
+        line1
+        line2
+      }
+      info {
+        __typename
+        title
+        desc
+      }
     }
     fundsLabel
     fundsTitle
@@ -1231,6 +1288,19 @@ export const TranslationsPartsFragmentDoc = gql`
       title
       desc
     }
+    adoptionForm {
+      __typename
+      title
+      subtitle
+      namePlaceholder
+      emailPlaceholder
+      messagePlaceholder
+      submitButton
+    }
+  }
+  privacy {
+    __typename
+    content
   }
 }
     `;
@@ -1291,63 +1361,6 @@ export const GlobalConnectionDocument = gql`
   }
 }
     ${GlobalPartsFragmentDoc}`;
-export const TranslationsDocument = gql`
-    query translations($relativePath: String!) {
-  translations(relativePath: $relativePath) {
-    ... on Document {
-      _sys {
-        filename
-        basename
-        hasReferences
-        breadcrumbs
-        path
-        relativePath
-        extension
-      }
-      id
-    }
-    ...TranslationsParts
-  }
-}
-    ${TranslationsPartsFragmentDoc}`;
-export const TranslationsConnectionDocument = gql`
-    query translationsConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: TranslationsFilter) {
-  translationsConnection(
-    before: $before
-    after: $after
-    first: $first
-    last: $last
-    sort: $sort
-    filter: $filter
-  ) {
-    pageInfo {
-      hasPreviousPage
-      hasNextPage
-      startCursor
-      endCursor
-    }
-    totalCount
-    edges {
-      cursor
-      node {
-        ... on Document {
-          _sys {
-            filename
-            basename
-            hasReferences
-            breadcrumbs
-            path
-            relativePath
-            extension
-          }
-          id
-        }
-        ...TranslationsParts
-      }
-    }
-  }
-}
-    ${TranslationsPartsFragmentDoc}`;
 export type Requester<C= {}> = <R, V>(doc: DocumentNode, vars?: V, options?: C) => Promise<R>
   export function getSdk<C>(requester: Requester<C>) {
     return {
@@ -1356,12 +1369,6 @@ export type Requester<C= {}> = <R, V>(doc: DocumentNode, vars?: V, options?: C) 
       },
     globalConnection(variables?: GlobalConnectionQueryVariables, options?: C): Promise<{data: GlobalConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: GlobalConnectionQueryVariables, query: string}> {
         return requester<{data: GlobalConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: GlobalConnectionQueryVariables, query: string}, GlobalConnectionQueryVariables>(GlobalConnectionDocument, variables, options);
-      },
-    translations(variables: TranslationsQueryVariables, options?: C): Promise<{data: TranslationsQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: TranslationsQueryVariables, query: string}> {
-        return requester<{data: TranslationsQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: TranslationsQueryVariables, query: string}, TranslationsQueryVariables>(TranslationsDocument, variables, options);
-      },
-    translationsConnection(variables?: TranslationsConnectionQueryVariables, options?: C): Promise<{data: TranslationsConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: TranslationsConnectionQueryVariables, query: string}> {
-        return requester<{data: TranslationsConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: TranslationsConnectionQueryVariables, query: string}, TranslationsConnectionQueryVariables>(TranslationsConnectionDocument, variables, options);
       }
     };
   }
