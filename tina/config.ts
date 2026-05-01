@@ -94,6 +94,7 @@ export default defineConfig({
                 label: "Vet Alliance Partner",
                 fields: [
                   { type: "string", name: "brand", label: "Brand Name" },
+                  { type: "string", name: "tagline", label: "Tagline" },
                   { type: "string", name: "description", label: "Description", ui: { component: "textarea" } },
                   { type: "string", name: "url", label: "CTA URL" },
                 ],
@@ -104,6 +105,7 @@ export default defineConfig({
                 label: "Tours Alt (for Project Detail)",
                 fields: [
                   { type: "string", name: "brand", label: "Brand Name" },
+                  { type: "string", name: "tagline", label: "Tagline" },
                   { type: "string", name: "description", label: "Description", ui: { component: "textarea" } },
                   { type: "string", name: "url", label: "CTA URL" },
                 ],

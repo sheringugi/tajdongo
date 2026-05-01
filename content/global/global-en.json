@@ -2,7 +2,7 @@
   "language": "en",
   "nav": {
     "home": "Home",
-    "about": "About ",
+    "about": "About Us",
     "mission": "Mission",
     "projects": "Projects",
     "donate": "Donate"
@@ -18,6 +18,7 @@
   "partners": {
     "tours": {
       "brand": "Zanzibar Eco Tours",
+      "tagline": "Explore Zanzibar Responsibly",
       "description": "We offer sustainable eco-tours across Zanzibar and proudly support the dogs and communities TAJDO serves.",
       "url": "https://www.tajdo.shop"
     },
