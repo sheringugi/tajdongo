@@ -37,12 +37,14 @@ fragment GlobalParts on Global {
     vets {
       __typename
       brand
+      tagline
       description
       url
     }
     tours_alt {
       __typename
       brand
+      tagline
       description
       url
     }

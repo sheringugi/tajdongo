@@ -119,12 +119,14 @@ type GlobalPartnersWelfare {
 
 type GlobalPartnersVets {
   brand: String
+  tagline: String
   description: String
   url: String
 }
 
 type GlobalPartnersTours_alt {
   brand: String
+  tagline: String
   description: String
   url: String
 }
@@ -384,12 +386,14 @@ input GlobalPartnersWelfareFilter {
 
 input GlobalPartnersVetsFilter {
   brand: StringFilter
+  tagline: StringFilter
   description: StringFilter
   url: StringFilter
 }
 
 input GlobalPartnersTours_altFilter {
   brand: StringFilter
+  tagline: StringFilter
   description: StringFilter
   url: StringFilter
 }
@@ -676,12 +680,14 @@ input GlobalPartnersWelfareMutation {
 
 input GlobalPartnersVetsMutation {
   brand: String
+  tagline: String
   description: String
   url: String
 }
 
 input GlobalPartnersTours_altMutation {
   brand: String
+  tagline: String
   description: String
   url: String
 }
