@@ -290,6 +290,12 @@ export const translations = {
       welfare: {
         brand: "Swiss Animal Welfare Co.",
         description: "Supporting the rescue and rehabilitation of street animals worldwide.",
+        tagline: "", // Added to match tina/config.ts
+        url: "https://www.tajdo.shop",
+      },
+      tours_alt: { // Added to match tina/config.ts
+        brand: "Zanzibar Eco Tours",
+        description: "We offer sustainable eco-tours across Zanzibar and proudly support the dogs and communities TAJDO serves.",
         url: "https://www.tajdo.shop",
       },
       vets: {
@@ -560,6 +566,7 @@ export const translations = {
       stats: [
         { number: "70", label: "Identifizierte Standorte auf Sansibar" },
         { number: "6", label: "Futter- und Wasserstellen" },
+        { number: "2", label: "Schulprojekte" }, // Added to match en and tina/config.ts
         { number: "7", label: "Erfolgreich vermittelte Hunde" },
         { number: "100", label: "Medizinisch behandelte Hunde" },
       ],
@@ -595,6 +602,12 @@ export const translations = {
       welfare: {
         brand: "Swiss Animal Welfare Co.",
         description: "Unterstützung der Rettung und Rehabilitation von Strassentieren weltweit.",
+        tagline: "", // Added to match tina/config.ts
+        url: "https://www.tajdo.shop",
+      },
+      tours_alt: { // Added to match tina/config.ts
+        brand: "Zanzibar Eco Tours",
+        description: "Wir bieten nachhaltige Öko-Touren auf ganz Sansibar an und unterstützen stolz die Hunde und Gemeinschaften, denen TAJDO dient.",
         url: "https://www.tajdo.shop",
       },
       vets: {

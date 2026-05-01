@@ -29,6 +29,12 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
             footer: globalData.footer || translations[language].footer,
             partners: globalData.partners || translations[language].partners,
             impact: globalData.impact || translations[language].impact,
+            index: globalData.index || translations[language].index,
+            about: globalData.about || translations[language].about,
+            mission: globalData.mission || translations[language].mission,
+            projects: globalData.projects || translations[language].projects,
+            donate: globalData.donate || translations[language].donate,
+            privacy: globalData.privacy || translations[language].privacy,
           });
         }
       })

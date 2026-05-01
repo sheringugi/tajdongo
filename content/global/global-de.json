@@ -25,6 +25,7 @@
     "welfare": {
       "brand": "Swiss Animal Welfare Co.",
       "description": "Unterstützung der Rettung und Rehabilitation von Strassentieren weltweit.",
+      "tagline": "",
       "url": "https://www.tajdo.shop"
     },
     "vets": {
@@ -33,6 +34,7 @@
       "description": "Zusammenarbeit mit TAJDO zur Bereitstellung wichtiger medizinischer Versorgung und Fachwissen für die Hunde auf Sansibar.",
       "url": "https://www.tajdo.shop"
     },
+    
     "tours_alt": {
       "brand": "Zanzibar Eco Tours",
       "description": "Wir bieten nachhaltige Öko-Touren auf ganz Sansibar an und unterstützen stolz die Hunde und Gemeinschaften, denen TAJDO dient.",
@@ -45,6 +47,10 @@
       {
         "number": "70",
         "label": "Identifizierte Standorte auf Sansibar"
+      },
+      {
+        "number": "2",
+        "label": "Schulprojekte"
       },
       {
         "number": "6",
@@ -72,5 +78,261 @@
     "together": "Füreinander da.",
     "rights": "Alle Rechte vorbehalten.",
     "privacy": "Datenschutz"
+  },
+  "index": {
+    "heroLabel": "Füreinander da",
+    "heroTitle1": "Leben retten",
+    "heroTitle2": "auf Sansibar",
+    "heroDesc": "TAJDO widmet sich der Rettung, Rehabilitation und Pflege der Strassenhunde auf Sansibar. Jedes Leben zählt.",
+    "donateNow": "Jetzt Spenden",
+    "ourStory": "Unsere Geschichte",
+    "aboutLabel": "Über TAJDO",
+    "aboutTitle": "Füreinander da",
+    "aboutP1": "TAJDO ist mehr als nur eine Organisation — wir sind eine Gemeinschaft von Menschen, die mit Herz und Leidenschaft für die Strassenhunde auf Sansibar arbeiten.",
+    "aboutP2": "Unser Ziel ist es, jedem Hund ein sicheres, liebevolles und gesundes Leben zu ermöglichen. Wir glauben, dass selbst kleine Taten eine grosse Wirkung haben können: ein wenig Futter, ein schattiger Platz oder medizinische Versorgung können das Leben eines Hundes für immer verändern.",
+    "aboutP3": "Mit jedem Projekt, das wir starten, und jeder Hilfe, die wir leisten, zeigen wir, dass Solidarität, Fürsorge und Verantwortung keine leeren Worte sind — sondern die Grundlage für eine bessere Zukunft für Mensch und Tier.",
+    "readStory": "Unsere Geschichte lesen",
+    "missionLabel": "Was wir tun",
+    "missionTitle": "Unsere Mission",
+    "missionItems": [
+      { "title": "Pflege & Versorgung", "description": "Das Hauptaugenmerk von TAJDO liegt auf dem Wohlergehen von Strassenhunden. Wir stellen regelmässig frisches Futter und sauberes Wasser zur Verfügung, um das Überleben der Tiere zu sichern. Darüber hinaus entwickeln wir durchdachte Futterstellen und bauen Hundehütten in lokalen Gemeinden, um den Hunden eine sichere und liebevolle Umgebung zu bieten. Besonderes Augenmerk legen wir auch auf die medizinische Versorgung: In Zusammenarbeit mit lokalen Tierärzten führen wir Impfungen, Kastrationen und notwendige Operationen durch, um die langfristige Gesundheit der Tiere zu gewährleisten." },
+      { "title": "Entwicklung & Vision", "description": "TAJDO arbeitet auf das Ziel hin, eines Tages ein Hundeheim in Sansibar zu errichten. Aber unsere Arbeit bedeutet mehr als nur ein konkretes Ziel: Sie fördert die Entwicklung von Potenzialen - sowohl bei den Hunden als auch in unserem eigenen Handeln. Jeder Schritt, den TAJDO unternimmt, ist auf Nachhaltigkeit und Verantwortung ausgelegt. Auf diese Weise wachsen wir kontinuierlich und verwirklichen unsere Vision Schritt für Schritt." },
+      { "title": "Bildung & Aufklärung", "description": "TAJDO will das Bewusstsein für die Bedürfnisse und Herausforderungen von Strassenhunden schärfen. Viele Menschen in Sansibar sind schlecht oder gar nicht über diese Tiere informiert, was oft zu Misshandlungen führt. Religiöse Vorurteile werden häufig als Rechtfertigung angeführt, obwohl der Islam nicht vorschreibt, Tieren Schaden zuzufügen. Wir konzentrieren uns auf Bildung und Sensibilisierung: Erstens wollen wir bei der lokalen Bevölkerung Respekt, Verständnis und Liebe für unsere vierbeinigen Freunde fördern. Zweitens informieren wir die Menschen darüber, wie jeder durch kleine Taten dazu beitragen kann, das Leben von Strassenhunden spürbar zu verbessern." }
+    ],
+    "missionTag": "Mission",
+    "learnMore": "Mehr erfahren",
+    "ctaLabel": "Einen Unterschied machen",
+    "ctaTitle": "Jeder Beitrag zählt",
+    "ctaDesc": "Ihre Spende hilft uns, die Strassenhunde auf Sansibar zu füttern, impfen, sterilisieren und unterzubringen. Gemeinsam können wir eine sicherere Welt für sie schaffen.",
+    "shopSupport": "Shop zur Unterstützung"
+  },
+  "about": {
+    "storyLabel": "Unsere Geschichte",
+    "title": "Über TAJDO",
+    "subtitle": "Der Name TAJDO ist eine Kombination aus den Namen Tajana und Dollar (oder Dog). Das sind wir, Dollar und Tajana, ein unschlagbares Team von der Schweiz bis nach Sansibar, von den Bergen bis zum Indischen Ozean.",
+    "team": [
+      {
+        "name": "Tajana Bieri",
+        "role": "Teamleiterin",
+        "image": "uploads/IMG_TAJANA.jpg",
+        "bio": [
+          "Mein Name ist Tajana, ich bin 24 Jahre alt und in der Schweiz geboren und aufgewachsen. Seit 2024 lebe ich mit meinem Hund Dollar auf Sansibar, Tansania. Ich widme mein ganzes Leben den Strassenhunden dort.",
+          "Ich bin in einer sehr liebevollen Familie mit einer älteren Schwester und einem jüngeren Bruder aufgewachsen. Mein Vater ist gehörlos und meine Mutter schwerhörig, was bedeutete, dass ich teilweise in der Welt der Hörgeschädigten und mit Gebärdensprache aufgewachsen bin. Das hat wahrscheinlich stark zu meiner Offenheit beigetragen.",
+          "Meine Liebe und Verbindung zu Tieren, insbesondere zu Hunden, begleitet mich seit meiner Kindheit. Je älter ich wurde, desto stärker wurde mein Wunsch nach einem eigenen Hund. Mein Hund Dollar fand seinen Weg zu mir aus einem Tierheim in Italien. Seit sieben Jahren sind wir nun die Begleiter des anderen durchs Leben.",
+          "Trotzdem habe ich meine Ausbildung zur Fachfrau Betreuung für Menschen mit Behinderung abgeschlossen und bin in diesem Bereich geblieben. Das starke Bedürfnis nach Verantwortung und die Förderung von Gemeinschaftsgeist, Grosszügigkeit und einer positiven Lebenseinstellung trieben mich weiter an. Es war mein erstes Mal auf Sansibar, Tansania, und ich fühlte mich zu Hause. Als junge Frau fühlte ich mich sicher in einem Land, das nicht meins war, und ich erlebte das Gefühl, wirklich willkommen zu sein.",
+          "TAJDO wurde aus Liebe zu unseren vierbeinigen Freunden geboren, aus der Freude, Verantwortung zu übernehmen, und aus dem Wunsch, einen sinnvollen Unterschied zu machen."
+        ]
+      },
+      {
+        "name": "Dollar",
+        "role": "Team-Liebling",
+        "image": "uploads/IMG_RESCUE.jpg",
+        "bio": [
+          "Ich bin Dollar, ungefähr 14 Jahre alt in Hundejahren, was ungefähr 98 Menschenjahren entspricht. Ursprünglich lebte ich auf den Strassen Italiens. Dann wurde ich von einem Tierheim aufgenommen, wo ich fünf Jahre mit vielen anderen Strassenhunden lebte.",
+          "Da meine Mama, Tajana, mich von dort aufgenommen hat, wusste sie nie genau, wie alt ich wirklich war. In den letzten sieben Jahren habe ich liebevoll and abenteuerlich mit meiner Mama gelebt. Wir sind zusammen in viele europäische Länder gereist, natürlich alles mit dem Auto. Jetzt darf ich meine letzten Jahre als Hund als 'alter Mann' am Strand von Sansibar verbringen, und ich war auch ein wesentlicher Teil der Inspiration für TAJDO."
+        ]
+      }
+    ],
+    "beginningLabel": "Über mich",
+    "beginningTitle": "Tajana Bieri",
+    "communityLabel": "Über mich",
+    "communityTitle": "Dollar"
+  },
+  "mission": {
+    "label": "Was uns antreibt",
+    "title": "Unsere Mission",
+    "subtitle": "Drei Säulen leiten alles, was wir tun — Pflege, Vision und Bildung. Zusammen bilden sie das Fundament für nachhaltige Veränderung für Strassenhunde auf Sansibar.",
+    "sections": [
+      {
+        "label": "Säule Eins",
+        "title": "Pflege & Versorgung",
+        "paragraphs": [
+          "Das Hauptziel von TAJDO ist die nachhaltige Verbesserung des Wohlergehens von Strassenhunden in Sansibar und Tansania. Wir setzen uns dafür ein, dass jedes Tier Zugang zu Futter, Wasser, medizinischer Versorgung und einer sicheren Umgebung hat - ein Recht, das jeder Hund verdient.",
+          "Ein wichtiger Bestandteil unserer Arbeit ist der Bau von Hundebars an strategisch wichtigen Standorten. Diese Hundebars werden von engagierten Einheimischen aus lokal gewonnenen Materialien gebaut und zeichnen sich durch ein durchdachtes Design aus, das sowohl die hygienischen als auch die praktischen Bedürfnisse der Hunde erfüllt. Jede Hundebar umfasst zwei Bereiche: einen für frisches Hundefutter und einen für sauberes Wasser. Um sicherzustellen, dass die Hundebars kontinuierlich genutzt werden, führt das TAJDO-Team wöchentliche Touren über die Insel durch. Bei diesen Touren werden die Standorte überprüft, die Hundebars gereinigt und mit Futter und Wasser aufgefüllt. Auf diese Weise können wir garantieren, dass die Strassenhunde immer gut versorgt sind."
+        ]
+      },
+      {
+        "label": "Säule Zwei",
+        "title": "Entwicklung & Vision",
+        "paragraphs": [
+          "Unsere Mission geht weit darüber hinaus, nur die Grundbedürfnisse zu befriedigen. Wir vermitteln Strassenhunde an liebevolle Familien, damit sie ein sicheres und glückliches Zuhause finden können. Gleichzeitig arbeitet TAJDO eng mit einem lokalen Tierarzt zusammen, um die medizinische Versorgung der Strassenhunde sicherzustellen. Dazu gehören regelmässige Impfungen, notwendige Operationen und Kastrationen. Diese Massnahmen sind nicht nur entscheidend für die Gesundheit der Hunde, sondern dienen auch einem nachhaltigen Ziel: der kontrollierten Regulierung der Strassenhundepopulation.",
+          "Darüber hinaus entwickeln wir durchdachte Futternäpfe und bauen Hundehütten in lokalen Dörfern, um den Hunden eine sichere und liebevolle Umgebung zu bieten.",
+          "Jeder Schritt, den TAJDO unternimmt, ist darauf ausgelegt, nachhaltig und verantwortungsvoll zu sein. Wir wachsen kontinuierlich und setzen unsere Visionen Schritt für Schritt in die Realität um."
+        ]
+      },
+      {
+        "label": "Säule Drei",
+        "title": "Bildung & Aufklärung",
+        "paragraphs": [
+          "TAJDO möchte das Bewusstsein der Menschen für die Bedürfnisse und Herausforderungen der Strassenhunde schärfen. Viele Menschen auf Sansibar sind schlecht oder gar nicht über die Tiere informiert, weshalb sie diese oft misshandeln. Religiöse Vorurteile werden häufig als Rechtfertigung angeführt, obwohl der Islam nicht vorschreibt, Tieren Schaden zuzufügen.",
+          "Wir setzen auf Bildung und Aufklärung: Einerseits wollen wir den Einheimischen Respekt, Verständnis und Liebe für unsere vierbeinigen Freunde näherbringen. Andererseits informieren wir darüber, wie jeder mit kleinen Taten dazu beitragen kann, das Leben der Strassenhunde spürbar zu verbessern."
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "label": "Meilensteine 24/25",
+    "title": "Unsere Projekte auf einen Blick",
+    "subtitle": "Wir schaffen sichere Orte, medizinische Versorgung und neue Lebensperspektiven für Sansibars Strassenhunde.",
+    "items": [
+      {
+        "slug": "care",
+        "category": "Versorgung",
+        "title": "Versorgung",
+        "description": "Unser Team reinigt und füllt regelmäßig unsere speziell angefertigten Futterstellen mit sauberem Wasser und frischem Futter auf.",
+        "detail": [
+          "Ein beständiger Zugang zu Nahrung und sauberem Wasser ist für die Gesundheit der Strassenhundepopulation von grundlegender Bedeutung. Unsere Futterstationen sind mehr als nur Schüsseln; es sind massgefertigte 'Hundebars', die auf Langlebigkeit und Hygiene ausgelegt sind.",
+          "Unser engagiertes TAJDO-Team führt regelmässige Runden durch, um diese Stationen gründlich zu reinigen und aufzufüllen. Dies verhindert nicht nur die Ausbreitung von Krankheiten, sondern schafft auch Vertrauen bei den lokalen Hundepopulationen, was sie für zukünftige medizinische Versorgung und Interaktion empfänglicher macht.",
+          "Um die Hunde vor dem rauen Klima Sansibars zu schützen – mit intensiver Sonne und starken Regenfällen – errichten wir an wichtigen Standorten einfache, aber langlebige und wetterfeste Hundehütten. Diese Unterkünfte bieten einen sicheren und trockenen Ort, an dem sich Hunde ausruhen, von Krankheiten erholen oder ihre Welpen aufziehen können.",
+          "Hundehütten werden an diversen Standorten in lokalen Dörfern gebaut, um den Hunden eine sichere und liebevolle Umgebung zu bieten, wie auch vor Unwetter zu schützen."
+        ]
+      },
+      {
+        "slug": "education",
+        "category": "Bildung",
+        "title": "Bildung und Aufklärung",
+        "description": "Auf Sansibar fehlt es oft an Wissen im Umgang mit Hunden, geprägt auch durch kulturelle und religiöse Einflüsse.",
+        "detail": [
+          "In vielen Teilen Sansibars werden Strassenhunde oft missverstanden oder aufgrund kultureller und religiöser Einflüsse als 'unrein' betrachtet. Diese Fehlinformationen führen leider oft dazu, dass viele Hunde vernachlässigt oder sogar misshandelt werden.",
+          "Langfristige Veränderung erfordert einen Perspektivwechsel. Unsere Bildungs- und Aufklärungsprogramme zielen darauf ab, eine Kultur des Mitgefühls und des Respekts zu fördern. Wir führen Workshops durch und leiten gezielte Schulprojekte mit Dollar, um Kindern und Erwachsenen Wissen über Hundeverhalten und Sicherheit zu vermitteln.",
+          "Indem wir Mythen ausräumen und kulturelle Missverständnisse ansprechen, schaffen wir die Grundlage für ein harmonischeres Zusammenleben von Mensch und Tier. So lernen Kinder und Jugendliche schon früh, Hunde mit Respekt zu behandeln und erkennen, wie schon kleine Taten das Leben der Strassenhunde verbessern können.",
+          "Bildung ist das mächtigste Werkzeug, um eine nachhaltige und freundliche Zukunft für Sansibar zu schaffen."
+        ]
+      },
+      {
+        "slug": "medical-care",
+        "category": "Medizin",
+        "title": "Medizinische Versorgung",
+        "description": "In Zusammenarbeit mit lokalen Tierärzten sterilisieren, impfen und behandeln wir Straßenhunde regelmässig.",
+        "detail": [
+          "Unser medizinisches Interventionsprogramm ist umfassend und lebensrettend. In Partnerschaft mit mitfühlenden lokalen Tierärzten bieten wir eine breite Palette von Behandlungen an, einschliesslich Impfkampagnen gegen Tollwut und andere häufige Krankheiten, um sowohl die Hunde als auch die menschliche Gemeinschaft zu schützen.",
+          "In Zusammenarbeit mit lokalen Tierärzten sterilisieren, impfen und behandeln wir Straßenhunde regelmässig, um Leid zu verhindern, bevor es überhaupt beginnt, und um Leben zu retten, die bereits in Gefahr sind.",
+          "Über die Präventivpflege hinaus behandeln wir akute Verletzungen, Hauterkrankungen und schwere Krankheiten wie Krebs. Regelmässige Pflege wie Entwurmung und Flohbehandlung gehört ebenfalls zu unseren Leistungen und bietet Hunden, die sonst keine Hoffnung hätten, eine Chance auf ein gesundes Leben."
+        ]
+      },
+      {
+        "slug": "successful-placement",
+        "category": "Adoption",
+        "title": "Erfolgreiche Vermittlung",
+        "description": "Unser Ziel ist es, das Leben aller Strassenhunde zu verbessern, doch manche Hunde sind zu verletzlich.",
+        "detail": [
+          "Obwohl unser Ziel darin besteht, das Leben aller Strassenhunde zu verbessern, sind einige zu verletzlich, jung oder verletzt, um allein auf der Strasse zu überleben. Für diese besonderen Fälle führen wir ein sorgfältiges und durchdachtes Adoptionsprogramm durch.",
+          "Unser Ziel ist es, das Leben aller Strassenhunde zu verbessern, doch manche Hunde sind zu verletzlich, um alleine auf der Strasse zu überleben. Unser Adoptionsprogramm bringt diese besonderen Fälle sorgfältig mit liebevollen, dauerhaften Familien zusammen.",
+          "Unser Prozess umfasst eine gründliche Überprüfung potenzieller Adoptiveltern, um eine perfekte Übereinstimmung zu gewährleisten und eine zweite Chance auf ein Leben voller Liebe, Sicherheit und Kameradschaft zu ermöglichen. Jede Adoption ist eine Geschichte der Hoffnung und Transformation."
+        ]
+      },
+      {
+        "slug": "campaigns",
+        "category": "Kampagnen",
+        "title": "Kampagnen",
+        "description": "Durch regelmässige Kastrationskampagnen werden notwendige Impfungen, Operationen und Kastrationen durchgeführt.",
+        "detail": [
+          "Sterilisation und Kastration stehen im Mittelpunkt unserer langfristigen Mission, um die Strassenhundepopulation human zu kontrollieren und zukünftiges Leid zu verhindern. Durch die Durchführung gross angelegter Kampagnen können wir die Ursache der Krise auf Sansibar angehen.",
+          "Durch regelmässige Kastrationskampagnen werden notwendige Impfungen, Operationen und Kastrationen durchgeführt. Diese Massnahmen sind entscheidend für die Gesundheit der Hunde und gleichzeitig ein wichtiger Schritt, um die Strassenhundepopulation nachhaltig zu regulieren und die Lebensqualität der Anwohner zu verbessern."
+        ]
+      }
+    ],
+    "ctaTitle": "Möchten Sie ein Projekt unterstützen?",
+    "ctaDesc": "Ihre Spende finanziert diese Initiativen direkt. Jeder Beitrag, egal wie klein, hilft uns, mehr Leben zu retten.",
+    "socialMedia": {
+      "title": "Social Media",
+      "subtitle": "Jedes der aufgeführten Projekte, die in den Jahren 2024 und 2025 abgeschlossen wurden, kann auf Instagram oder TikTok entdeckt werden.",
+      "viewMore": "Mehr anzeigen",
+      "followUs": "Folge uns"
+    },
+    "adoption": {
+      "title": "Die Adoption",
+      "subtitle": "Einige Hunde haben durch erfolgreiche Vermittlung bereits ein liebevolles Zuhause gefunden. Hier sind einige Erfahrungen von unseren neuen Hundebesitzern:",
+      "testimonials": [
+        { "quote": "Der Adoptionsprozess war absolut unkompliziert und mit so viel Sorgfalt gehandhabt. Unser Simba fühlte sich vom ersten Tag an wie ein Familienmitglied. Wir sind überglücklich – danke für eure wundervolle Arbeit!", "author": "Name" },
+        { "quote": "Man merkt sofort, wie viel Leidenschaft hier reingesteckt wird. Ich wurde hervorragend beraten, alle meine Fragen wurden ernst genommen, und Mali bereichert mein Leben vom ersten Tag an mit seiner Lebensfreude.", "author": "Levke Kersting" },
+        { "quote": "Vom ersten Kontakt bis zum Einzug unseres Hundes fühlten wir uns extrem gut betreut. Professionell und unglaublich einfühlsam. Unsere Adoption hätte nicht besser laufen können.", "author": "Name" }
+      ],
+      "form": {
+        "title": "Möchten Sie adoptieren?",
+        "subtitle": "Wenn Sie einem kleinen Fellfreund ein artgerechtes und liebevolles Zuhause bieten möchten, kontaktieren Sie uns.",
+        "namePlaceholder": "Name",
+        "emailPlaceholder": "E-Mail",
+        "messagePlaceholder": "Nachricht",
+        "submitButton": "Anfrage senden"
+      }
+    }
+  },
+  "donate": {
+    "heroTitle": "Ihre Unterstützung",
+    "heroDesc": [
+      "Ihre Unterstützung ermöglicht es, unsere Projekte weiter auszubauen und eine nachhaltige Wirkung zu erzielen.",
+      "Jeder Beitrag stärkt unsere Arbeit vor Ort und hilft uns, langfristige Verbesserungen für Tier und Mensch zu schaffen.",
+      "Gemeinsam setzen wir ein Zeichen für Verantwortung, Mitgefühl und Veränderung.",
+      "Danke, dass Sie Teil dieser Entwicklung sind."
+    ],
+    "donateNow": "Jetzt spenden",
+    "mainTitle": "Wir schätzen jede Unterstützung – ob klein oder gross, einmalig oder monatlich.",
+    "mainDesc": [
+      "Ihre Spende hilft uns, den Tieren eine kontinuierliche Versorgung mit Futter, medizinischer Betreuung und liebevoller Zuwendung zu sichern. Transparenz ist uns besonders wichtig: Auf unseren Social-Media-Kanälen geben wir regelmässig Einblicke in unsere Projekte und zeigen, wie Ihre Hilfe direkt bei den Tieren vor Ort ankommt.",
+      "Dank Ihrer Beiträge können wir nicht nur akute Notfälle versorgen, sondern auch langfristige Rettungs- und Rehabilitationsprogramme planen und umsetzen – und schaffen so zusätzlich Arbeitsplätze.",
+      "Wir danken Ihnen von Herzen für Ihre Grosszügigkeit und Ihr Vertrauen.",
+      "TAJDO"
+    ],
+    "shopCTA": "Doppelte Wirkung",
+    "shopTitle": "Shoppen, um Leben zu retten",
+    "shopButton": "Besuchen Sie unseren Shop",
+    "details": {
+      "bank": {
+        "title": "Bankverbindung",
+        "name": "TAJDO",
+        "iban": "IBAN: CH2209000000163182559",
+        "bic": "BIC: POFICHBEXXX"
+      },
+      "address": {
+        "title": "Adresse",
+        "name": "TAJDO",
+        "line1": "Sennweidstrasse 2A",
+        "line2": "CH-6276 Hohenrain"
+      },
+      "info": {
+        "title": "Information",
+        "desc": "Spenden aus der Schweiz sind gemäss den geltenden kantonalen Bestimmungen steuerlich absetzbar."
+      }
+    },
+    "fundsLabel": "Wohin es geht",
+    "fundsTitle": "Was Ihre Spende bewirkt",
+    "fundsItems": [
+      {
+        "title": "Futterstellen",
+        "desc": "Bau zahlreicher Futter- und Wassernäpfe an verschiedenen Standorten. Unser Team reinigt und füllt sie kontinuierlich auf, damit die Tiere immer Zugang zu Futter und frischem Wasser haben."
+      },
+      {
+        "title": "Medizinische Versorgung",
+        "desc": "Behandlung von Krankheiten und Verletzungen, Sterilisationen und Tollwutimpfungen sowie regelmässige Pflege wie Entwurmung und Flohbehandlung."
+      },
+      {
+        "title": "Bau von Unterkünften",
+        "desc": "Bau wetterfester Hundehütten, die Schutz und einen sicheren Rückzugsort für Strassenhunde bieten."
+      },
+      {
+        "title": "Bildung",
+        "desc": "Sensibilisierung von Kindern und Erwachsenen auf Sansibar für einen respektvollen Umgang mit Hunden."
+      }
+    ],
+    "adoptionForm": {
+      "title": "Möchten Sie adoptieren?",
+      "subtitle": "Wenn Sie einem kleinen Fellfreund ein artgerechtes und liebevolles Zuhause bieten möchten, kontaktieren Sie uns.",
+      "namePlaceholder": "Name",
+      "emailPlaceholder": "E-Mail",
+      "messagePlaceholder": "Nachricht",
+      "submitButton": "Anfrage senden"
+    }
+  },
+  "privacy": {
+    "content": [
+      "TAJDO setzt sich für den Schutz Ihrer persönlichen Daten und Ihrer Privatsphäre ein, die uns von Spendern, Freiwilligen und Partnern anvertraut werden. Diese Richtlinie erläutert, wie wir Ihre Informationen sammeln, verwenden, speichern und schützen, gemäss den geltenden Gesetzen, einschliesslich des Schweizer Bundesgesetzes über den Datenschutz (DSG) und der EU-Datenschutz-Grundverordnung (DSGVO).",
+      "Wir sammeln verschiedene Datenkategorien zur Unterstützung unserer Mission, darunter Identifikationsdaten (Name, Geburtsdatum), Kontaktdaten (E-Mail, Telefon) und Finanzdaten zur Bearbeitung von Spenden. Zudem erfassen wir technische Daten wie IP-Adressen und Geräte-IDs, um unsere digitalen Plattformen und Analysetools zu verbessern.",
+      "Ihre Daten werden nur für legitime gemeinnützige Zwecke verarbeitet: zur Erbringung unserer Dienstleistungen, zur Verwaltung von Spenderkonten, zur Mitteilung von Updates über unsere Projekte auf Sansibar und zur Erfüllung rechtlicher Verpflichtungen. Wir halten uns an die Grundsätze der Datenminimierung, Zweckbindung und Richtigkeit.",
+      "TAJDO verkauft keine persönlichen Daten. Wir geben Informationen nur an autorisierte Dienstleister (z. B. Zahlungsabwickler) unter strengen Vertraulichkeitsvereinbarungen oder an Behörden weiter, wenn dies gesetzlich vorgeschrieben ist. Grenzüberschreitende Datentransfers erfolgen nur mit angemessenen Garantien wie Standardvertragsklauseln.",
+      "Wir implementieren robuste technische und organisatorische Sicherheitsmassnahmen, einschliesslich Verschlüsselung bei Speicherung und Übertragung, Zugriffskontrollen und regelmässigem Schwachstellenmanagement. Daten werden nur so lange aufbewahrt, wie es für den Zweck der Erhebung oder aufgrund gesetzlicher Aufbewahrungsfristen erforderlich ist.",
+      "Als betroffene Person haben Sie das Recht auf Auskunft, Berichtigung oder Löschung Ihrer persönlichen Daten. Sie können zudem die Verarbeitung einschränken, die Datenübertragbarkeit verlangen oder eine Einwilligung jederzeit widerrufen. Wir verwenden auch Cookies zur Verbesserung Ihres Nutzererlebnisses; diese können Sie über Ihre Browsereinstellungen verwalten.",
+      "Für Anfragen oder zur Ausübung Ihrer Rechte kontaktieren Sie bitte unseren Datenschutzbeauftragten unter info@tajdo.ch oder per Post an die Sennweidstrasse 2A, CH-6276 Hohenrain."
+    ]
+    }
   }
-}
