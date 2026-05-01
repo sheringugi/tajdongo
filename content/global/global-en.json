@@ -1,5 +1,5 @@
 {
-  "language": "en",
+  "language": "eng",
   "nav": {
     "home": "Home",
     "about": "About Us",
@@ -123,7 +123,7 @@
       {
         "name": "Tajana Bieri",
         "role": "Team leader",
-        "image": "uploads/IMG_TAJANA.jpg",
+        "image": "/uploadsuploads/IMG_TAJANA.jpg",
         "bio": [
           "My name is Tajana, I'm 24 years old, and I was born and raised in Switzerland. Since 2024, I've been living with my dog, Dollar, in Zanzibar, Tanzania. I dedicate my entire life to the street dogs there.",
           "I grew up in a very loving family with an older sister and a younger brother. My father is deaf and my mother is hard of hearing, which meant I grew up partly in the world of the hearing impaired and using sign language. This has probably contributed greatly to my open-mindedness.",
@@ -135,7 +135,7 @@
       {
         "name": "Dollar",
         "role": "Team favorite",
-        "image": "uploads/IMG_RESCUE.jpg",
+        "image": "/uploadsuploads/IMG_RESCUE.jpg",
         "bio": [
           "I'm Dollar, about 14 years old in dog years, which is roughly equivalent to 98 in human years. I originally lived on the streets of Italy. Then I was taken in by an animal shelter, where I lived for five years with many other street dogs.",
           "Since my mom, Tajana, took me in from there, she never knew exactly how old I really was. For the past seven years, I've lived lovingly and adventurously with my mom. We've traveled to many European countries together, all by car, of course. Now I get to spend my last years as a dog as an 'old man' on the beach in Zanzibar, and I was also a significant part of the inspiration for TAJDO."
