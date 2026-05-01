@@ -2,8 +2,8 @@
 import { defineConfig } from "tinacms";
 var config_default = defineConfig({
   branch: process.env.GITHUB_BRANCH || process.env.VERCEL_GIT_COMMIT_REF || "main",
-  clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID || process.env.VITE_TINA_CLIENT_ID || "",
-  token: process.env.TINA_TOKEN || process.env.VITE_TINA_TOKEN || "",
+  clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID || "",
+  token: process.env.TINA_TOKEN || "",
   build: {
     outputFolder: "admin",
     publicFolder: "public"
@@ -43,7 +43,12 @@ var config_default = defineConfig({
               { type: "string", name: "donate", label: "Donate" }
             ]
           },
-          { type: "string", name: "announcement", label: "Announcement Bar", ui: { component: "textarea" } },
+          {
+            type: "string",
+            name: "announcement",
+            label: "Announcement Bar",
+            ui: { component: "textarea" }
+          },
           {
             type: "object",
             name: "ads",
@@ -139,7 +144,7 @@ var config_default = defineConfig({
         path: "content",
         format: "json",
         match: {
-          include: ["en", "de"]
+          include: "{en,de}"
         },
         fields: [
           {
