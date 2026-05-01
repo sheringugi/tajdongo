@@ -49,11 +49,7 @@
         "label": "Identifizierte Standorte auf Sansibar"
       },
       {
-        "number": "2",
-        "label": "Schulprojekte"
-      },
-      {
-        "number": "6",
+        "number": "10",
         "label": "Futter- und Wasserstellen"
       },
       {
@@ -63,6 +59,10 @@
       {
         "number": "100",
         "label": "Medizinisch behandelte Hunde"
+      },
+      {
+        "number": "2",
+        "label": "Schulprojekte"
       }
     ]
   },
