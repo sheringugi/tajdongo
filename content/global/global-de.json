@@ -1,7 +1,7 @@
 {
   "language": "de",
   "nav": {
-    "home": "Startseite",
+    "home": "Startseit",
     "about": "Über Uns",
     "mission": "Mission",
     "projects": "Projekte",
@@ -24,8 +24,8 @@
     },
     "welfare": {
       "brand": "Swiss Animal Welfare Co.",
-      "description": "Unterstützung der Rettung und Rehabilitation von Strassentieren weltweit.",
       "tagline": "",
+      "description": "Unterstützung der Rettung und Rehabilitation von Strassentieren weltweit.",
       "url": "https://www.tajdo.shop"
     },
     "vets": {
@@ -95,9 +95,18 @@
     "missionLabel": "Was wir tun",
     "missionTitle": "Unsere Mission",
     "missionItems": [
-      { "title": "Pflege & Versorgung", "description": "Das Hauptaugenmerk von TAJDO liegt auf dem Wohlergehen von Strassenhunden. Wir stellen regelmässig frisches Futter und sauberes Wasser zur Verfügung, um das Überleben der Tiere zu sichern. Darüber hinaus entwickeln wir durchdachte Futterstellen und bauen Hundehütten in lokalen Gemeinden, um den Hunden eine sichere und liebevolle Umgebung zu bieten. Besonderes Augenmerk legen wir auch auf die medizinische Versorgung: In Zusammenarbeit mit lokalen Tierärzten führen wir Impfungen, Kastrationen und notwendige Operationen durch, um die langfristige Gesundheit der Tiere zu gewährleisten." },
-      { "title": "Entwicklung & Vision", "description": "TAJDO arbeitet auf das Ziel hin, eines Tages ein Hundeheim in Sansibar zu errichten. Aber unsere Arbeit bedeutet mehr als nur ein konkretes Ziel: Sie fördert die Entwicklung von Potenzialen - sowohl bei den Hunden als auch in unserem eigenen Handeln. Jeder Schritt, den TAJDO unternimmt, ist auf Nachhaltigkeit und Verantwortung ausgelegt. Auf diese Weise wachsen wir kontinuierlich und verwirklichen unsere Vision Schritt für Schritt." },
-      { "title": "Bildung & Aufklärung", "description": "TAJDO will das Bewusstsein für die Bedürfnisse und Herausforderungen von Strassenhunden schärfen. Viele Menschen in Sansibar sind schlecht oder gar nicht über diese Tiere informiert, was oft zu Misshandlungen führt. Religiöse Vorurteile werden häufig als Rechtfertigung angeführt, obwohl der Islam nicht vorschreibt, Tieren Schaden zuzufügen. Wir konzentrieren uns auf Bildung und Sensibilisierung: Erstens wollen wir bei der lokalen Bevölkerung Respekt, Verständnis und Liebe für unsere vierbeinigen Freunde fördern. Zweitens informieren wir die Menschen darüber, wie jeder durch kleine Taten dazu beitragen kann, das Leben von Strassenhunden spürbar zu verbessern." }
+      {
+        "title": "Pflege & Versorgung",
+        "description": "Das Hauptaugenmerk von TAJDO liegt auf dem Wohlergehen von Strassenhunden. Wir stellen regelmässig frisches Futter und sauberes Wasser zur Verfügung, um das Überleben der Tiere zu sichern. Darüber hinaus entwickeln wir durchdachte Futterstellen und bauen Hundehütten in lokalen Gemeinden, um den Hunden eine sichere und liebevolle Umgebung zu bieten. Besonderes Augenmerk legen wir auch auf die medizinische Versorgung: In Zusammenarbeit mit lokalen Tierärzten führen wir Impfungen, Kastrationen und notwendige Operationen durch, um die langfristige Gesundheit der Tiere zu gewährleisten."
+      },
+      {
+        "title": "Entwicklung & Vision",
+        "description": "TAJDO arbeitet auf das Ziel hin, eines Tages ein Hundeheim in Sansibar zu errichten. Aber unsere Arbeit bedeutet mehr als nur ein konkretes Ziel: Sie fördert die Entwicklung von Potenzialen - sowohl bei den Hunden als auch in unserem eigenen Handeln. Jeder Schritt, den TAJDO unternimmt, ist auf Nachhaltigkeit und Verantwortung ausgelegt. Auf diese Weise wachsen wir kontinuierlich und verwirklichen unsere Vision Schritt für Schritt."
+      },
+      {
+        "title": "Bildung & Aufklärung",
+        "description": "TAJDO will das Bewusstsein für die Bedürfnisse und Herausforderungen von Strassenhunden schärfen. Viele Menschen in Sansibar sind schlecht oder gar nicht über diese Tiere informiert, was oft zu Misshandlungen führt. Religiöse Vorurteile werden häufig als Rechtfertigung angeführt, obwohl der Islam nicht vorschreibt, Tieren Schaden zuzufügen. Wir konzentrieren uns auf Bildung und Sensibilisierung: Erstens wollen wir bei der lokalen Bevölkerung Respekt, Verständnis und Liebe für unsere vierbeinigen Freunde fördern. Zweitens informieren wir die Menschen darüber, wie jeder durch kleine Taten dazu beitragen kann, das Leben von Strassenhunden spürbar zu verbessern."
+      }
     ],
     "missionTag": "Mission",
     "learnMore": "Mehr erfahren",
@@ -114,7 +123,7 @@
       {
         "name": "Tajana Bieri",
         "role": "Teamleiterin",
-        "image": "uploads/IMG_TAJANA.jpg",
+        "image": "/uploadsuploads/IMG_TAJANA.jpg",
         "bio": [
           "Mein Name ist Tajana, ich bin 24 Jahre alt und in der Schweiz geboren und aufgewachsen. Seit 2024 lebe ich mit meinem Hund Dollar auf Sansibar, Tansania. Ich widme mein ganzes Leben den Strassenhunden dort.",
           "Ich bin in einer sehr liebevollen Familie mit einer älteren Schwester und einem jüngeren Bruder aufgewachsen. Mein Vater ist gehörlos und meine Mutter schwerhörig, was bedeutete, dass ich teilweise in der Welt der Hörgeschädigten und mit Gebärdensprache aufgewachsen bin. Das hat wahrscheinlich stark zu meiner Offenheit beigetragen.",
@@ -126,7 +135,7 @@
       {
         "name": "Dollar",
         "role": "Team-Liebling",
-        "image": "uploads/IMG_RESCUE.jpg",
+        "image": "/uploadsuploads/IMG_RESCUE.jpg",
         "bio": [
           "Ich bin Dollar, ungefähr 14 Jahre alt in Hundejahren, was ungefähr 98 Menschenjahren entspricht. Ursprünglich lebte ich auf den Strassen Italiens. Dann wurde ich von einem Tierheim aufgenommen, wo ich fünf Jahre mit vielen anderen Strassenhunden lebte.",
           "Da meine Mama, Tajana, mich von dort aufgenommen hat, wusste sie nie genau, wie alt ich wirklich war. In den letzten sieben Jahren habe ich liebevoll and abenteuerlich mit meiner Mama gelebt. Wir sind zusammen in viele europäische Länder gereist, natürlich alles mit dem Auto. Jetzt darf ich meine letzten Jahre als Hund als 'alter Mann' am Strand von Sansibar verbringen, und ich war auch ein wesentlicher Teil der Inspiration für TAJDO."
@@ -244,9 +253,18 @@
       "title": "Die Adoption",
       "subtitle": "Einige Hunde haben durch erfolgreiche Vermittlung bereits ein liebevolles Zuhause gefunden. Hier sind einige Erfahrungen von unseren neuen Hundebesitzern:",
       "testimonials": [
-        { "quote": "Der Adoptionsprozess war absolut unkompliziert und mit so viel Sorgfalt gehandhabt. Unser Simba fühlte sich vom ersten Tag an wie ein Familienmitglied. Wir sind überglücklich – danke für eure wundervolle Arbeit!", "author": "Name" },
-        { "quote": "Man merkt sofort, wie viel Leidenschaft hier reingesteckt wird. Ich wurde hervorragend beraten, alle meine Fragen wurden ernst genommen, und Mali bereichert mein Leben vom ersten Tag an mit seiner Lebensfreude.", "author": "Levke Kersting" },
-        { "quote": "Vom ersten Kontakt bis zum Einzug unseres Hundes fühlten wir uns extrem gut betreut. Professionell und unglaublich einfühlsam. Unsere Adoption hätte nicht besser laufen können.", "author": "Name" }
+        {
+          "quote": "Der Adoptionsprozess war absolut unkompliziert und mit so viel Sorgfalt gehandhabt. Unser Simba fühlte sich vom ersten Tag an wie ein Familienmitglied. Wir sind überglücklich – danke für eure wundervolle Arbeit!",
+          "author": "Name"
+        },
+        {
+          "quote": "Man merkt sofort, wie viel Leidenschaft hier reingesteckt wird. Ich wurde hervorragend beraten, alle meine Fragen wurden ernst genommen, und Mali bereichert mein Leben vom ersten Tag an mit seiner Lebensfreude.",
+          "author": "Levke Kersting"
+        },
+        {
+          "quote": "Vom ersten Kontakt bis zum Einzug unseres Hundes fühlten wir uns extrem gut betreut. Professionell und unglaublich einfühlsam. Unsere Adoption hätte nicht besser laufen können.",
+          "author": "Name"
+        }
       ],
       "form": {
         "title": "Möchten Sie adoptieren?",
@@ -334,5 +352,5 @@
       "Als betroffene Person haben Sie das Recht auf Auskunft, Berichtigung oder Löschung Ihrer persönlichen Daten. Sie können zudem die Verarbeitung einschränken, die Datenübertragbarkeit verlangen oder eine Einwilligung jederzeit widerrufen. Wir verwenden auch Cookies zur Verbesserung Ihres Nutzererlebnisses; diese können Sie über Ihre Browsereinstellungen verwalten.",
       "Für Anfragen oder zur Ausübung Ihrer Rechte kontaktieren Sie bitte unseren Datenschutzbeauftragten unter info@tajdo.ch oder per Post an die Sennweidstrasse 2A, CH-6276 Hohenrain."
     ]
-    }
   }
+}
