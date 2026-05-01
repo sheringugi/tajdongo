@@ -65,5 +65,8 @@
     "stayConnected": "Stay Connected",
     "together": "Together for each other.",
     "rights": "All rights reserved."
+  },
+  "index": {
+    "heroLabel": "lala"
   }
 }
