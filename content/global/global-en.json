@@ -1,4 +1,84 @@
 {
+  "language": "en",
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "mission": "Mission",
+    "projects": "Projects",
+    "donate": "Donate"
+  },
+  "announcement": "Every purchase on our online store supports the rescue and rehabilitation of street dogs in Zanzibar",
+  "ads": {
+    "sponsored": "Sponsored",
+    "spotlight": "Partner Spotlight",
+    "learnMore": "Learn More",
+    "visitSite": "Visit Site",
+    "logo": "Logo"
+  },
+  "partners": {
+    "tours": {
+      "brand": "Zanzibar Eco Tours",
+      "tagline": "Explore Zanzibar Responsibly",
+      "description": "We offer sustainable eco-tours across Zanzibar and proudly support the dogs and communities TAJDO serves.",
+      "url": "https://www.tajdo.shop"
+    },
+    "welfare": {
+      "brand": "Swiss Animal Welfare Co.",
+      "tagline": "",
+      "description": "Supporting the rescue and rehabilitation of street animals worldwide.",
+      "url": "https://www.tajdo.shop"
+    },
+    "vets": {
+      "brand": "Global Vet Alliance",
+      "tagline": "Quality Care for Every Animal",
+      "description": "Partnering with TAJDO to provide essential medical supplies and expertise for Zanzibar's dogs.",
+      "url": "https://www.tajdo.shop"
+    },
+    "tours_alt": {
+      "brand": "Zanzibar Eco Tours",
+      "tagline": "",
+      "description": "We offer sustainable eco-tours across Zanzibar and proudly support the dogs and communities TAJDO serves.",
+      "url": "https://www.tajdo.shop"
+    }
+  },
+  "impact": {
+    "label": "Our Impact",
+    "stats": [
+      {
+        "number": "70+",
+        "label": "Identified locations in Zanzibar"
+      },
+      {
+        "number": "10",
+        "label": "Feeding and watering stations"
+      },
+      {
+        "number": "7",
+        "label": "Successfully adopted dogs"
+      },
+      {
+        "number": "120",
+        "label": "Medically treated dogs"
+      },
+      {
+        "number": "2",
+        "label": "School Projects"
+      }
+    ]
+  },
+  "footer": {
+    "stayConnected": "Stay Connected",
+    "together": "Together for each other.",
+    "rights": "All rights reserved.",
+    "stayConnectedDesc": "Follow our journey and receive updates on the dogs we rescue and rehabilitate in Zanzibar.",
+    "navigation": "Navigation",
+    "shop": "Shop",
+    "onlineStore": "Online Store",
+    "allProducts": "All Products",
+    "contact": "Contact",
+    "bankTransferLink": "Contact us for bank transfer details",
+    "privacy": "Privacy Policy"
+  },
   "index": {
     "heroLabel": "Together for each other",
     "heroTitle1": "Rescuing Lives",
@@ -15,18 +95,9 @@
     "missionLabel": "What We Do",
     "missionTitle": "Our Mission",
     "missionItems": [
-      {
-        "title": "Maintenance & Care",
-        "description": " TAJDO's primary focus is the well-being of street dogs. We regularly provide fresh food and clean water to ensure the animals' survival. In addition, we develop thoughtfully designed feeding bowls and build doghouses in local communities to offer the dogs a safe and loving environment. We also place a strong emphasis on medical care: in cooperation with local veterinarians, we administer vaccinations, spaying/neutering, and perform necessary surgeries to ensure the animals' long-term health."
-      },
-      {
-        "title": "Development & Vision",
-        "description": "TAJDO is working towards the goal of one day establishing a dog shelter in Zanzibar. But our work means more than just a concrete goal: it fosters the development of potential – both in the dogs and in our own actions. Every step TAJDO takes is designed sustainably and responsibly. In this way, we grow continuously and realize our vision step by step."
-      },
-      {
-        "title": "Education & Enlightenment",
-        "description": "TAJDO aims to raise awareness about the needs and challenges faced by street dogs. Many people in Zanzibar are poorly informed or completely uninformed about these animals, which often leads to mistreatment. Religious prejudices are frequently cited as justification, even though Islam does not prescribe harming animals. We focus on education and raising awareness: Firstly, we want to foster respect, understanding, and love for our four-legged friends among the local population. Secondly, we inform people about how everyone can contribute to tangibly improving the lives of street dogs through small acts of kindness."
-      }
+      { "title": "Maintenance & Care", "description": " TAJDO's primary focus is the well-being of street dogs. We regularly provide fresh food and clean water to ensure the animals' survival. In addition, we develop thoughtfully designed feeding bowls and build doghouses in local communities to offer the dogs a safe and loving environment. We also place a strong emphasis on medical care: in cooperation with local veterinarians, we administer vaccinations, spaying/neutering, and perform necessary surgeries to ensure the animals' long-term health." },
+      { "title": "Development & Vision", "description": "TAJDO is working towards the goal of one day establishing a dog shelter in Zanzibar. But our work means more than just a concrete goal: it fosters the development of potential – both in the dogs and in our own actions. Every step TAJDO takes is designed sustainably and responsibly. In this way, we grow continuously and realize our vision step by step." },
+      { "title": "Education & Enlightenment", "description": "TAJDO aims to raise awareness about the needs and challenges faced by street dogs. Many people in Zanzibar are poorly informed or completely uninformed about these animals, which often leads to mistreatment. Religious prejudices are frequently cited as justification, even though Islam does not prescribe harming animals. We focus on education and raising awareness: Firstly, we want to foster respect, understanding, and love for our four-legged friends among the local population. Secondly, we inform people about how everyone can contribute to tangibly improving the lives of street dogs through small acts of kindness." }
     ],
     "missionTag": "Mission",
     "learnMore": "Learn More",
@@ -173,18 +244,9 @@
       "title": "Adoption",
       "subtitle": "Some dogs have already found a loving home through successful rehoming. Here are some experiences from our new dog parents:",
       "testimonials": [
-        {
-          "quote": "The adoption process was absolutely straightforward and handled with such care. Our Simba felt like a member of the family from day one. We are overjoyed – thank you for your wonderful work!",
-          "author": "Name"
-        },
-        {
-          "quote": "You can immediately tell how much passion has gone into this. I received excellent advice, all my questions were taken seriously, and Mali enriched my life with his zest for life from day one.",
-          "author": "Levke Kersting"
-        },
-        {
-          "quote": "From the initial contact until our dog moved in, we felt extremely well cared for. Professional and incredibly empathetic. Our adoption couldn't have gone better.",
-          "author": "Name"
-        }
+        { "quote": "The adoption process was absolutely straightforward and handled with such care. Our Simba felt like a member of the family from day one. We are overjoyed – thank you for your wonderful work!", "author": "Name" },
+        { "quote": "You can immediately tell how much passion has gone into this. I received excellent advice, all my questions were taken seriously, and Mali enriched my life with his zest for life from day one.", "author": "Levke Kersting" },
+        { "quote": "From the initial contact until our dog moved in, we felt extremely well cared for. Professional and incredibly empathetic. Our adoption couldn't have gone better.", "author": "Name" }
       ],
       "form": {
         "title": "Do you want to adopt?",
@@ -194,150 +256,83 @@
         "messagePlaceholder": "News",
         "submitButton": "Send Inquiry"
       }
-    },
-    "donate": {
-      "heroTitle": "Your support",
-      "heroDesc": [
-        "Your support makes it possible to further expand our projects and achieve a sustainable impact.",
-        "Every contribution strengthens our work on the ground and helps us create long-term improvements for animals and people.",
-        "Together we are setting an example for responsibility, compassion and change.",
-        "Thank you for being part of this development."
-      ],
-      "donateNow": "Donate now",
-      "mainTitle": "We appreciate any support – whether small or large, one-off or monthly.",
-      "mainDesc": [
-        "Your donation helps us ensure the animals receive continuous food, medical care, and loving attention. Transparency is especially important to us: On our social media channels, we regularly provide insights into our projects and show how your help directly impacts the animals on the ground.",
-        "Thanks to your contributions, we can not only handle acute emergencies, but also plan and implement long-term rescue and rehabilitation programs – and thus create additional jobs.",
-        "We would like to thank you from the bottom of our hearts for your generosity and trust.",
-        "TAJDO"
-      ],
-      "shopCTA": "Double the Impact",
-      "shopTitle": "Shop to Save Lives",
-      "shopButton": "Visit Our Shop",
-      "details": {
-        "bank": {
-          "title": "Bank details",
-          "name": "TAJDO",
-          "iban": "IBAN: CH2209000000163182559",
-          "bic": "BIC: POFICHBEXXX"
-        },
-        "address": {
-          "title": "Address",
-          "name": "TAJDO",
-          "line1": "Sennweidstrasse 2A",
-          "line2": "CH-6276 Hohenrain"
-        },
-        "info": {
-          "title": "Information",
-          "desc": "Donations from Switzerland are tax-deductible in accordance with the applicable cantonal regulations."
-        }
+  },
+  "donate": {
+    "heroTitle": "Your support",
+    "heroDesc": [
+      "Your support makes it possible to further expand our projects and achieve a sustainable impact.",
+      "Every contribution strengthens our work on the ground and helps us create long-term improvements for animals and people.",
+      "Together we are setting an example for responsibility, compassion and change.",
+      "Thank you for being part of this development."
+    ],
+    "donateNow": "Donate now",
+    "mainTitle": "We appreciate any support – whether small or large, one-off or monthly.",
+    "mainDesc": [
+      "Your donation helps us ensure the animals receive continuous food, medical care, and loving attention. Transparency is especially important to us: On our social media channels, we regularly provide insights into our projects and show how your help directly impacts the animals on the ground.",
+      "Thanks to your contributions, we can not only handle acute emergencies, but also plan and implement long-term rescue and rehabilitation programs – and thus create additional jobs.",
+      "We would like to thank you from the bottom of our hearts for your generosity and trust.",
+      "TAJDO"
+    ],
+    "shopCTA": "Double the Impact",
+    "shopTitle": "Shop to Save Lives",
+    "shopButton": "Visit Our Shop",
+    "details": {
+      "bank": {
+        "title": "Bank details",
+        "name": "TAJDO",
+        "iban": "IBAN: CH2209000000163182559",
+        "bic": "BIC: POFICHBEXXX"
       },
-      "fundsLabel": "Where It Goes",
-      "fundsTitle": "What Your Donation Funds",
-      "fundsItems": [
-        {
-          "title": "Feeding Stations",
-          "desc": "Building numerous food and water bowls and placing them at various locations. Our team continuously cleans and refills them so the animals always have access to food and fresh water."
-        },
-        {
-          "title": "Medical Care",
-          "desc": "Treating illnesses and injuries, sterilizations and rabies vaccinations and regular care such as deworming and flea treatment."
-        },
-        {
-          "title": "Shelter Building",
-          "desc": "Building weatherproof doghouses that offer shelter and a safe retreat for street dogs."
-        },
-        {
-          "title": "Education",
-          "desc": "Raising awareness among children and adults in Zanzibar about treating dogs with respect."
-        }
-      ],
-      "adoptionForm": {
-        "title": "Do you want to adopt?",
-        "subtitle": "If you would like to offer a small furry friend a species-appropriate and loving home, contact us.",
-        "namePlaceholder": "Name",
-        "emailPlaceholder": "Email",
-        "messagePlaceholder": "News",
-        "submitButton": "Send Inquiry"
+      "address": {
+        "title": "Address",
+        "name": "TAJDO",
+        "line1": "Sennweidstrasse 2A",
+        "line2": "CH-6276 Hohenrain"
+      },
+      "info": {
+        "title": "Information",
+        "desc": "Donations from Switzerland are tax-deductible in accordance with the applicable cantonal regulations."
       }
     },
-    "privacy": {
-      "content": [
-        "TAJDO is committed to safeguarding the privacy and protection of personal data entrusted to it by donors, volunteers, and partners. This policy explains how we collect, use, store, and protect your data in accordance with applicable laws, including the Swiss Federal Act on Data Protection (FADP) and the EU General Data Protection Regulation (GDPR).",
-        "We collect various categories of data to support our mission, including identification data (name, date of birth), contact details (email, phone), and financial data for processing donations. We also collect technical data such as IP addresses and device identifiers to improve our digital platforms and analytics tools.",
-        "Your data is processed only for legitimate charitable purposes: providing our services, managing donor accounts, communicating updates about our projects in Zanzibar, and complying with legal obligations. We adhere to core principles of data minimization, purpose limitation, and accuracy.",
-        "TAJDO does not sell personal data. We may share information with authorized service providers (e.g., payment processors) under strict confidentiality agreements or with regulators when required by law. Cross-border transfers are conducted only with adequate safeguards like Standard Contractual Clauses.",
-        "We implement robust technical and organizational security measures, including encryption at rest and in transit, access controls, and regular vulnerability management. Data is retained only as long as necessary to fulfill the purpose of collection or as required by statutory retention periods.",
-        "As a data subject, you have the right to access, correct, or delete your personal data. You may also restrict processing, request data portability, or withdraw consent at any time. We also use cookies to enhance your experience; you can manage these through your browser settings.",
-        "For any inquiries or to exercise your rights, please contact our Data Protection Officer at info@tajdo.ch or via mail at Sennweidstrasse 2A, CH-6276 Hohenrain."
-      ]
-    }
-  },
-  "language": "en",
-  "nav": {
-    "home": "Hom",
-    "about": "About Us",
-    "mission": "Mission",
-    "projects": "Projects",
-    "donate": "Donate"
-  },
-  "announcement": "Every purchase on our online store supports the rescue and rehabilitation of street dogs in Zanzibar",
-  "ads": {
-    "sponsored": "Sponsored",
-    "spotlight": "Partner Spotlight",
-    "learnMore": "Learn More",
-    "visitSite": "Visit Site"
-  },
-  "partners": {
-    "tours": {
-      "brand": "Zanzibar Eco Tours",
-      "description": "We offer sustainable eco-tours across Zanzibar and proudly support the dogs and communities TAJDO serves.",
-      "url": "https://www.tajdo.shop"
-    },
-    "welfare": {
-      "brand": "Swiss Animal Welfare Co.",
-      "description": "Supporting the rescue and rehabilitation of street animals worldwide.",
-      "url": "https://www.tajdo.shop"
-    },
-    "vets": {
-      "brand": "Global Vet Alliance",
-      "description": "Partnering with TAJDO to provide essential medical supplies and expertise for Zanzibar's dogs.",
-      "url": "https://www.tajdo.shop"
-    },
-    "tours_alt": {
-      "brand": "Zanzibar Eco Tours",
-      "description": "We offer sustainable eco-tours across Zanzibar and proudly support the dogs and communities TAJDO serves.",
-      "url": "https://www.tajdo.shop"
-    }
-  },
-  "impact": {
-    "label": "Our Impact",
-    "stats": [
+    "fundsLabel": "Where It Goes",
+    "fundsTitle": "What Your Donation Funds",
+    "fundsItems": [
       {
-        "number": "70+",
-        "label": "Identified locations in Zanzibar"
+        "title": "Feeding Stations",
+        "desc": "Building numerous food and water bowls and placing them at various locations. Our team continuously cleans and refills them so the animals always have access to food and fresh water."
       },
       {
-        "number": "10",
-        "label": "Feeding and watering stations"
+        "title": "Medical Care",
+        "desc": "Treating illnesses and injuries, sterilizations and rabies vaccinations and regular care such as deworming and flea treatment."
       },
       {
-        "number": "7",
-        "label": "Successfully adopted dogs"
+        "title": "Shelter Building",
+        "desc": "Building weatherproof doghouses that offer shelter and a safe retreat for street dogs."
       },
       {
-        "number": "120",
-        "label": "Medically treated dogs"
-      },
-      {
-        "number": "2",
-        "label": "School Projects"
+        "title": "Education",
+        "desc": "Raising awareness among children and adults in Zanzibar about treating dogs with respect."
       }
+    ],
+    "adoptionForm": {
+      "title": "Do you want to adopt?",
+      "subtitle": "If you would like to offer a small furry friend a species-appropriate and loving home, contact us.",
+      "namePlaceholder": "Name",
+      "emailPlaceholder": "Email",
+      "messagePlaceholder": "News",
+      "submitButton": "Send Inquiry"
+    }
+  },
+  "privacy": {
+    "content": [
+      "TAJDO is committed to safeguarding the privacy and protection of personal data entrusted to it by donors, volunteers, and partners. This policy explains how we collect, use, store, and protect your data in accordance with applicable laws, including the Swiss Federal Act on Data Protection (FADP) and the EU General Data Protection Regulation (GDPR).",
+      "We collect various categories of data to support our mission, including identification data (name, date of birth), contact details (email, phone), and financial data for processing donations. We also collect technical data such as IP addresses and device identifiers to improve our digital platforms and analytics tools.",
+      "Your data is processed only for legitimate charitable purposes: providing our services, managing donor accounts, communicating updates about our projects in Zanzibar, and complying with legal obligations. We adhere to core principles of data minimization, purpose limitation, and accuracy.",
+      "TAJDO does not sell personal data. We may share information with authorized service providers (e.g., payment processors) under strict confidentiality agreements or with regulators when required by law. Cross-border transfers are conducted only with adequate safeguards like Standard Contractual Clauses.",
+      "We implement robust technical and organizational security measures, including encryption at rest and in transit, access controls, and regular vulnerability management. Data is retained only as long as necessary to fulfill the purpose of collection or as required by statutory retention periods.",
+      "As a data subject, you have the right to access, correct, or delete your personal data. You may also restrict processing, request data portability, or withdraw consent at any time. We also use cookies to enhance your experience; you can manage these through your browser settings.",
+      "For any inquiries or to exercise your rights, please contact our Data Protection Officer at info@tajdo.ch or via mail at Sennweidstrasse 2A, CH-6276 Hohenrain."
     ]
-  },
-  "footer": {
-    "stayConnected": "Stay Connected",
-    "together": "Together for each other.",
-    "rights": "All rights reserved."
+    }
   }
 }
