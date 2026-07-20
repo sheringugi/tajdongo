@@ -17,6 +17,7 @@ const Navbar = () => {
     { label: t.nav.about, href: "/about" },
     { label: t.nav.mission, href: "/mission" },
     { label: t.nav.projects, href: "/projects" },
+    { label: "Studio", href: "/studio" },
   ];
 
   // Close mobile menu on route change
