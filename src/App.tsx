@@ -12,6 +12,7 @@ import ProjectDetail from "./pages/ProjectDetail.tsx";
 import Donate from "./pages/Donate.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import Privacy from "./pages/Privacy.tsx";
+import CoverStudio from "./pages/CoverStudio.tsx";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +31,7 @@ const App = () => (
             <Route path="/projects/:slug" element={<ProjectDetail />} />
             <Route path="/donate" element={<Donate />} />
             <Route path="/privacy" element={<Privacy />} />
+            <Route path="/studio" element={<CoverStudio />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
