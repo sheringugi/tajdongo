@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/components/ui/use-toast";
 import { generateCover, CoverStyle, STYLE_LABELS } from "@/lib/coverGenerator";
+import { generateVideo, VideoStyle, VIDEO_STYLE_LABELS } from "@/lib/videoGenerator";
 
 type PhotoItem = {
   id: string;
@@ -12,9 +13,14 @@ type PhotoItem = {
   name: string;
   previews: Partial<Record<CoverStyle, string>>;
   blobs: Partial<Record<CoverStyle, Blob>>;
+  videoUrl?: string;
+  videoBlob?: Blob;
+  videoStyle?: VideoStyle;
+  videoBusy?: boolean;
 };
 
 const ALL_STYLES: CoverStyle[] = ["torn", "banner", "split"];
+const ALL_VIDEO_STYLES: VideoStyle[] = ["kenburns", "reveal", "pulse"];
 
 const CoverStudio = () => {
   const { toast } = useToast();
