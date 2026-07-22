@@ -106,7 +106,10 @@ const CoverStudio = () => {
   const removeItem = (id: string) => {
     setItems((prev) => {
       const it = prev.find((x) => x.id === id);
-      if (it) Object.values(it.previews).forEach((u) => u && URL.revokeObjectURL(u));
+      if (it) {
+        Object.values(it.previews).forEach((u) => u && URL.revokeObjectURL(u));
+        if (it.videoUrl) URL.revokeObjectURL(it.videoUrl);
+      }
       return prev.filter((x) => x.id !== id);
     });
   };
@@ -115,6 +118,28 @@ const CoverStudio = () => {
     setSelectedStyles((prev) =>
       prev.includes(s) ? prev.filter((x) => x !== s) : [...prev, s]
     );
+  };
+
+  const makeVideo = async (id: string, style: VideoStyle) => {
+    const it = items.find((x) => x.id === id);
+    if (!it) return;
+    setItems((prev) => prev.map((x) => (x.id === id ? { ...x, videoBusy: true } : x)));
+    try {
+      const blob = await generateVideo(it.file, style, 5, subtitle);
+      const url = URL.createObjectURL(blob);
+      setItems((prev) =>
+        prev.map((x) => {
+          if (x.id !== id) return x;
+          if (x.videoUrl) URL.revokeObjectURL(x.videoUrl);
+          return { ...x, videoBlob: blob, videoUrl: url, videoStyle: style, videoBusy: false };
+        })
+      );
+      toast({ title: "Video ready" });
+    } catch (e) {
+      console.error(e);
+      setItems((prev) => prev.map((x) => (x.id === id ? { ...x, videoBusy: false } : x)));
+      toast({ title: "Video failed", description: String(e) });
+    }
   };
 
   return (
