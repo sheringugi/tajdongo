@@ -1,5 +1,7 @@
 // Client-side Ken Burns video generator for "tajdo on mission" reels.
-// Renders a 1080x1350 canvas animation to WebM via MediaRecorder.
+// Renders a 1080x1350 canvas animation, preferring MP4/H.264 for device compatibility.
+
+import { ArrayBufferTarget, Muxer } from "mp4-muxer";
 
 export type VideoStyle = "kenburns" | "reveal" | "pulse";
 
@@ -12,11 +14,24 @@ const CREAM_LIGHT = "#F6EFDD";
 const CHARCOAL = "#302B27";
 const TERRA = "#B5622B";
 
+const H264_CODECS = [
+  "avc1.640034",
+  "avc1.4d0034",
+  "avc1.420034",
+  "avc1.640032",
+  "avc1.4d0032",
+  "avc1.420032",
+];
+
 export const VIDEO_STYLE_LABELS: Record<VideoStyle, string> = {
   kenburns: "Ken Burns zoom",
   reveal: "Banner reveal",
   pulse: "Split pulse",
 };
+
+export function getVideoFileExtension(blob?: Blob): "mp4" | "webm" {
+  return blob?.type.includes("mp4") ? "mp4" : "webm";
+}
 
 async function loadImage(src: string): Promise<HTMLImageElement> {
   return new Promise((res, rej) => {
@@ -141,8 +156,15 @@ export async function generateVideo(
     const ctx = canvas.getContext("2d")!;
     if ((document as any).fonts?.ready) await (document as any).fonts.ready;
 
-    // pick best supported mime
+    const mp4 = await tryGenerateMp4(canvas, ctx, img, style, durationSec, subtitle);
+    if (mp4) return mp4;
+
+    // Fallback for browsers without WebCodecs/H.264. Safari can often record MP4 here;
+    // WebM remains the last-resort format.
     const mimeCandidates = [
+      "video/mp4;codecs=avc1.42E01E",
+      "video/mp4;codecs=h264",
+      "video/mp4",
       "video/webm;codecs=vp9",
       "video/webm;codecs=vp8",
       "video/webm",
@@ -173,5 +195,99 @@ export async function generateVideo(
     return new Blob(chunks, { type: mime });
   } finally {
     if (typeof file !== "string") URL.revokeObjectURL(src);
+  }
+}
+
+async function pickSupportedH264Codec(): Promise<string | null> {
+  const VideoEncoderCtor = (window as any).VideoEncoder;
+  if (!VideoEncoderCtor?.isConfigSupported) return null;
+
+  for (const codec of H264_CODECS) {
+    try {
+      const result = await VideoEncoderCtor.isConfigSupported({
+        codec,
+        width: W,
+        height: H,
+        bitrate: 6_000_000,
+        framerate: FPS,
+        avc: { format: "avc" },
+      });
+      if (result.supported) return codec;
+    } catch {
+      // Try the next codec profile.
+    }
+  }
+
+  return null;
+}
+
+async function tryGenerateMp4(
+  canvas: HTMLCanvasElement,
+  ctx: CanvasRenderingContext2D,
+  img: HTMLImageElement,
+  style: VideoStyle,
+  durationSec: number,
+  subtitle: string
+): Promise<Blob | null> {
+  const VideoEncoderCtor = (window as any).VideoEncoder;
+  const VideoFrameCtor = (window as any).VideoFrame;
+  if (!VideoEncoderCtor || !VideoFrameCtor) return null;
+
+  const codec = await pickSupportedH264Codec();
+  if (!codec) return null;
+
+  try {
+    const target = new ArrayBufferTarget();
+    const muxer = new Muxer({
+      target,
+      video: {
+        codec: "avc",
+        width: W,
+        height: H,
+        frameRate: FPS,
+      },
+      fastStart: { expectedVideoChunks: durationSec * FPS },
+    });
+
+    const encoder = new VideoEncoderCtor({
+      output: (chunk: EncodedVideoChunk, meta?: EncodedVideoChunkMetadata) => {
+        muxer.addVideoChunk(chunk, meta);
+      },
+      error: (error: Error) => {
+        throw error;
+      },
+    });
+
+    encoder.configure({
+      codec,
+      width: W,
+      height: H,
+      bitrate: 6_000_000,
+      framerate: FPS,
+      avc: { format: "avc" },
+    });
+
+    const totalFrames = durationSec * FPS;
+    const frameDuration = Math.round(1_000_000 / FPS);
+
+    for (let f = 0; f < totalFrames; f++) {
+      const t = f / (totalFrames - 1);
+      drawCover(ctx, img, t, style, subtitle);
+      const frame = new VideoFrameCtor(canvas, {
+        timestamp: f * frameDuration,
+        duration: frameDuration,
+      });
+      encoder.encode(frame, { keyFrame: f % FPS === 0 });
+      frame.close();
+    }
+
+    await encoder.flush();
+    encoder.close();
+    muxer.finalize();
+
+    return new Blob([target.buffer], { type: "video/mp4" });
+  } catch (error) {
+    console.warn("MP4 generation failed; falling back to WebM", error);
+    return null;
   }
 }
