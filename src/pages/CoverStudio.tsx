@@ -206,6 +206,9 @@ const CoverStudio = () => {
                   );
                 })}
               </div>
+              <p className="text-xs text-muted-foreground mt-3">
+                Tip: after uploading, a <span className="font-medium text-foreground">Make a video</span> row appears under each photo card (Ken Burns, Banner reveal, Split pulse — 5s reels).
+              </p>
             </div>
 
             <div className="flex flex-wrap gap-4 pt-2">
