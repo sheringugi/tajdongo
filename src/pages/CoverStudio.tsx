@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/components/ui/use-toast";
 import { generateCover, CoverStyle, STYLE_LABELS } from "@/lib/coverGenerator";
-import { generateVideo, VideoStyle, VIDEO_STYLE_LABELS } from "@/lib/videoGenerator";
+import { generateVideo, getVideoFileExtension, VideoStyle, VIDEO_STYLE_LABELS } from "@/lib/videoGenerator";
 
 type PhotoItem = {
   id: string;
@@ -134,7 +134,7 @@ const CoverStudio = () => {
           return { ...x, videoBlob: blob, videoUrl: url, videoStyle: style, videoBusy: false };
         })
       );
-      toast({ title: "Video ready" });
+      toast({ title: `Video ready as .${getVideoFileExtension(blob)}` });
     } catch (e) {
       console.error(e);
       setItems((prev) => prev.map((x) => (x.id === id ? { ...x, videoBusy: false } : x)));
@@ -270,7 +270,7 @@ const CoverStudio = () => {
                     <span className="text-sm uppercase tracking-widest font-semibold text-primary">
                       🎬 Make a video
                     </span>
-                    <span className="text-xs text-muted-foreground">5s reel · 1080×1350</span>
+                    <span className="text-xs text-muted-foreground">5s reel · 1080×1350 · exports MP4 when supported</span>
                   </div>
                   <div className="flex flex-wrap items-center gap-3 mb-4">
                     {ALL_VIDEO_STYLES.map((v) => (
@@ -300,16 +300,19 @@ const CoverStudio = () => {
                       </div>
                       <div className="space-y-2">
                         <p className="text-xs uppercase tracking-widest">
-                          {it.videoStyle ? VIDEO_STYLE_LABELS[it.videoStyle] : ""} · 5s · 1080×1350
+                          {it.videoStyle ? VIDEO_STYLE_LABELS[it.videoStyle] : ""} · 5s · 1080×1350 · .{getVideoFileExtension(it.videoBlob)}
                         </p>
                         <button
                           onClick={() =>
                             it.videoBlob &&
-                            downloadOne(it.videoBlob, `${it.name}__${it.videoStyle || "video"}.webm`)
+                            downloadOne(
+                              it.videoBlob,
+                              `${it.name}__${it.videoStyle || "video"}.${getVideoFileExtension(it.videoBlob)}`
+                            )
                           }
                           className="text-xs uppercase tracking-widest text-primary hover:underline"
                         >
-                          Download video (.webm)
+                          Download video (.{getVideoFileExtension(it.videoBlob)})
                         </button>
                       </div>
                     </div>
