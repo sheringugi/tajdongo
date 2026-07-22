@@ -159,8 +159,12 @@ export async function generateVideo(
     const mp4 = await tryGenerateMp4(canvas, ctx, img, style, durationSec, subtitle);
     if (mp4) return mp4;
 
-    // Fallback for browsers without WebCodecs/H.264. This creates WebM, which is less portable.
+    // Fallback for browsers without WebCodecs/H.264. Safari can often record MP4 here;
+    // WebM remains the last-resort format.
     const mimeCandidates = [
+      "video/mp4;codecs=avc1.42E01E",
+      "video/mp4;codecs=h264",
+      "video/mp4",
       "video/webm;codecs=vp9",
       "video/webm;codecs=vp8",
       "video/webm",
