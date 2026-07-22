@@ -265,18 +265,21 @@ const CoverStudio = () => {
                 </div>
 
                 {/* Video section */}
-                <div className="mt-8 pt-6 border-t border-foreground/5">
-                  <div className="flex flex-wrap items-center gap-3 mb-4">
-                    <span className="text-xs uppercase tracking-widest text-muted-foreground mr-2">
-                      Make a video
+                <div className="mt-8 pt-6 border-t-2 border-primary/30 bg-primary/5 -mx-4 px-4 py-5 rounded">
+                  <div className="flex flex-wrap items-center gap-3 mb-2">
+                    <span className="text-sm uppercase tracking-widest font-semibold text-primary">
+                      🎬 Make a video
                     </span>
+                    <span className="text-xs text-muted-foreground">5s reel · 1080×1350</span>
+                  </div>
+                  <div className="flex flex-wrap items-center gap-3 mb-4">
                     {ALL_VIDEO_STYLES.map((v) => (
                       <button
                         key={v}
                         type="button"
                         onClick={() => makeVideo(it.id, v)}
                         disabled={it.videoBusy}
-                        className="px-4 py-2 text-xs uppercase tracking-widest border border-foreground/30 hover:border-foreground disabled:opacity-50"
+                        className="px-4 py-2 text-xs uppercase tracking-widest border-2 border-primary/40 hover:border-primary hover:bg-primary hover:text-primary-foreground disabled:opacity-50 transition-colors"
                       >
                         {it.videoBusy && it.videoStyle === v ? "Rendering…" : VIDEO_STYLE_LABELS[v]}
                       </button>
