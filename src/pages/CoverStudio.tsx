@@ -260,6 +260,55 @@ const CoverStudio = () => {
                     );
                   })}
                 </div>
+
+                {/* Video section */}
+                <div className="mt-8 pt-6 border-t border-foreground/5">
+                  <div className="flex flex-wrap items-center gap-3 mb-4">
+                    <span className="text-xs uppercase tracking-widest text-muted-foreground mr-2">
+                      Make a video
+                    </span>
+                    {ALL_VIDEO_STYLES.map((v) => (
+                      <button
+                        key={v}
+                        type="button"
+                        onClick={() => makeVideo(it.id, v)}
+                        disabled={it.videoBusy}
+                        className="px-4 py-2 text-xs uppercase tracking-widest border border-foreground/30 hover:border-foreground disabled:opacity-50"
+                      >
+                        {it.videoBusy && it.videoStyle === v ? "Rendering…" : VIDEO_STYLE_LABELS[v]}
+                      </button>
+                    ))}
+                  </div>
+                  {it.videoUrl && (
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+                      <div className="aspect-[4/5] bg-secondary rounded overflow-hidden">
+                        <video
+                          src={it.videoUrl}
+                          controls
+                          autoPlay
+                          loop
+                          muted
+                          playsInline
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <div className="space-y-2">
+                        <p className="text-xs uppercase tracking-widest">
+                          {it.videoStyle ? VIDEO_STYLE_LABELS[it.videoStyle] : ""} · 5s · 1080×1350
+                        </p>
+                        <button
+                          onClick={() =>
+                            it.videoBlob &&
+                            downloadOne(it.videoBlob, `${it.name}__${it.videoStyle || "video"}.webm`)
+                          }
+                          className="text-xs uppercase tracking-widest text-primary hover:underline"
+                        >
+                          Download video (.webm)
+                        </button>
+                      </div>
+                    </div>
+                  )}
+                </div>
               </div>
             ))}
 
